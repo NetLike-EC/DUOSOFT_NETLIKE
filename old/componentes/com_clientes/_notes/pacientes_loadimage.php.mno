@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RS_imgpac" value="name:ima_pac_cod;datatype:int,name:pac_cod;datatype:int,name:img_path;datatype:string,name:img_status;datatype:string" />
+</info>

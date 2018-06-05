@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RecordsetNuevoPac" value="name:pac_cod;datatype:int,name:pac_ced;datatype:string,name:pac_nom;datatype:string,name:pac_ape;datatype:string,name:pac_fec;datatype:date,name:pac_ciu;datatype:string,name:pac_dir;datatype:string,name:pac_tel1;datatype:string,name:pac_tel2;datatype:string,name:pac_tip_san;datatype:string,name:pac_prof;datatype:string,name:pac_empr;datatype:string,name:pac_ocup;datatype:string,name:pac_tip;datatype:string,name:pac_nom_contact;datatype:string,name:pac_tel_contact;datatype:string" />
+	<infoitem key="UD_RS_paciente_Sel" value="name:pac_cod;datatype:int,name:pac_ced;datatype:string,name:pac_fec;datatype:date,name:pac_nom;datatype:string,name:pac_ape;datatype:string,name:pac_ciu;datatype:string,name:pac_dir;datatype:string,name:pac_tel1;datatype:string,name:pac_tel2;datatype:string,name:pac_tip_san;datatype:string,name:pac_prof;datatype:string,name:pac_empr;datatype:string,name:pac_ocup;datatype:string,name:pac_tip;datatype:string,name:pac_nom_par;datatype:string,name:pac_tel_par;datatype:string,name:pac_image;datatype:string" />
+	<infoitem key="UD_RS_types_tipsan" value="name:typ_cod;datatype:int,name:mod_cod;datatype:int,name:typ_ref;datatype:string,name:typ_val;datatype:string,name:typ_stat;datatype:string" />
+</info>

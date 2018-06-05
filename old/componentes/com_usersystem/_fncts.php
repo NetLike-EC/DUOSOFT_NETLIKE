@@ -1,0 +1,42 @@
+<?php 
+include('../_config.php');
+require_once(RAIZ.'Connections/conn.php');
+session_start();
+$_SESSION['LOG']=NULL;
+if(isset($_POST['id_sel'])) $id_sel=$_POST['id_sel'];
+else $id_sel=$_GET['id_sel'];
+if(isset($_POST['action'])) $action=$_POST['action'];
+else $action=$_GET['action'];
+//IF MOD USERS SYSTEM
+if ((isset($_SESSION['MODSEL'])) && ($_SESSION['MODSEL'] == 'USER')){
+	$insertGoTo = 'users_list.php';
+	if((isset($_POST['form']))&&($_POST['form']=='form_prod')){
+		if((isset($action))&&($action=='UPDATE')){
+			$qry='UPDATE tbl_inv_productos SET prod_nom="'.$_POST['txt_nom'].'", mar_id="'.$_POST['id_mar_sel'].'", tip_cod="'.$_POST['id_tip_sel'].'", prod_obs="'.$_POST['txt_obs'].'"'.$valueimage_upd.' WHERE prod_id='.$id_sel;
+			if(@mysql_query($qry)){ $LOG.="Actualizado Correctamente. ID=".$id_sel; $action="UPDATE";}
+			else $LOG.='<b>Error al Actualizar</b><br />';
+		}
+		if((isset($action))&&($action=='INSERT')){
+			$qry='INSERT INTO tbl_inv_productos (prod_nom, mar_id, tip_cod, prod_obs, prod_stat'.$valueimage_ins[1].')VALUES("'.$_POST['txt_nom'].'", "'.$_POST['id_mar_sel'].'", "'.$_POST['id_tip_sel'].'", "'.$_POST['txt_obs'].'", "1"'.$valueimage_ins[2].')';
+			if(@mysql_query($qry)){ $id_sel=@mysql_insert_id(); $LOG.="Creado Correctamente. ID=".$id_sel; $action="UPDATE";
+			}else $LOG.='<b>Error al Grabar</b><br />';
+		}
+		$LOG.=mysql_error();
+		$insertGoTo = 'users_form.php?id_sel='.$id_sel.'&action='.$action;
+	}
+	if((isset($action))&&($action=='DELETE')){
+		$qry='DELETE FROM tbl_user_system WHERE user_id="'.$id_sel.'"';
+		if(@mysql_query($qry)) $LOG.="Eliminado Correctamente :: ID = ".$id_sel;
+		else $LOG.='<b>No se pudo Eliminar</b><br />';
+	}
+	if(isset($_GET['stat'])){
+		$qry='UPDATE tbl_user_system SET user_status="'.$stat.'" WHERE user_id='.$id_sel;
+		if(@mysql_query($qry)) $LOG.="Status Actualizado:: ID = ".$id_sel;
+		else $LOG.='<b>Error al Actualizar Status</b><br />';
+	}
+	$LOG.=mysql_error();
+}//END IF MOD USERS SYSTEM
+$_SESSION['LOG']=$LOG;
+if(mysql_error()) $_SESSION['LOGr']="e";
+header(sprintf("Location: %s", $insertGoTo));
+?>

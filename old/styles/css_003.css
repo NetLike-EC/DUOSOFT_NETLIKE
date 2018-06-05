@@ -1,0 +1,21 @@
+body.popup{background:#FFF !important;}
+body.popup-nav{padding-top:40px !important;}
+
+.item{margin-bottom:0px !important;}
+.img-small{max-width:250px; max-height:100px}
+.img-mini{max-width:150px; max-height:50px}
+.img-tiny{max-width:75px; max-height:25px}
+
+.img-xl{max-width:480px; max-height:240px}
+.img-md{max-width:240px; max-height:120px}
+.img-sm{max-width:120px; max-height:60px}
+.img-xs{max-width:60px; max-height:30px}
+
+#loading{ text-align: center; visibility: hidden;}
+.pag_port_tit{}
+.pag_port_tit .pagination{margin:0;}
+.pag_port_tit .pagination ul>li>a{padding:1px 12px;}
+.pag_port_tit select{margin:0px;}
+
+.portlet-title h4{ margin-bottom:0px;}
+.btn-group.list{margin:0px !important;}

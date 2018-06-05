@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RS_pacientes_list" value="name:pac_cod;datatype:int,name:pac_ced;datatype:string,name:pac_fec;datatype:date,name:pac_nom;datatype:string,name:pac_ape;datatype:string,name:pac_ciu;datatype:string,name:pac_dir;datatype:string,name:pac_tel1;datatype:string,name:pac_tel2;datatype:string,name:pac_tip_san;datatype:string,name:pac_prof;datatype:string,name:pac_empr;datatype:string,name:pac_ocup;datatype:string,name:pac_tip;datatype:string,name:pac_nom_par;datatype:string,name:pac_tel_par;datatype:string,name:pac_image;datatype:string" />
+	<infoitem key="UD_Recordset1" value="name:pac_cod;datatype:int,name:pac_ced;datatype:string,name:pac_fec;datatype:date,name:pac_nom;datatype:string,name:pac_ape;datatype:string,name:pac_ciu;datatype:string,name:pac_dir;datatype:string,name:pac_tel1;datatype:string,name:pac_tel2;datatype:string,name:pac_tip_san;datatype:string,name:pac_prof;datatype:string,name:pac_empr;datatype:string,name:pac_ocup;datatype:string,name:pac_tip;datatype:string,name:pac_nom_par;datatype:string,name:pac_tel_par;datatype:string,name:pac_image;datatype:string" />
+</info>

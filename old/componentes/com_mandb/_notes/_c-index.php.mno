@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RSt" value="name:typ_cod;datatype:int,name:mod_cod;datatype:int,name:typ_ref;datatype:string,name:typ_val;datatype:string,name:typ_stat;datatype:string" />
+</info>

@@ -1,0 +1,8 @@
+Niveles de acceso al sistema
+----------------------------
+1 Super Administrador
+2 Doctor
+3 Recepcionista 
+4 Terapista
+5 Contador
+6 Invitado

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RS_pac_sel" value="name:pac_cod;datatype:int,name:pac_fec;datatype:date,name:pac_nom;datatype:string,name:pac_ape;datatype:string" />
+	<infoitem key="UD_RS_ter_ses_num" value="name:MAX(tbl_sesiones.ses_num);datatype:int" />
+	<infoitem key="UD_RS_terapia_sel" value="name:ter_num;datatype:int,name:con_num;datatype:int,name:pac_cod;datatype:int,name:ter_ses_fec;datatype:date,name:ter_ses_hor;datatype:time,name:ter_ses_val;datatype:real,name:ter_num_ses;datatype:int,name:ter_num_ses_rel;datatype:int" />
+	<infoitem key="UD_RS_pag_pend" value="name:num_cta;datatype:int,name:con_num;datatype:int,name:pac_cod;datatype:int,name:cta_fecha;datatype:datetime,name:cta_detalle;datatype:string,name:cta_valor;datatype:real,name:cta_abono;datatype:real,name:cta_cantidad;datatype:int" />
+	<infoitem key="UD_RS_cta_pend" value="name:num_cta;datatype:int,name:con_num;datatype:int,name:cta_fecha;datatype:datetime,name:cta_detalle;datatype:string,name:cta_valor;datatype:real,name:cta_abono;datatype:real,name:cta_cantidad;datatype:int,name:cta_saldo;datatype:real" />
+	<infoitem key="UD_RS_pag_realiz" value="name:sec_pag;datatype:int,name:pag_num;datatype:int,name:con_num;datatype:int,name:num_cta;datatype:int,name:abono;datatype:real,name:detalle;datatype:string" />
+</info>
