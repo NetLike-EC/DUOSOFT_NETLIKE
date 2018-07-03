@@ -12,10 +12,10 @@ $iddf=vParam('iddf',$_GET['iddf'],$_POST['iddf']);
 $action=vParam('action',$_GET['action'],$_POST['action']);
 $detdoc=detRow('db_documentos','id_doc',$idd);//fnc_datadoc($idd);
 $detdocf=fnc_datadocf($iddf);
-if($idd) {$idp=$detdoc['pac_cod']; $idc=$detdoc['con_num'];}
+if($idd) {$idp=$detdoc['cli_id']; $idc=$detdoc['con_num'];}
 if($action=='DELDF') header(sprintf("Location: %s", '_fncts.php?idd='.$idd.'&action=DELDF'));
 $detpac=dPac($idp);
-$detpac_nom=$detpac['pac_nom'].' '.$detpac['pac_ape'];
+$detcli_nom=$detpac['cli_nom'].' '.$detpac['cli_ape'];
 $detCON=detRow('db_consultas','con_num',$idc);//fnc_datacons($idc, $idp);
 $detDD=detRow('db_diagnosticos','id_diag',$detCON['con_diagd']);
 $detDD_nom=$detDD['nombre'];
@@ -72,7 +72,7 @@ include(RAIZf.'head.php');
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       	<li><a><span class="label label-info"><?php echo $idd ?></span></a></li>
-        <li><a><?php echo $detpac_nom ?></a></li>
+        <li><a><?php echo $detcli_nom ?></a></li>
         <li><a>Consulta: <span class="label label-default"><?php echo $idc ?></span></a></li>
         <li><a><?php echo $detdoc['fecha'] ?></a></li>
       </ul>
@@ -123,9 +123,9 @@ include(RAIZf.'head.php');
         <p><div class="btn-group">
 		<a class="btn dropdown-toggle btn-primary btn-sm" data-toggle="dropdown" href="#">Datos Paciente <span class="caret"></span></a>
 		<ul class="dropdown-menu">
-			<li><a href="javascript:;" onClick="tinymce.activeEditor.insertContent('<?php echo $detpac_nom ?>');return false;">Nombre Paciente</a></li>
-            <li><a href="javascript:;" onClick="tinymce.activeEditor.insertContent('<?php echo $detpac['pac_ced'] ?>');return false;">Cedula</a></li>
-            <li><a href="javascript:;" onClick="tinymce.activeEditor.insertContent('<?php echo edad($detpac['pac_fec'])?>');return false;">Edad</a></li>
+			<li><a href="javascript:;" onClick="tinymce.activeEditor.insertContent('<?php echo $detcli_nom ?>');return false;">Nombre Paciente</a></li>
+            <li><a href="javascript:;" onClick="tinymce.activeEditor.insertContent('<?php echo $detpac['cli_doc'] ?>');return false;">Cedula</a></li>
+            <li><a href="javascript:;" onClick="tinymce.activeEditor.insertContent('<?php echo edad($detpac['cli_fec'])?>');return false;">Edad</a></li>
 		</ul>
 		</div></p>
         <p><div class="btn-group">

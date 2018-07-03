@@ -5,7 +5,7 @@ if($_SESSION['refresh']=='ok'){
 	header(sprintf("Location: %s", $insertGoTo));
 }
 
-$query_RS_cta_pend = "SELECT DISTINCT  db_clientes.pac_cod, db_clientes.pac_nom, db_clientes.pac_ape, (SELECT  SUM(tbl_cta_por_cobrar.cta_valor-tbl_cta_por_cobrar.cta_abono) FROM tbl_cta_por_cobrar WHERE tbl_cta_por_cobrar.pac_cod=db_clientes.pac_cod) AS Deuda FROM db_clientes WHERE (SELECT  SUM(tbl_cta_por_cobrar.cta_valor-tbl_cta_por_cobrar.cta_abono)  FROM tbl_cta_por_cobrar WHERE tbl_cta_por_cobrar.pac_cod=db_clientes.pac_cod)>0";
+$query_RS_cta_pend = "SELECT DISTINCT  db_clientes.cli_id, db_clientes.cli_nom, db_clientes.cli_ape, (SELECT  SUM(tbl_cta_por_cobrar.cta_valor-tbl_cta_por_cobrar.cta_abono) FROM tbl_cta_por_cobrar WHERE tbl_cta_por_cobrar.cli_id=db_clientes.cli_id) AS Deuda FROM db_clientes WHERE (SELECT  SUM(tbl_cta_por_cobrar.cta_valor-tbl_cta_por_cobrar.cta_abono)  FROM tbl_cta_por_cobrar WHERE tbl_cta_por_cobrar.cli_id=db_clientes.cli_id)>0";
 $RS_cta_pend = mysql_query($query_RS_cta_pend) or die(mysql_error());
 $row_RS_cta_pend = mysql_fetch_assoc($RS_cta_pend);
 $totalRows_RS_cta_pend = mysql_num_rows($RS_cta_pend);
@@ -32,10 +32,10 @@ include(RAIZf.'head.php');
 	<?php do { ?>
     <tr>
     	<td align="center">
-        <a href="pagos_form.php?idp=<?php echo $row_RS_cta_pend['pac_cod']; ?>"><i class="icon-th"></i></a>           </td>
-		<td><?php echo $row_RS_cta_pend['pac_cod']; ?></td>
-        <td><?php echo $row_RS_cta_pend['pac_ape']; ?></td>
-		<td><?php echo $row_RS_cta_pend['pac_nom']; ?></td>
+        <a href="pagos_form.php?idp=<?php echo $row_RS_cta_pend['cli_id']; ?>"><i class="icon-th"></i></a>           </td>
+		<td><?php echo $row_RS_cta_pend['cli_id']; ?></td>
+        <td><?php echo $row_RS_cta_pend['cli_ape']; ?></td>
+		<td><?php echo $row_RS_cta_pend['cli_nom']; ?></td>
 		<td><strong><?php echo $row_RS_cta_pend['Deuda']; ?></strong></td>
     </tr>
     <?php } while ($row_RS_cta_pend = mysql_fetch_assoc($RS_cta_pend)); ?>    

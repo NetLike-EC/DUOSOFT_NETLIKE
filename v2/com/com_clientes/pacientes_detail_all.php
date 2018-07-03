@@ -1,20 +1,20 @@
 <?php include('../../init.php');
 $idPac = "-1";
 if (isset($_GET['idPac'])) $idPac = $_GET['idPac'];
-$detPac=dPac($idPac);
+$detPac=dataPac($idPac);
 ?>
 <div>
-	<div><h1><?php echo $detPac['pac_nom']." ".$detPac['pac_ape']; ?></h1></div>
+	<div><h1><?php echo $detPac['cli_nom']." ".$detPac['cli_ape']; ?></h1></div>
 </div>
 
 <body bgcolor="#FFFFFF">
 <table align="center">
 	<tr>
-    	<td>OCn FOto<?php echo $detPac['pac_cod']; ?></td>
+    	<td>OCn FOto<?php echo $detPac['cli_id']; ?></td>
   </tr>
   <tr>
   	<td align="center"><a href="<?php echo $detPac['../../pac_image']; ?>" rel="shadowbox">
-    <img src="<?php fncImgExist($pathimag_db_pac,lastImgPac($detPac['pac_cod'])) ; ?>" class="detMinPacI" style="max-width:300px; max-height:250px;"/></a></td>
+    <img src="<?php fncImgExist($pathimag_db_pac,lastImgPac($detPac['cli_id'])) ; ?>" class="detMinPacI" style="max-width:300px; max-height:250px;"/></a></td>
   </tr>
 </table>
 <table class="bord_gray_4cornes" align="center">

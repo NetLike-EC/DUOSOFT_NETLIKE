@@ -153,13 +153,13 @@ $goTo='form.php';
 		/*
 		$detRes=detRow('db_fullcalendarterapias','id',$id);
 		$id_aud=AUD($detRes['id_aud'],'Actualización Reserva');
-		$qryUpd=sprintf('UPDATE db_fullcalendarterapias SET fechai=%s, fechaf=%s, horai=%s, horaf=%s, pac_cod=%s, idculta=%s, id_trat=%s, id_terapista=%s ,est=%s, id_aud=%s, detalle=%s, observaciones=%s 
+		$qryUpd=sprintf('UPDATE db_fullcalendarterapias SET fechai=%s, fechaf=%s, horai=%s, horaf=%s, cli_id=%s, idculta=%s, id_trat=%s, id_terapista=%s ,est=%s, id_aud=%s, detalle=%s, observaciones=%s 
 		WHERE id=%s',
 		SSQL($fechai,'date'),
 		SSQL($fechai,'date'),
 		SSQL($horai,'text'),
 		SSQL($horaf,'text'),
-		SSQL($pac_cod,'int'),
+		SSQL($cli_id,'int'),
 		SSQL($idculta,'int'),
 		SSQL($id_tratamiento,'int'),
 		SSQL($id_terapista,'int'),

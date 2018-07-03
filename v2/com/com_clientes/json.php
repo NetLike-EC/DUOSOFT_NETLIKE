@@ -1,11 +1,12 @@
 <?php require_once('../../init.php');
 $qry=genCadSearchPac($_GET['term']);
-$RSjson = mysql_query($qry) or die(mysql_error());
-while($row = mysql_fetch_array($RSjson)){
+$RSjson = mysqli_query($conn,$qry) or die(mysqli_error($conn));
+while($row = mysqli_fetch_array($RSjson)){
 	$datos[] = array(
-		'code' => $row['pac_cod'],
-		'value' => $row['pac_nom'].' '.$row['pac_ape'],
-		'label' => $row['pac_nom'].' '.$row['pac_ape'] //Esto Muestra
+		'code' => $row['idc'],
+		'ids' => md5($row['idc']),
+		'value' => $row['cli_nom'].' '.$row['cli_ape'],
+		'label' => $row['cli_nom'].' '.$row['cli_ape'] //Esto Muestra
 	);
 }
 echo json_encode($datos);

@@ -10,7 +10,7 @@ if(($_POST['form'])&&($_POST['form']=='hispac')){
 	$imc=$_POST['himc'];
 	if(($acc)&&($acc=='INS')){
 		$qryIns = sprintf("INSERT INTO `db_signos`
-		(`pac_cod`,`fecha`,`peso`,`pa`,`talla`,`imc`) VALUES (%s,%s,%s,%s,%s,%s)",
+		(`cli_id`,`fecha`,`peso`,`pa`,`talla`,`imc`) VALUES (%s,%s,%s,%s,%s,%s)",
 			SSQL($id, "int"),
 			SSQL($sdate, "date"),
 			SSQL($peso, "text"),

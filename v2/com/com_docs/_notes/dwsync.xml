@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="documentos_con_list.php" server="//servidor/clinic/" local="130489224549495538" remote="130489224540000000" Dst="0" />
-<file name="documento_form.php" server="//servidor/clinic/" local="130505456528007615" remote="130505456520000000" Dst="0" />
-<file name="doc_print.php" server="//servidor/clinic/" local="130486952781751653" remote="130486952780000000" Dst="0" />
-<file name="print_doc.php" server="//servidor/clinic/" local="130303793322132078" remote="130303793320000000" Dst="0" />
-<file name="reporteDoc.php" server="//servidor/clinic/" local="130759936239340479" remote="130759936230000000" Dst="0" />
-<file name="_fncts.php" server="//servidor/clinic/" local="130759919462085888" remote="130759919460000000" Dst="0" />
-<file name="documentohtc_form.php" server="//servidor/clinic/" local="130760865534225222" remote="130760865530000000" Dst="0" />
-<file name="documentoshtc_con_list.php" server="//servidor/clinic/" local="130759931185021085" remote="130759931180000000" Dst="0" />
-<file name="doc_print.php" server="//192.168.0.2/clinic/" local="130486952780000000" remote="130486952780000000" Dst="0" />
+<file name="documentohtc_form.php" server="//Server01/duosoft_netlike/v2/" local="131751047228692142" remote="131751047220000000" Dst="0" />
+<file name="documentoshtc_con_list.php" server="//Server01/duosoft_netlike/v2/" local="131751043825485096" remote="131751043820000000" Dst="0" />
+<file name="documentos_con_list.php" server="//Server01/duosoft_netlike/v2/" local="131751043825415288" remote="131751043820000000" Dst="0" />
+<file name="documento_form.php" server="//Server01/duosoft_netlike/v2/" local="131751047228632298" remote="131751047220000000" Dst="0" />
+<file name="doc_print.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="print_doc.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="reporteDoc.php" server="//Server01/duosoft_netlike/v2/" local="131751047228811838" remote="131751047220000000" Dst="0" />
+<file name="_fncts.php" server="//Server01/duosoft_netlike/v2/" local="131751043824963535" remote="131751043820000000" Dst="0" />
 </dwsync>

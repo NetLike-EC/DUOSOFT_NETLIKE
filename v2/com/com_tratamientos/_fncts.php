@@ -19,7 +19,7 @@ $urlreturn=$_SESSION['urlp'];
 //FUNCIONES PARA TRATAMIENTOS
 if ((isset($_POST['form'])) && ($_POST['form'] == 'tratdet')){
 	if($action=='INS'){	
-	$qryinst=sprintf('INSERT INTO db_tratamientos (con_num, pac_cod, fecha, fechap, diagnostico, obs)
+	$qryinst=sprintf('INSERT INTO db_tratamientos (con_num, cli_id, fecha, fechap, diagnostico, obs)
 	VALUES (%s,%s,%s,%s,%s,%s)',
 	SSQL($_POST['idc'], "int"),
 	SSQL($_POST['idp'], "int"),

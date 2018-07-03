@@ -25,13 +25,13 @@ include(RAIZf.'head.php');
 <tbody> 
 	<?php do { ?>
     <?php
-	$detPac_cod=$row_RSr['pac_cod'];
-    $detPac=detRow('db_clientes','pac_cod',$detPac_cod);
+	$detcli_id=$row_RSr['cli_id'];
+    $detPac=detRow('db_clientes','cli_id',$detcli_id);
 	$detAud_inf=infAud($row_RSr['id_aud']);
-	$detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
+	$detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
 	$btnAcc=NULL;
 	if($detPac){
-		$btnAcc='<a class="btn btn-default btn-xs" target="_parent" href="'.$RAIZc.'com_consultas/form.php?idp='.$detPac_cod.'">
+		$btnAcc='<a class="btn btn-default btn-xs" target="_parent" href="'.$RAIZc.'com_consultas/form.php?idp='.$detcli_id.'">
 		Tratar Consulta <i class="fa fa-chevron-right"></i></a>';
 	}
 	
@@ -40,7 +40,7 @@ include(RAIZf.'head.php');
     	<td><?php echo $btnAcc ?></td>
 		<td><?php echo $row_RSr['id']; ?></td>
 		<td><?php echo $row_RSr['fechai']?> <span class="badge"><?php echo $row_RSr['horai'] ?></span></td>
-		<td><?php echo $detPac_nom ?></td>
+		<td><?php echo $detcli_nom ?></td>
 		<td><?php echo $detAud_inf ?></td>
     </tr>
     <?php } while ($row_RSr = mysql_fetch_assoc($RSr)); ?>    

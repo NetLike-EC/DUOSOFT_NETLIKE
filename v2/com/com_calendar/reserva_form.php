@@ -3,7 +3,7 @@ $idp=vParam('idp',$_GET['idp'],$_POST['idp'],FALSE);
 $id=vParam('id',$_GET['id'],$_POST['id'],FALSE);
 $detRes=detRow('db_fullcalendar','id',$id);
 if($detRes){
-	$idp=$detRes['pac_cod'];
+	$idp=$detRes['cli_id'];
 	$acc='UPD';
 	$accBtn='<button class="btn btn-success navbar-btn"><i class="fa fa-floppy-o fa-lg"></i> ACTUALIZAR</button>';
 	$accBtn.='<a class="btn btn-danger navbar-btn" href="actions.php?id='.$id.'&acc='.md5('DELE').'"><i class="fa fa-trash-o"></i></a>';
@@ -11,9 +11,9 @@ if($detRes){
 	$acc='INS';
 	$accBtn='<button class="btn btn-primary navbar-btn"><i class="fa fa-floppy-o fa-lg"></i> GRABAR</button>';
 }
-$detPac=detRow('db_clientes','pac_cod',$idp);
-$detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
-$qrylr=sprintf('SELECT * FROM db_fullcalendar WHERE pac_cod=%s ORDER BY id DESC',
+$detPac=detRow('db_clientes','cli_id',$idp);
+$detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
+$qrylr=sprintf('SELECT * FROM db_fullcalendar WHERE cli_id=%s ORDER BY id DESC',
 SSQL($idp,'int'));
 $RSlr=mysql_query($qrylr) or die(mysql_error());
 $row_RSlr=mysql_fetch_assoc($RSlr);
@@ -22,8 +22,8 @@ $cssBody='cero';
 include(RAIZf.'head.php'); ?>
 <div class="container">
 <div class="page-header">
-	<h1>Reservar Cita <small><?php echo $detPac_nom ?> 
-	<span class="label label-info"><?php echo $detPac['pac_cod']; ?></span></small></h1>
+	<h1>Reservar Cita <small><?php echo $detcli_nom ?> 
+	<span class="label label-info"><?php echo $detPac['cli_id']; ?></span></small></h1>
 </div>
 <?php sLOG('g') ?>
 <div class="row">
@@ -33,7 +33,7 @@ include(RAIZf.'head.php'); ?>
 	<input name="id" type="hidden" id="id" value="<?php echo $id?>">
 	<input name="acc" type="hidden" id="acc" value="<?php echo md5($acc)?>">
     <input name="form" type="hidden" id="form" value="AGE">
-    <input name="pac_cod" type="hidden" id="pac_cod" value="<?php echo $idp?>">
+    <input name="cli_id" type="hidden" id="cli_id" value="<?php echo $idp?>">
 </fieldset>
 <nav class="navbar navbar-default navbar-inverse" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -153,7 +153,7 @@ include(RAIZf.'head.php'); ?>
 					$valEst='<span class="label label-danger">Anulado</span>';
 				}else if($estado==1){
 					$valEst='<span class="label label-default">Pendiente</span>';
-					$btnAcc='<a href="reserva_form.php?idp='.$row_RSlr['pac_cod'].'&id='.$row_RSlr['id'].'" class="btn btn-info btn-xs">
+					$btnAcc='<a href="reserva_form.php?idp='.$row_RSlr['cli_id'].'&id='.$row_RSlr['id'].'" class="btn btn-info btn-xs">
 						<i class="fa fa-edit"></i></a>';
 					$btnAcc.='<a href="actions.php?id='.$row_RSlr['id'].'&acc='.md5('DELEL').'" class="btn btn-danger btn-xs">
 						<i class="fa fa-trash-o"></i></a>';

@@ -14,7 +14,7 @@ if (isset($_GET['idp_pol'])) {
   $idp_pol_Rs_paciente = $_GET['idp_pol'];
 }
 
-$query_Rs_paciente = sprintf("SELECT * FROM db_clientes WHERE db_clientes.pac_cod = %s", SSQL($idp_pol_Rs_paciente, "int"));
+$query_Rs_paciente = sprintf("SELECT * FROM db_clientes WHERE db_clientes.cli_id = %s", SSQL($idp_pol_Rs_paciente, "int"));
 $Rs_paciente = mysql_query($query_Rs_paciente) or die(mysql_error());
 $row_Rs_paciente = mysql_fetch_assoc($Rs_paciente);
 $totalRows_Rs_paciente = mysql_num_rows($Rs_paciente);
@@ -29,7 +29,7 @@ $totalRows_Rs_paciente = mysql_num_rows($Rs_paciente);
 <body bgcolor="#FFFFFF">
 <div id="cont_head">
 <table id="tabla1">
-<tr><td><?php echo $row_Rs_paciente['pac_nom']." ".$row_Rs_paciente['pac_ape'];?></td></tr>
+<tr><td><?php echo $row_Rs_paciente['cli_nom']." ".$row_Rs_paciente['cli_ape'];?></td></tr>
 <tr>
 	<td>Poliza</td>
     <td>Valor</td>
@@ -44,7 +44,7 @@ do
 {
 	?>
 	<tr>
-    	<td><a href="polizas_form.php?cod_poliza=<?php echo $row_Rs_polizas['cod_pol'];?>&amp;accion=ACTUALIZAR&amp;idp=<?php echo $row_Rs_paciente['pac_cod'];?>">Editar</a></td>
+    	<td><a href="polizas_form.php?cod_poliza=<?php echo $row_Rs_polizas['cod_pol'];?>&amp;accion=ACTUALIZAR&amp;idp=<?php echo $row_Rs_paciente['cli_id'];?>">Editar</a></td>
         <td><?php echo $row_Rs_polizas['cod_pol'];?></td>
         <td><?php echo $row_Rs_polizas['fec_pol'];?></td>
         <td><?php echo $row_Rs_polizas['val_pol'];?></td>

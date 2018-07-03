@@ -63,7 +63,7 @@ $pages = new Paginator;
 <tbody> 
 	<?php do{?>
 	<?php
-	$detPac=detRow('db_clientes','pac_cod',$row_RSd['pac_cod']);
+	$detPac=detRow('db_clientes','cli_id',$row_RSd['cli_id']);
 	$detTT=detRow('db_types','typ_cod',$row_RSd['typ_cod']);
 	if($row_RSd['status']==1) $btnStatTI='<span class="label label-success">Activo</a>';
 	else $btnStatTI='<span class="label label-warning">Finalizado</a>';
@@ -73,8 +73,8 @@ $pages = new Paginator;
 			<td><?php echo $row_RSd['date'] ?></td>
             <td><?php echo $row_RSd['datei'] ?></td>
             <td><?php echo $row_RSd['datef'] ?></td>
-			<td><?php echo strtoupper($detPac['pac_nom'])?></td>
-			<td><?php echo strtoupper($detPac['pac_ape'])?></td>
+			<td><?php echo strtoupper($detPac['cli_nom'])?></td>
+			<td><?php echo strtoupper($detPac['cli_ape'])?></td>
             <td><?php echo $detTT['typ_val'] ?></td>
             <td><?php echo $row_RSd['donante'] ?></td>
             <td><?php echo $btnStatTI ?></td>
@@ -82,7 +82,7 @@ $pages = new Paginator;
             <a class="btn btn-info btn-xs fancyreload fancybox.iframe" href="form.php?id=<?php echo $row_RSd['id_ti'];?>">
         	<i class="fa fa-edit fa-lg"></i> Editar</a>
             
-            <a class="btn btn-default btn-xs" href="gest.php?id=<?php echo $row_RSd['pac_cod'];?>">
+            <a class="btn btn-default btn-xs" href="gest.php?id=<?php echo $row_RSd['cli_id'];?>">
         	<i class="fa fa-history"></i> Historial</a>
             </td>
     	</tr>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_RS_items_list" value="name:item_id;datatype:int,name:cat_id;datatype:int,name:item_cod;datatype:string,name:item_nom;datatype:string,name:item_des;datatype:blob,name:item_img;datatype:string,name:item_path;datatype:string,name:item_status;datatype:string" />
+</info>

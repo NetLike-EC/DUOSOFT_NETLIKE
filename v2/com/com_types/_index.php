@@ -1,90 +1,72 @@
-<?php
-$rTyp=vParam('ref',$_GET['ref'],$_POST['ref']);
-
+<?php $rTyp=vParam('ref',$_GET['ref'],$_POST['ref']);
 if($rTyp){
-	$pTyp=' AND typ_ref="'.$rTyp.'"';//Parametro para SQL
+	$param['typ']=array('typ_ref','=',$rTyp);
 	$uTyp='&ref='.$rTyp;//Parametro para URL
 }
-
-$qry='SELECT * FROM db_types WHERE 1=1 '.$pTyp.' ORDER BY typ_cod DESC';
-$RSt=mysql_query($qry);
-$trRSt=mysql_num_rows($RSt);
-
-$qryLT='SELECT DISTINCT(typ_ref) AS sVAL, typ_ref AS sID FROM db_types';
-$RSlt=mysql_query($qryLT);
-
-
+$paramSQL=getParamSQLA($param);
+$TR=totRowsTabP('tbl_types',$paramSQL);
+if($TR>0){
+	$pages = new Paginator;
+	$pages->items_total = $TR;
+	$pages->mid_range = 8;
+	$pages->paginate();
+	$qry = 'SELECT * FROM tbl_types WHERE 1=1 '.$paramSQL.' ORDER BY typ_cod DESC '.$pages->limit;
+	$RSl = mysqli_query($conn,$qry) or die(mysqli_error($conn));
+	$dRSl = mysqli_fetch_assoc($RSl);
+	$tRSl = mysqli_num_rows($RSl);
+}
+$btnNew='<a href="form.php?'.$uTyp.'" class="btn btn-primary fancybox.iframe fancyreload">'.$cfg[i]['new'].$cfg[b]['new'].'</a>';
 ?>
+<?php echo genPageHeader($dM['mod_cod'],'header',NULL,NULL,NULL,$btnNew) ?>
 <div class="well well-sm">
-<a href="form.php?<?php echo $uTyp ?>" class="btn btn-primary btn-xs pull-right fancybox.iframe fancyreload"><span class="fa fa-plus"></span> Nuevo Tipo</a>
 <form class="form-inline">
-	<span class="label label-default">Filtros</span> 
-    <label class="control-label">Referencia</label>
-	<?php genSelect('typ_cod',$RSlt,$rTyp,' form-control input-sm', NULL, NULL, 'Todos'); ?>
+	<span class="label label-default"><?php echo $cfg[t][filters] ?></span> 
+    <label class="control-label"><?php echo $cfg[t][reference] ?></label>
+	<?php genSelect('typ_cod', detRowGSel('tbl_types','typ_ref','DISTINCT (typ_ref)','1','1'), $rTyp, 'form-control', 'required', NULL, 'Seleccione', TRUE,NULL,'Todos')?>
 </form>
 </div>
-<? if($trRSt>0){
-$pages = new Paginator;
-$pages->items_total = $trRSt;
-$pages->mid_range = 8;
-$pages->paginate();
-$query_RSlist = 'SELECT * FROM db_types ORDER BY typ_cod DESC '.$pages->limit;
-$RSlist = mysql_query($qry) or die(mysql_error());
-$row_RSlist = mysql_fetch_assoc($RSlist);
-$totalRows_RSlist = mysql_num_rows($RSlist);
-
-?>
+<? if($tRSl>0){?>
 <div>
+<?php sLOG('g'); ?>
 
-<?php sLOG('g');
-?>
-<div class="well well-sm">
-
-<div class="row">
-		<div class="col-sm-8"><ul class="pagination cero"><?php echo $pages->display_pages() ?></ul></div>
-		<div class="col-sm-4"><?php echo $pages->display_items_per_page() ?></div>
-	</div>
-
-</div>
 <div class="table-responsive">   
 <table class="table table-hover table-condensed table-bordered" id="itm_table">
 <thead><tr>
 	<th>ID</th>
     <th></th>
     <th>Módulo</th>
-    <th>Ref</th>
     <th>Nombre</th>
+    <th>Ref</th>
     <th>Valor</th>
+    <th>Aux</th>
     <th></th>
 </tr></thead>
 <tbody>
-	<?php do {
-	$row_cod=$row_RSlist['typ_cod'];
-	$row_mref=$row_RSlist['mod_ref'];
-	$row_ref=$row_RSlist['typ_ref'];
-	$row_nom=$row_RSlist['typ_nom'];
-	$row_val=$row_RSlist['typ_val'];
-	$row_stat=$row_RSlist['typ_stat'];
-	//$status=fnc_status($row_cod,$row_stat,'fncts.php','STAT');
+	<?php do { ?>
+	<?php 
+		$id=$dRSl['typ_cod'];
+		$ids=md5($id);
+		$btnStat=fncStat('_fnc.php',array("ids"=>$ids, "val"=>$dRSl['typ_stat'],"acc"=>md5('STt'),'ref'=>$rTyp,"url"=>$urlc));
 	?>
-	  <tr>
-        <td><?php echo $row_cod ?></td>
-		<td><?php echo $status ?></td>
-        <td><?php echo $row_mref ?></td>
-        <td><?php echo $row_ref ?></td>        
-        <td><?php echo $row_nom ?></td>
-        <td><?php echo $row_val ?></td>
-        <td><div class="btn-group">
-          <a href="form.php?id=<?php echo $row_cod ?>" class="btn btn-info btn-xs">
-            <span class="icon-edit"></span> Edit</a>
-          <a href="fncts.php?id=<?php echo $row_cod ?>&acc=DEL&url=<?php echo $urlc.$uTyp ?>" class="btn btn-danger btn-xs">
-            <span class="icon-trash"></span> Del</a></div>
-        </td>
+		<tr>
+			<td><a href="form.php?ids=<?php echo $ids ?>" class="btn btn-link btn-xs fancybox.iframe fancyreload"><?php echo $id ?></a></td>
+			<td><?php echo $btnStat ?></td>
+			<td><?php echo $dRSl['mod_ref'] ?></td>
+			<td><?php echo $dRSl['typ_nom'] ?></td>
+			<td><?php echo $dRSl['typ_ref'] ?></td>
+			<td><?php echo $dRSl['typ_val'] ?></td>
+			<td><?php echo $dRSl['typ_aux'] ?></td>
+			<td><div class="btn-group">
+			  <a href="form.php?ids=<?php echo $ids ?>" class="btn btn-info btn-xs fancybox.iframe fancyreload"><?php echo $cfg[i][edit].$cfg[b][edit] ?></a>
+			  <a href="_fnc.php?ids=<?php echo $ids ?>&acc=<?php echo md5('DELt') ?>&url=<?php echo $urlc.$uTyp ?>" class="btn btn-danger btn-xs vAccL">
+				<?php echo $cfg[i][del].$cfg[b][del] ?></a></div>
+			</td>
 	    </tr>
-	  <?php } while ($row_RSlist = mysql_fetch_assoc($RSlist)); ?>
+	  <?php } while ($dRSl = mysqli_fetch_assoc($RSl)); ?>
 </tbody>
 </table>
 </div>
+	<?php include(RAIZf.'paginator.php') ?>
 <?php }else{ echo '<div class="alert alert-warning"><h4>Not Found Items !</h4></div>'; } ?>
 </div>
 <script type="text/javascript">

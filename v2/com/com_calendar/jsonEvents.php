@@ -1,6 +1,6 @@
 <?php include('../../init.php');
 $qryJson=sprintf("SELECT * FROM db_fullcalendar 
-LEFT JOIN db_clientes ON db_fullcalendar.pac_cod=db_clientes.pac_cod 
+LEFT JOIN db_clientes ON db_fullcalendar.cli_id=db_clientes.cli_id 
 LEFT JOIN db_types ON db_fullcalendar.typ_cod=db_types.typ_cod 
 WHERE fechai>=%s AND fechaf<=%s AND est<>0",
 SSQL($_GET['start'],'date'),
@@ -12,8 +12,8 @@ while($row = mysql_fetch_array($RSjson)){
 	$fend=NULL;
 	$color=NULL;
 
-	if($row['pac_cod']){
-		$det_tit.=$row['pac_nom'].' '.$row['pac_ape'];
+	if($row['cli_id']){
+		$det_tit.=$row['cli_nom'].' '.$row['cli_ape'];
 	}else{
 		$det_tit=$row['obs'];
 	}
@@ -41,7 +41,7 @@ while($row = mysql_fetch_array($RSjson)){
 		if($row['est']==2){//Atendido
 			$color='#009900';
 		}else if($row['est']==1){//Pendiente
-			if($row['pac_cod']){
+			if($row['cli_id']){
 				$color='#084c8d';
 			}else{
 				$color='#5174b3';
@@ -50,7 +50,7 @@ while($row = mysql_fetch_array($RSjson)){
 	}
 
 /*
-	if($row['pac_cod']){
+	if($row['cli_id']){
 		$color='#2e4174';
 	}else{
 		$color='#73b9e6';

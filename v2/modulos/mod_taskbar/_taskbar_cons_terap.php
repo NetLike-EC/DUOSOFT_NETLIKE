@@ -24,14 +24,14 @@
                     <input type="submit" name="btn_nueva_ter" value="Ver Terapia" />
                     <input name="id_ter" type="hidden" id="id_ter" value="<?php echo $row_RS_ter_cons['ter_num']; ?>" />
                     <input name="idc" type="hidden" id="idc" value="<?php echo $row_RS_ter_cons['con_num']; ?>" />
-              <input name="idp"  type="hidden" id="idp" value="<?php echo $row_RS_ter_cons['pac_cod']; ?>" />
+              <input name="idp"  type="hidden" id="idp" value="<?php echo $row_RS_ter_cons['cli_id']; ?>" />
                     <input name="action_form" type="hidden" id="action_form" value="Actualizar" />
                 </form>
                 <form action="../../com/com_terapias/terapias_form.php" method="post">
                   <?php }else{ ?>
                     <input type="submit" name="btn_nueva_ter" value="Crear Terapia" />
                     <input -name="idc" type="hidden" id="idc" value="<?php echo $row_RS_cons_detail['con_num']; ?>" />
-                    <input name="idp"  type="hidden" id="idp" value="<?php echo $row_RS_cons_detail['pac_cod']; ?>" />
+                    <input name="idp"  type="hidden" id="idp" value="<?php echo $row_RS_cons_detail['cli_id']; ?>" />
                   <input name="action_form"  type="hidden" id="action2" value="Grabar Nuevo" />
                   <?php } ?>
                 </form>

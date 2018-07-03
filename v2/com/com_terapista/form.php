@@ -3,7 +3,7 @@ $idt=vParam('idt',$_GET['idt'],$_POST['idt']);
 $idp=vParam('idp',$_GET['idp'],$_POST['idp']);
 $acc='UPD';
 $btnAcc='<button class="btn btn-success navbar-btn">ACTUALIZAR SESIÓN</button>';
-$detP=detRow('db_clientes','pac_cod',$idp);
+$detP=detRow('db_clientes','cli_id',$idp);
 $qryConLst=sprintf('SELECT * FROM clinic_freimo.db_fullcalendar_sesiones
 where id_ter=%s',
 SSQL($idt,'int'));
@@ -41,7 +41,7 @@ include(RAIZf.'head.php'); ?>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Paciente</a></li>
-        <li><a href="#"><?php echo $detP['pac_nom'].' '.$detP['pac_ape'] ?></a></li>        
+        <li><a href="#"><?php echo $detP['cli_nom'].' '.$detP['cli_ape'] ?></a></li>        
       </ul>
 
       <div class="navbar-right">

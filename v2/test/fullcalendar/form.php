@@ -29,7 +29,7 @@ if($detRes){
 		}
 	}
 }
-$qryLP=sprintf('SELECT pac_cod as sID, CONCAT(pac_nom," ",pac_ape) as sVAL FROM db_clientes');
+$qryLP=sprintf('SELECT cli_id as sID, CONCAT(cli_nom," ",cli_ape) as sVAL FROM db_clientes');
 $RSLP=mysql_query($qryLP);
 ?>
 <body class="cero">
@@ -107,7 +107,7 @@ $RSLP=mysql_query($qryLP);
             	<div class="form-group">
                 <label for="horaf" class="col-sm-3 control-label">Paciente</label>
                 <div class="col-sm-9">
-                <?php genSelect('pac_cod',$RSLP,$detRes['pac_cod'],' form-control '); ?>
+                <?php genSelect('cli_id',$RSLP,$detRes['cli_id'],' form-control '); ?>
                 </div>
                 </div>
                 <div class="form-group">
@@ -130,7 +130,7 @@ $RSLP=mysql_query($qryLP);
 </form>
 <script type="text/javascript">
 $(document).ready(function(){
-	$('#pac_cod').chosen();
+	$('#cli_id').chosen();
 });	
 
 </script>

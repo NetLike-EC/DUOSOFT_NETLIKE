@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="chapter_demo_1.txt" server="//servidor/clinic/" local="129419559560000000" remote="129419559560000000" Dst="0" />
-<file name="chapter_demo_2.txt" server="//servidor/clinic/" local="129419559560000000" remote="129419559560000000" Dst="0" />
-<file name="table_data_demo.txt" server="//servidor/clinic/" local="129419559560000000" remote="129419559560000000" Dst="0" />
-<file name="utf8test.txt" server="//servidor/clinic/" local="130068023589176956" remote="130068023580000000" Dst="0" />
+<file name="chapter_demo_1.txt" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686080776353" remote="131632131000000000" Dst="0" />
+<file name="chapter_demo_2.txt" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686079623217" remote="131632131000000000" Dst="0" />
+<file name="table_data_demo.txt" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686076400087" remote="131632131000000000" Dst="0" />
+<file name="utf8test.txt" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686075373648" remote="131632131000000000" Dst="0" />
+<file name="chapter_demo_1.txt" server="ftp.ecuahomes.net//public_html/admin/" local="131631686080776353" remote="131670823800000000" Dst="0" />
+<file name="chapter_demo_2.txt" server="ftp.ecuahomes.net//public_html/admin/" local="131631686079623217" remote="131670823800000000" Dst="0" />
+<file name="table_data_demo.txt" server="ftp.ecuahomes.net//public_html/admin/" local="131631686076400087" remote="131670823800000000" Dst="0" />
+<file name="utf8test.txt" server="ftp.ecuahomes.net//public_html/admin/" local="131631686075373648" remote="131670823800000000" Dst="0" />
+<file name="chapter_demo_1.txt" server="//Server01/duosoft_netlike/v2/" local="131631686080776353" remote="131631686080000000" Dst="0" />
+<file name="chapter_demo_2.txt" server="//Server01/duosoft_netlike/v2/" local="131631686079623217" remote="131631686070000000" Dst="0" />
+<file name="table_data_demo.txt" server="//Server01/duosoft_netlike/v2/" local="131631686076400087" remote="131631686070000000" Dst="0" />
+<file name="utf8test.txt" server="//Server01/duosoft_netlike/v2/" local="131631686075373648" remote="131631686070000000" Dst="0" />
 </dwsync>

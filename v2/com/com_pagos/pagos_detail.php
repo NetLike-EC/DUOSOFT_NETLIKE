@@ -6,8 +6,8 @@ $query_RS_det_pag = sprintf("SELECT * FROM tbl_pagopac_cab INNER JOIN tbl_pagopa
 $RS_det_pag = mysql_query($query_RS_det_pag) or die(mysql_error());
 $row_RS_det_pag = mysql_fetch_assoc($RS_det_pag);
 $totalRows_RS_det_pag = mysql_num_rows($RS_det_pag);
-$detpac=dPac($row_RS_det_pag['pac_cod']);
-$detpac_nom=$detpac['pac_nom'].' '.$detpac['pac_ape'];
+$detpac=dPac($row_RS_det_pag['cli_id']);
+$detcli_nom=$detpac['cli_nom'].' '.$detpac['cli_ape'];
 $detemp=dataEmp($row_RS_det_pag['emp_cod']);
 $detemp_nom=$detemp['emp_nom'].' '.$detemp['emp_ape'];
 include(RAIZf."head.php");
@@ -18,7 +18,7 @@ include(RAIZf."head.php");
 </div>
 <div class="row-fluid">
 	<table class="table table-condensed">
-		<tr><td><strong>Paciente</strong></td><td><?php echo $detpac_nom; ?></td></tr>
+		<tr><td><strong>Paciente</strong></td><td><?php echo $detcli_nom; ?></td></tr>
         <tr><td><strong>Fecha Pago</strong></td><td><?php echo $row_RS_det_pag['pag_fech']; ?></td></tr>
         <tr><td><strong>Valor</strong></td><td>$ <?php echo $row_RS_det_pag['pag_val']; ?></td></tr>
         <tr><td><strong>Responsable</strong></td><td><?php echo $detemp_nom; ?></td></tr>

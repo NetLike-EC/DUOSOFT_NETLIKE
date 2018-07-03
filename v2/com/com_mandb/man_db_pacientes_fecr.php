@@ -21,15 +21,15 @@ if($tr_RSlp>0){
 	<td>Resultado</td></tr>';
 	do{
 		
-		$detCon=detRow('db_consultas','pac_cod',$row_RSlp['pac_cod']);
+		$detCon=detRow('db_consultas','cli_id',$row_RSlp['cli_id']);
 		$detCon_num=$detCon['con_num'];
 		$detCon_fec=$detCon['con_fec'];
 		
-		if($row_RSlp['pac_fecr']==NULL){
+		if($row_RSlp['cli_fecr']==NULL){
 		
-			$qryUPD=sprintf('UPDATE db_clientes SET pac_fecr=%s WHERE pac_cod=%s', 
+			$qryUPD=sprintf('UPDATE db_clientes SET cli_fecr=%s WHERE cli_id=%s', 
 			SSQL($detCon_fec,'date'),
-			SSQL($row_RSlp['pac_cod'],'int'));
+			SSQL($row_RSlp['cli_id'],'int'));
 			if(mysql_query($qryUPD)){
 				$LOG='<span class="label label-primary">SUCCESS UPDATE</span>';
 			}else{
@@ -40,9 +40,9 @@ if($tr_RSlp>0){
 		}
 
 		echo '<tr>';
-		echo '<td>'.$row_RSlp['pac_cod'].'</td>';
-		echo '<td>'.$row_RSlp['pac_nom'].' '.$row_RSlp['pac_ape'].'</td>';
-		echo '<td>'.$row_RSlp['pac_fecr'].'</td>';
+		echo '<td>'.$row_RSlp['cli_id'].'</td>';
+		echo '<td>'.$row_RSlp['cli_nom'].' '.$row_RSlp['cli_ape'].'</td>';
+		echo '<td>'.$row_RSlp['cli_fecr'].'</td>';
 		echo '<td>'.$detCon_fec.'</td>';
 		echo '<td>'.$LOG.'</td>';
 		echo '</tr>';

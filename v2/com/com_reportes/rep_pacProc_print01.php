@@ -5,21 +5,22 @@ include_once(RAIZf.'headPrint.php') ?>
     <?php
 $dFI=vParam('FI', $_GET['FI'], $_POST['FI'],FALSE);
 $dFF=vParam('FF', $_GET['FF'], $_POST['FF'],FALSE);
-$qryPR=sprintf('SELECT * FROM db_clientes WHERE pac_fecr>=%s AND pac_fecr<=%s',
-SSQL($dFI,'date'),
-SSQL($dFF,'date'));
+$qryPR=sprintf('SELECT * FROM tbl_contact_data WHERE date>=%s AND date<=%s',
+GetSQLValueString($dFI,'date'),
+GetSQLValueString($dFF,'date'));
 
 $RSpr = mysql_query($qryPR) or die(mysql_error());
 $row_RSpr = mysql_fetch_assoc($RSpr);
 $tr_RSpr = mysql_num_rows($RSpr);
 
-$qryPRs=sprintf('SELECT db_types.typ_cod,db_types.typ_val,db_types.typ_icon,COUNT(db_clientes.pac_cod) AS cant FROM db_clientes
-INNER JOIN db_types
-ON db_clientes.publi=db_types.typ_cod
-WHERE db_clientes.pac_fecr>=%s AND db_clientes.pac_fecr<=%s
-GROUP BY typ_val',
-SSQL($dFI,'date'),
-SSQL($dFF,'date'));
+$qryPRs=sprintf('SELECT tbl_types.typ_cod,tbl_types.typ_nom,tbl_types.typ_val,tbl_types.typ_icon,COUNT(tbl_contact_data.ContactKnow) AS cant 
+FROM tbl_contact_data
+LEFT JOIN tbl_types
+ON tbl_contact_data.ContactKnow=tbl_types.typ_cod
+WHERE tbl_contact_data.date>=%s AND tbl_contact_data.date<=%s
+GROUP BY ContactKnow',
+GetSQLValueString($dFI,'date'),
+GetSQLValueString($dFF,'date'));
 
 $RSprs = mysql_query($qryPRs) or die(mysql_error());
 $row_RSprs = mysql_fetch_assoc($RSprs);
@@ -45,23 +46,23 @@ if(!$dFI||!$dFF){
 
 if($banSR==TRUE){
 	$GraphGen_name='graph-'.date('Ymd-His').'.jpg';
-	$setTitle="REPORTE PROCEDENCIA PACIENTES";
+	$setTitle="REPORT - Source new contacts";
 	include_once(RAIZf.'fra_print_header_gen.php')
 ?>
 
 <div style="margin-top:10px;">
     
     <div class="panel panel-default">
-    	<div class="panel-heading" style="text-align:center">Del <?php echo $dFI.' al '.$dFF ?></div>        
+    	<div class="panel-heading" style="text-align:center">From <strong><?php echo $dFI ?></strong> to <strong><?php echo $dFF ?></strong></div>        
     </div>
     
     <div class="panel panel-info">
-    	<div class="panel-heading">Resumen Procedencias</div>
+    	<div class="panel-heading">DATA</div>
         <div class="panel-body">
         <table style="width:100%;" border="1" bordercolor="#ccc" cellspacing="0" cellpadding="4">
 	<tr>
-        <th style="width:75%; background:#666; color:#fff; padding-left:10px;">Origen</th>
-        <th style="width:25%; background:#666; color:#fff; text-align:center;">Cantidad</th>
+        <th style="width:75%; background:#666; color:#fff; padding-left:10px;">Source</th>
+        <th style="width:25%; background:#666; color:#fff; text-align:center;">Quantity</th>
 	</tr>
 	<?php
     	$dataG;
@@ -87,42 +88,38 @@ if($banSR==TRUE){
     </tr>
     <?php } while ($row_RSprs = mysql_fetch_assoc($RSprs)); ?>
     <tr>
-        <td style="padding-left:20px; color:#999; background:#ddd;">No Determinado</td>
+        <td style="padding-left:20px; color:#999; background:#ddd;">No Defined</td>
         <td style="text-align:center; color:#999; background:#ddd;"><?php echo $tr_RSpr-$sumVals ?></td>
     </tr>
     <tr>
-        <th style="width:75%; background:#999; color:#eee; padding-left:10px;">TOTAL Pacientes</th>
-        <th style="width:25%; background:#999; color:#eee; text-align:center;"><?php echo $tr_RSpr ?></th>
-	</tr>
-    <tr>
-        <th style="width:75%; background:#666; color:#fff; padding-left:10px;">TOTAL Pacientes Nuevos</th>
-        <th style="width:25%; background:#666; color:#fff; text-align:center;"><?php echo $sumVals ?></th>
+        <th style="width:75%; background:#666; color:#fff; padding-left:10px;">TOTAL NEW Contacts</th>
+        <th style="width:25%; background:#666; color:#fff; text-align:center;"><?php echo $tr_RSpr ?></th>
 	</tr>
 </table>
         </div>
     </div>
 
 	<div class="panel panel-info">
-    	<div class="panel-heading">GRAFICO ESTADISTICO</div>
+    	<div class="panel-heading">GRAPHIC</div>
         <div class="panel-body">
         <?php include('rep_pacProc_graph.php'); ?>
 	<div style="text-align:center; padding:10px;">
-        <img src="<?php echo $graph_SetOutputFile ?>">
+        <img style="width:94%" src="res/<?php echo $graph_SetOutputFile ?>">
     </div>
         </div>
     </div>
     
     <div class="panel panel-default">
-    	<div class="panel-heading">Comentarios</div>
+    	<div class="panel-heading">Comments</div>
         <div class="panel-body" style="padding:15px;">
         	<table style="width:100%">
             	<tr>
-                <th style="width:50%">Fecha Generación</th>
+                <th style="width:50%">Generated</th>
                 <td><?php echo $sdatet ?></td>
                 </tr>
                 <tr>
-                <th style="width:50%">Responsable</th>
-                <td><?php echo $detEmp_fullname//DetEMP movido del mod_navbar al INIT ?></td>
+                <th style="width:50%">By</th>
+                <td><?php echo $_SESSION['MM_Username'] ?></td>
                 </tr>
             </table>
         </div>

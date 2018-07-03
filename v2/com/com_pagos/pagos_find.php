@@ -13,7 +13,7 @@
             <div class="span2"><label>
                         <input type="submit" name="btn_cobrar" id="btn_cobrar" value="Cobrar" class="btn" />
                           <input name="deuda" type="hidden" id="deuda" value="<?php echo $row_RS_cta_deuda['Deuda'] ?>" />
-                          <input name="pac_sel_pag" type="hidden" id="pac_sel_pag" value="<?php echo $detpac['pac_cod']; ?>" />
+                          <input name="pac_sel_pag" type="hidden" id="pac_sel_pag" value="<?php echo $detpac['cli_id']; ?>" />
                       </label></div>
             
         </div>

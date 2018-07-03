@@ -9,7 +9,7 @@ $resFin=$resFec.' '.$resHor; //Hora y Fecha de Reserva
 if($acc=='INS'){
 	$id_aud=AUD();
 	// GUARDA LA RESERVA
-	$qryInsRes=sprintf("INSERT INTO db_consultas_reserva (pac_cod, fecha, id_aud, estado) 
+	$qryInsRes=sprintf("INSERT INTO db_consultas_reserva (cli_id, fecha, id_aud, estado) 
 	VALUES (%s,%s,%s,%s)",
 	SSQL($idPac,'int'),
 	SSQL($resFin,'text'),

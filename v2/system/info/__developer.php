@@ -1,39 +1,32 @@
-<?php require('../../init.php');
-include(RAIZf.'head.php'); ?>
+<?php include('../../init.php');
+include(RAIZf.'_head.php'); ?>
+<title>DUOTICS developer CMS. Mercoframes</title>
 <body>
 <div class="container">
-	<div class="well well-sm">
-	  <table class="table table-bordered">
+<h1><img src="http://duotics.com/source/images/duotics/Logo-duotics(100x70).png"/> DUOTICS. soluciones Informáticas</h1>
+<table class="table">
 <tr>
-	<td colspan="2" class="label label-info"><h1>DUOTICS <small>Soluciones Informáticas</small></h1></td>
-</tr>
-
-<tr>
-	<td>Software</td>
-    <td>CLINIC</td>
+	<td>Software Name:</td>
+    <td><span class="txt_detaill">CMS Mercoframes</span> Optical Corp.</td>
 </tr>
 <tr>
-	<td>Desarrolladores</td>
-    <td><ul class="nav nav-stacked">
-    <li>Daniel Banegas</li>
-    <li>Andrés Pacheco</li>
-    </ul></td>
+	<td>Developer</td>
+    <td>Daniel A. Banegas León</td>
 </tr>
 <tr>
-	<td>Contacto</td>
+	<td>Contact</td>
     <td><ul>
-    <li>desarrollo@duotics.com</li>
-	<li>0984231177</li>
-    <li>www.duotics.com</li>
+      <li>info@duotics.com</li>
+      <li>dbanegasl@gmail.com</li>
+      <li>www.duotics.com</li>
+      <li>+593 984231177</li>
     </ul></td>
 </tr>
 <tr>
-	<td>Año Creación</td>
-    <td>2009</td>
+	<td>Creation</td>
+    <td>2011</td>
 </tr>
-
 </table>
-	</div>
 </div>
 </body>
 </html>

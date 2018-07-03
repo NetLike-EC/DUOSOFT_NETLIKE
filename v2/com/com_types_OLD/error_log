@@ -1,0 +1,12 @@
+[24-Feb-2015 05:55:01 America/Chicago] PHP Fatal error:  Call to undefined function loginN() in /home/alemerco/public_html/admin/componentes/com_types/index.php on line 2
+[24-Feb-2015 05:55:23 America/Chicago] PHP Warning:  include(_c-index.php): failed to open stream: No such file or directory in /home/alemerco/public_html/admin/componentes/com_types/index.php on line 10
+[24-Feb-2015 05:55:23 America/Chicago] PHP Warning:  include(_c-index.php): failed to open stream: No such file or directory in /home/alemerco/public_html/admin/componentes/com_types/index.php on line 10
+[24-Feb-2015 05:55:23 America/Chicago] PHP Warning:  include(): Failed opening '_c-index.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/alemerco/public_html/admin/componentes/com_types/index.php on line 10
+[24-Feb-2015 05:55:41 America/Chicago] PHP Fatal error:  Call to undefined function fnc_TotAtrib() in /home/alemerco/public_html/admin/componentes/com_types/_c-index.php on line 27
+[24-Feb-2015 05:56:51 America/Chicago] PHP Fatal error:  Call to undefined function loginN() in /home/alemerco/public_html/admin/componentes/com_types/form.php on line 2
+[24-Feb-2015 05:57:20 America/Chicago] PHP Fatal error:  Call to undefined function loginN() in /home/alemerco/public_html/admin/componentes/com_types/form.php on line 2
+[24-Feb-2015 05:57:39 America/Chicago] PHP Fatal error:  Call to undefined function vParam() in /home/alemerco/public_html/admin/componentes/com_types/form.php on line 5
+[24-Feb-2015 06:11:02 America/Chicago] PHP Warning:  sprintf(): Too few arguments in /home/alemerco/public_html/admin/componentes/com_types/fncts.php on line 22
+[24-Feb-2015 06:11:02 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_types/fncts.php:22) in /home/alemerco/public_html/admin/componentes/com_types/fncts.php on line 45
+[24-Feb-2015 06:11:27 America/Chicago] PHP Warning:  sprintf(): Too few arguments in /home/alemerco/public_html/admin/componentes/com_types/fncts.php on line 22
+[24-Feb-2015 06:11:27 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_types/fncts.php:22) in /home/alemerco/public_html/admin/componentes/com_types/fncts.php on line 45

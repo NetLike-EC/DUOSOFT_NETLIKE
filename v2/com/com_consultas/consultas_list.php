@@ -36,7 +36,7 @@ include(RAIZm.'mod_menu/menuMain.php'); ?>
 <tbody>
 	<?php
 	do {
-	$detpac=dPac($row_RScl['pac_cod']);
+	$detpac=dPac($row_RScl['cli_id']);
 	$diagd=detRow('db_diagnosticos','id_diag',$row_RScl['con_diagd']);
 	$stat=estCon($row_RScl['con_stat']);
 	?>
@@ -45,8 +45,8 @@ include(RAIZm.'mod_menu/menuMain.php'); ?>
         <i class="fa fa-eye fa-lg"></i> Ver</a>
         </td>
 	    <td align="center"><?php echo $row_RScl['con_num']; ?></td>
-        <td align="center"><?php echo $row_RScl['pac_cod']; ?></td>
-	    <td><small><?php echo $detpac['pac_nom'].' '.$detpac['pac_ape']; ?></small></td>
+        <td align="center"><?php echo $row_RScl['cli_id']; ?></td>
+	    <td><small><?php echo $detpac['cli_nom'].' '.$detpac['cli_ape']; ?></small></td>
         <td><?php echo $diagd['nombre'] ?></td>
 	    <td><?php echo $row_RScl['con_fec']; ?></td>
 	    <td><?php echo $stat['txt'] ?></td>

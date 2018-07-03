@@ -48,7 +48,7 @@ function verifyREShis($idp){
 	//$qry=sprintf('SELECT * FROM ');
 	//$detRes=detRow('db_fullcalendar','id',$id);
 	//if($detRes){
-		$qryUpd=sprintf('UPDATE db_fullcalendar SET est=%s WHERE pac_cod=%s AND fechai=%s AND est=1 LIMIT 1',
+		$qryUpd=sprintf('UPDATE db_fullcalendar SET est=%s WHERE cli_id=%s AND fechai=%s AND est=1 LIMIT 1',
 		SSQL('2', "text"),
 		SSQL($idp, "int"),
 		SSQL($GLOBALS['sdate'], "date"));
@@ -67,7 +67,7 @@ function verifyREShis($idp){
 
 //Verifico la Reserva para Eliminarla
 function verifyRES($idp){
-	$detRes=detRow2P('db_fullcalendar','pac_cod',$idp,'est','1',' AND ');
+	$detRes=detRow2P('db_fullcalendar','cli_id',$idp,'est','1',' AND ');
 	if($detRes){
 		$qryUpd=sprintf('UPDATE db_fullcalendar SET est=%s WHERE id=%s LIMIT 1',
 		SSQL('2', "text"),
@@ -82,7 +82,7 @@ function verifyRES($idp){
 
 //Verifico La Existencia de GINECOLOGIA
 function verifyGIN($idp,$data){
-	$detGIN=detRow('db_ginecologia','pac_cod',$idp);
+	$detGIN=detRow('db_ginecologia','cli_id',$idp);
 	if($detGIN){
 		$qryUpd=sprintf('UPDATE db_ginecologia SET 
 		gin_men=%s, gin_fun=%s, gin_ges=%s, gin_pnor=%s, gin_pces=%s, gin_abo=%s, gin_hviv=%s, gin_hmue=%s, gin_mes=%s, gin_obs=%s 
@@ -105,7 +105,7 @@ function verifyGIN($idp,$data){
 		}
 	}else{
 		$qryIns=sprintf('INSERT INTO db_ginecologia 
-		(pac_cod, gin_men, gin_fun, gin_ges, gin_pnor, gin_pces, gin_abo, gin_hviv, gin_hmue, gin_mes, gin_obs) 
+		(cli_id, gin_men, gin_fun, gin_ges, gin_pnor, gin_pces, gin_abo, gin_hviv, gin_hmue, gin_mes, gin_obs) 
 		VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',
 		SSQL($idp, "int"),
 		SSQL($data['gin_men'], "text"),
@@ -130,7 +130,7 @@ function verifyGIN($idp,$data){
 
 //Verifico La Existencia de Historia Clinica
 function verifyHC($idp,$data){
-	$detHC=detRow('db_paciente_hc','pac_cod',$idp);
+	$detHC=detRow('db_paciente_hc','cli_id',$idp);
 	if($detHC){
 		$qryUpd=sprintf('UPDATE db_paciente_hc SET hc_cir_pre=%s, hc_antf=%s, hc_antf=%s, hc_antp=%s, hc_hab=%s, hc_ale=%s, hc_cau_inf=%s, hc_cic_ra=%s, hc_obs=%s WHERE hc_id=%s',
 		SSQL($data['hc_cir_pre'], "text"),
@@ -150,7 +150,7 @@ function verifyHC($idp,$data){
 			$LOG.= '<p>Error al Actualizar Historia Clinica</p>';
 		}
 	}else{
-		$qryIns=sprintf('INSERT INTO db_paciente_hc (pac_cod,hc_cir_pre,hc_antf,hc_antp,hc_hab,hc_ale,hc_cau_inf,hc_cic_ra,hc_obs) 
+		$qryIns=sprintf('INSERT INTO db_paciente_hc (cli_id,hc_cir_pre,hc_antf,hc_antp,hc_hab,hc_ale,hc_cau_inf,hc_cic_ra,hc_obs) 
 		VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)',
 		SSQL($idp, "int"),
 		SSQL($data['hc_cir_pre'], "text"),

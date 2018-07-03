@@ -6,7 +6,7 @@ $id=$_REQUEST['cod'];
 //PACIENTE
 if($tbl=='pac'){
 	$_SESSION['tab']['con']=NULL;
-	$qryUpd=sprintf('UPDATE db_clientes SET %s=%s WHERE pac_cod=%s',
+	$qryUpd=sprintf('UPDATE db_clientes SET %s=%s WHERE cli_id=%s',
 	SSQL($field,''),
 	SSQL($param,'text'),
 	SSQL($id,'int'));

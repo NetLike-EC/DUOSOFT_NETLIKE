@@ -42,10 +42,10 @@ $classtr;
 	</thead>
     <tbody>
 	<?php do{ ?>
-	<?php $detP=detRow('db_clientes','pac_cod',$dRS['pac_cod']); ?>
+	<?php $detP=detRow('db_clientes','cli_id',$dRS['cli_id']); ?>
 	<tr <?php echo $classtr?>>
         	<td><?php echo $dRS['id'] ?></td>
-            <td><?php echo $detP['pac_nom'].' '.$detP['pac_ape'] ?></td>
+            <td><?php echo $detP['cli_nom'].' '.$detP['cli_ape'] ?></td>
 			<td><?php echo $dRS['fechar'] ?></td>
             <td><?php echo $dRS['fechae'] ?></td>
 			<td><?php echo totRowsTab('db_rep_obs_detalle','id_rep',$dRS['id']) ?></td>

@@ -12,7 +12,7 @@ mysql_query("BEGIN;"); //Inicia la transaccion
 if ((isset($mod))&&($mod=='consForm')){
 	if ($_POST['acc']=="INS"){
 		$idAud=AUD(NULL,'Creación Consulta');
-		$qryins=sprintf('INSERT INTO db_consultas (pac_cod, con_fec, con_typ, con_diagd, con_val, tip_pag, dcon_mot, id_aud, con_stat) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)',
+		$qryins=sprintf('INSERT INTO db_consultas (cli_id, con_fec, con_typ, con_diagd, con_val, tip_pag, dcon_mot, id_aud, con_stat) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)',
 		SSQL($idp, "int"),
 		SSQL($sdate, "date"),
 		SSQL($con_typ, "int"),

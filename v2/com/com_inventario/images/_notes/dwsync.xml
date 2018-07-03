@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="11_128x128.png" server="//servidor/clinic/" local="129047645720000000" remote="129047645720000000" Dst="0" />
-<file name="12_128x128.png" server="//servidor/clinic/" local="129047645780000000" remote="129047645780000000" Dst="0" />
-<file name="23_24x24.png" server="//servidor/clinic/" local="129047646500000000" remote="129047646500000000" Dst="0" />
-<file name="25_24x24.png" server="//servidor/clinic/" local="128802359440000000" remote="128802359440000000" Dst="0" />
-<file name="31_128x128.png" server="//servidor/clinic/" local="129050367940000000" remote="129050367940000000" Dst="0" />
-<file name="loading.gif" server="//servidor/clinic/" local="129066857660000000" remote="129066857660000000" Dst="0" />
+<file name="12_128x128.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683923623807" remote="131632129200000000" Dst="0" />
+<file name="11_128x128.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683927392643" remote="131632129200000000" Dst="0" />
+<file name="23_24x24.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683922269953" remote="131632129200000000" Dst="0" />
+<file name="31_128x128.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683918112910" remote="131632129200000000" Dst="0" />
+<file name="add.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683913977782" remote="131632129200000000" Dst="0" />
+<file name="25_24x24.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683919468029" remote="131632129200000000" Dst="0" />
+<file name="Empty-Trash_16x16.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683915333055" remote="131632129200000000" Dst="0" />
+<file name="loading.gif" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683909843511" remote="131632129200000000" Dst="0" />
+<file name="edit-16.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683911228690" remote="131632129200000000" Dst="0" />
+<file name="tick.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683905704057" remote="131632129200000000" Dst="0" />
+<file name="publish_x.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683907108558" remote="131632129200000000" Dst="0" />
+<file name="11_128x128.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683927392643" remote="131670822000000000" Dst="0" />
+<file name="12_128x128.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683923623807" remote="131670822000000000" Dst="0" />
+<file name="23_24x24.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683922269953" remote="131670822000000000" Dst="0" />
+<file name="25_24x24.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683919468029" remote="131670822000000000" Dst="0" />
+<file name="31_128x128.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683918112910" remote="131670822000000000" Dst="0" />
+<file name="add.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683913977782" remote="131670822000000000" Dst="0" />
+<file name="edit-16.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683911228690" remote="131670822000000000" Dst="0" />
+<file name="Empty-Trash_16x16.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683915333055" remote="131670822000000000" Dst="0" />
+<file name="loading.gif" server="ftp.ecuahomes.net//public_html/admin/" local="131631683909843511" remote="131670822000000000" Dst="0" />
+<file name="publish_x.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683907108558" remote="131670822000000000" Dst="0" />
+<file name="tick.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683905704057" remote="131670822000000000" Dst="0" />
+<file name="11_128x128.png" server="//Server01/duosoft_netlike/v2/" local="131631683927392643" remote="131631683920000000" Dst="0" />
+<file name="12_128x128.png" server="//Server01/duosoft_netlike/v2/" local="131631683923623807" remote="131631683920000000" Dst="0" />
+<file name="23_24x24.png" server="//Server01/duosoft_netlike/v2/" local="131631683922269953" remote="131631683920000000" Dst="0" />
+<file name="25_24x24.png" server="//Server01/duosoft_netlike/v2/" local="131631683919468029" remote="131631683910000000" Dst="0" />
+<file name="31_128x128.png" server="//Server01/duosoft_netlike/v2/" local="131631683918112910" remote="131631683910000000" Dst="0" />
+<file name="add.png" server="//Server01/duosoft_netlike/v2/" local="131631683913977782" remote="131631683910000000" Dst="0" />
+<file name="edit-16.png" server="//Server01/duosoft_netlike/v2/" local="131631683911228690" remote="131631683910000000" Dst="0" />
+<file name="Empty-Trash_16x16.png" server="//Server01/duosoft_netlike/v2/" local="131631683915333055" remote="131631683910000000" Dst="0" />
+<file name="loading.gif" server="//Server01/duosoft_netlike/v2/" local="131631683909843511" remote="131631683900000000" Dst="0" />
+<file name="publish_x.png" server="//Server01/duosoft_netlike/v2/" local="131631683907108558" remote="131631683900000000" Dst="0" />
+<file name="tick.png" server="//Server01/duosoft_netlike/v2/" local="131631683905704057" remote="131631683900000000" Dst="0" />
+<file name="Thumbs.db" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
 </dwsync>

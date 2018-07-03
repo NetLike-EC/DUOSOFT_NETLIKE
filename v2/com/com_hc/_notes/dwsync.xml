@@ -1,40 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="_fncts.php" server="C:/AppServ/www/CLINIC_BIOGEPA/" local="130480592922397012" remote="130480592920000000" Dst="0" />
-<file name="consulta_ant.php" server="//servidor/clinic/" local="130487090324442148" remote="130487090320000000" Dst="0" />
-<file name="consulta_det.php" server="//servidor/clinic/" local="130489260347358383" remote="130489260340000000" Dst="0" />
-<file name="tratamiento_form.php" server="//servidor/clinic/" local="130501087125870747" remote="130501087120000000" Dst="0" />
-<file name="_fncts.php" server="//servidor/clinic/" local="130501044727179273" remote="130501044720000000" Dst="0" />
-<file name="receta.php" server="//servidor/clinic/" local="130511472920400952" remote="130511472920000000" Dst="0" />
-<file name="error_log" server="//servidor/clinic/" local="130408924357140762" remote="130408924350000000" Dst="0" />
-<file name="examenes_con_list.php" server="//servidor/clinic/" local="130517490243069636" remote="130517490240000000" Dst="0" />
-<file name="examen_form.php" server="//servidor/clinic/" local="130500059705649732" remote="130500059700000000" Dst="0" />
-<file name="historia_det.php" server="//servidor/clinic/" local="130500721199729508" remote="130500721190000000" Dst="0" />
-<file name="medicamento.php" server="//servidor/clinic/" local="130482485260612921" remote="130482485260000000" Dst="0" />
-<file name="obstetrico_con_list.php" server="//servidor/clinic/" local="130492292041681987" remote="130492292040000000" Dst="0" />
-<file name="obstetrico_form.php" server="//servidor/clinic/" local="130482547900592634" remote="130482547900000000" Dst="0" />
-<file name="receta_print.php" server="//servidor/clinic/" local="130303793323258181" remote="130303793320000000" Dst="0" />
-<file name="test.php" server="//servidor/clinic/" local="130233884844040246" remote="130233884840000000" Dst="0" />
-<file name="tratamiento_con_list.php" server="//servidor/clinic/" local="130501096224054377" remote="130501096220000000" Dst="0" />
-<file name="ginecologia_con_list - Copia.php" server="//servidor/clinic/" local="130496536171213335" remote="130496536170000000" Dst="0" />
-<file name="ginecologia_det.php" server="//servidor/clinic/" local="130505381792629446" remote="130505381790000000" Dst="0" />
-<file name="examen_form.php" server="//192.168.0.2/clinic/" local="130771491636305938" remote="130771491630000000" Dst="0" />
-<file name="cirugias_con_list.php" server="//192.168.0.2/clinic/" local="130483441640000000" remote="130483441640000000" Dst="0" />
-<file name="cirugia_form.php" server="//192.168.0.2/clinic/" local="130483096430000000" remote="130483096430000000" Dst="0" />
-<file name="consulta_ant.php" server="//192.168.0.2/clinic/" local="130487090324442148" remote="130487090320000000" Dst="0" />
-<file name="consulta_det.php" server="//192.168.0.2/clinic/" local="130489260347358383" remote="130489260340000000" Dst="0" />
-<file name="error_log" server="//192.168.0.2/clinic/" local="130408924357140762" remote="130408924350000000" Dst="0" />
-<file name="examenes_con_list.php" server="//192.168.0.2/clinic/" local="130517490243069636" remote="130517490240000000" Dst="0" />
-<file name="ginecologia_con_list - Copia.php" server="//192.168.0.2/clinic/" local="130496536171213335" remote="130496536170000000" Dst="0" />
-<file name="ginecologia_det.php" server="//192.168.0.2/clinic/" local="130505381792629446" remote="130505381790000000" Dst="0" />
-<file name="historia_det.php" server="//192.168.0.2/clinic/" local="130500721199729508" remote="130500721190000000" Dst="0" />
-<file name="medicamento.php" server="//192.168.0.2/clinic/" local="130482485260612921" remote="130482485260000000" Dst="0" />
-<file name="obstetrico_con_list.php" server="//192.168.0.2/clinic/" local="130492292041681987" remote="130492292040000000" Dst="0" />
-<file name="obstetrico_form.php" server="//192.168.0.2/clinic/" local="130482547900592634" remote="130482547900000000" Dst="0" />
-<file name="receta.php" server="//192.168.0.2/clinic/" local="130511472920400952" remote="130511472920000000" Dst="0" />
-<file name="receta_print.php" server="//192.168.0.2/clinic/" local="130303793323258181" remote="130303793320000000" Dst="0" />
-<file name="test.php" server="//192.168.0.2/clinic/" local="130233884844040246" remote="130233884840000000" Dst="0" />
-<file name="tratamiento_con_list.php" server="//192.168.0.2/clinic/" local="130501096224054377" remote="130501096220000000" Dst="0" />
-<file name="tratamiento_form.php" server="//192.168.0.2/clinic/" local="130501087125870747" remote="130501087120000000" Dst="0" />
-<file name="_fncts.php" server="//192.168.0.2/clinic/" local="130501044727179273" remote="130501044720000000" Dst="0" />
+<file name="cirugias_con_list.php" server="//Server01/duosoft_netlike/v2/" local="131751043831396742" remote="131751043830000000" Dst="0" />
+<file name="cirugia_form.php" server="//Server01/duosoft_netlike/v2/" local="131751046393165997" remote="131751046390000000" Dst="0" />
+<file name="consulta_ant.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="consulta_det.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="error_log" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="examenes_con_list.php" server="//Server01/duosoft_netlike/v2/" local="131751043831676019" remote="131751043830000000" Dst="0" />
+<file name="examen_form.php" server="//Server01/duosoft_netlike/v2/" local="131751046393305501" remote="131751046390000000" Dst="0" />
+<file name="ginecologia_con_list - Copia.php" server="//Server01/duosoft_netlike/v2/" local="131751043831795876" remote="131751043830000000" Dst="0" />
+<file name="ginecologia_det.php" server="//Server01/duosoft_netlike/v2/" local="131751043831885445" remote="131751043830000000" Dst="0" />
+<file name="historia_det.php" server="//Server01/duosoft_netlike/v2/" local="131751043831955256" remote="131751043830000000" Dst="0" />
+<file name="medicamento.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="obstetrico_con_list.php" server="//Server01/duosoft_netlike/v2/" local="131751043832085192" remote="131751043830000000" Dst="0" />
+<file name="obstetrico_form.php" server="//Server01/duosoft_netlike/v2/" local="131751046393504723" remote="131751046390000000" Dst="0" />
+<file name="receta.php" server="//Server01/duosoft_netlike/v2/" local="131751046394192877" remote="131751046390000000" Dst="0" />
+<file name="receta_print.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="test.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="tratamiento_con_list.php" server="//Server01/duosoft_netlike/v2/" local="131751043832422116" remote="131751043830000000" Dst="0" />
+<file name="tratamiento_form.php" server="//Server01/duosoft_netlike/v2/" local="131751046394322536" remote="131751046390000000" Dst="0" />
+<file name="_fncts.php" server="//Server01/duosoft_netlike/v2/" local="131751043830998322" remote="131751043830000000" Dst="0" />
 </dwsync>

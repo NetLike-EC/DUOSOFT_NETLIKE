@@ -1,0 +1,8 @@
+[16-Jun-2013 21:12:02] PHP Fatal error:  Call to undefined function  datacontmail() in /home/susan/public_html/admin/componentes/com_mail/index_mess.php on line 63
+[18-Oct-2013 10:50:21] PHP Fatal error:  Call to undefined method Paginator::display_items_per_pag() in /home/susan/public_html/admin/componentes/com_mailwa/index_mess.php on line 35
+[18-Oct-2013 10:50:27] PHP Fatal error:  Call to undefined method Paginator::display_items_per_pag() in /home/susan/public_html/admin/componentes/com_mailwa/index_mess.php on line 35
+[24-Oct-2013 10:18:10] PHP Fatal error:  Call to undefined function SELECT COUNT(*) AS TR FROM tbl_contact_data WHERE idMail = "4"() in /home/susan/public_html/admin/componentes/com_mailwa/contact_data.php on line 40
+[12-Nov-2013 11:22:56] PHP Fatal error:  Undefined class constant 'FORMAT_DATE' in /home/susan/public_html/admin/componentes/com_mailwa/rep_excel.php on line 60
+[12-Nov-2013 11:23:05] PHP Fatal error:  Undefined class constant 'FORMAT_DATE_DATE' in /home/susan/public_html/admin/componentes/com_mailwa/rep_excel.php on line 60
+[25-Jul-2017 03:59:56 America/Guayaquil] PHP Warning:  require_once(/home/merco/public_html/admin/system/base/inc/PHPExcel/PHPExcel.php): failed to open stream: No existe el fichero o el directorio in /home/merco/public_html/admin/com/com_mailwa/rep_excel-maillist.php on line 3
+[25-Jul-2017 03:59:56 America/Guayaquil] PHP Fatal error:  require_once(): Failed opening required '/home/merco/public_html/admin/system/base/inc/PHPExcel/PHPExcel.php' (include_path='.:/opt/php54/lib/php') in /home/merco/public_html/admin/com/com_mailwa/rep_excel-maillist.php on line 3

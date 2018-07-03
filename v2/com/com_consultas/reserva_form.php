@@ -1,16 +1,16 @@
 <?php require_once('../../init.php');
 $idp=vParam('idp',$_GET['idp'],$_POST['idp']);
 
-$detPac=detRow('db_clientes','pac_cod',$idp);
-$detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
+$detPac=detRow('db_clientes','cli_id',$idp);
+$detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
 
-$detRes=detRow2P('db_consultas_reserva','pac_cod',$idp,'estado','1',' AND ');
+$detRes=detRow2P('db_consultas_reserva','cli_id',$idp,'estado','1',' AND ');
 include(RAIZf.'head.php');
 ?>
 <body class="cero">
 <div class="container">
-<div class="page-header"><h1>Reservar Consulta <small><?php echo $detPac_nom ?> 
-<span class="label label-info"><?php echo $detPac['pac_cod']; ?></span></small></h1></div>
+<div class="page-header"><h1>Reservar Consulta <small><?php echo $detcli_nom ?> 
+<span class="label label-info"><?php echo $detPac['cli_id']; ?></span></small></h1></div>
 <?php sLOG('a') ?>
 <!-- VERIFICACION RESERVA EXISTENTE PACIENTE -->
 <?php if ($detRes){ ?>
@@ -35,7 +35,7 @@ include(RAIZf.'head.php');
 <?php }else{ ?>
 <div id="cont_head">
 <form action="action_res.php" method="post">
-<input name="idp" type="hidden" id="idp" value="<?php echo $detPac['pac_cod']; ?>" />
+<input name="idp" type="hidden" id="idp" value="<?php echo $detPac['cli_id']; ?>" />
 <input name="acc" type="hidden" id="acc" value="INS" />
 <fieldset class="form-horizontal">
 <div class="form-group">

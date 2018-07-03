@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="bra.php" server="//servidor/clinic/" local="129419559560000000" remote="129419559560000000" Dst="0" />
-<file name="eng.php" server="//servidor/clinic/" local="129419559560000000" remote="129419559560000000" Dst="0" />
-<file name="ger.php" server="//servidor/clinic/" local="129419559560000000" remote="129419559560000000" Dst="0" />
-<file name="ita.php" server="//servidor/clinic/" local="129419559560000000" remote="129419559560000000" Dst="0" />
+<file name="bra.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686096245405" remote="131632131000000000" Dst="0" />
+<file name="eng.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686095299558" remote="131632131000000000" Dst="0" />
+<file name="ger.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686091957854" remote="131632131000000000" Dst="0" />
+<file name="ita.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686091138142" remote="131632131000000000" Dst="0" />
+<file name="bra.php" server="ftp.ecuahomes.net//public_html/admin/" local="131631686096245405" remote="131670823800000000" Dst="0" />
+<file name="eng.php" server="ftp.ecuahomes.net//public_html/admin/" local="131631686095299558" remote="131670823800000000" Dst="0" />
+<file name="ger.php" server="ftp.ecuahomes.net//public_html/admin/" local="131631686091957854" remote="131670823800000000" Dst="0" />
+<file name="ita.php" server="ftp.ecuahomes.net//public_html/admin/" local="131631686091138142" remote="131670823800000000" Dst="0" />
+<file name="bra.php" server="//Server01/duosoft_netlike/v2/" local="131631686096245405" remote="131631686090000000" Dst="0" />
+<file name="eng.php" server="//Server01/duosoft_netlike/v2/" local="131631686095299558" remote="131631686090000000" Dst="0" />
+<file name="ger.php" server="//Server01/duosoft_netlike/v2/" local="131631686091957854" remote="131631686090000000" Dst="0" />
+<file name="ita.php" server="//Server01/duosoft_netlike/v2/" local="131631686091138142" remote="131631686090000000" Dst="0" />
 </dwsync>

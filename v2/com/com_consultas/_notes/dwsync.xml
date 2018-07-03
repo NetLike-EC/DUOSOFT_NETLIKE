@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="form.php" server="C:/AppServ/www/CLINIC_BIOGEPA/" local="130469322416697365" remote="130469322410000000" Dst="0" />
-<file name="actions.php" server="C:/AppServ/www/CLINIC_BIOGEPA/" local="130460030830525972" remote="130460030830000000" Dst="0" />
-<file name="consultas_list.php" server="C:/AppServ/www/CLINIC_BIOGEPA/" local="130464596920471968" remote="130464596920000000" Dst="0" />
-<file name="form.php" server="//servidor/clinic/" local="130760002598502664" remote="130760002590000000" Dst="0" />
-<file name="_fra_con_detpac.php" server="//servidor/clinic/" local="130500916765017779" remote="130500916760000000" Dst="0" />
-<file name="actions.php" server="//servidor/clinic/" local="130565627962227516" remote="130565627960000000" Dst="0" />
-<file name="action_res.php" server="//servidor/clinic/" local="130464641357295337" remote="130464641350000000" Dst="0" />
-<file name="consultas_act_save.php" server="//servidor/clinic/" local="130460064700360335" remote="130460064700000000" Dst="0" />
-<file name="consultas_detail_all.php" server="//servidor/clinic/" local="129073577062530000" remote="129073577060000000" Dst="0" />
-<file name="consultas_gest.php" server="//servidor/clinic/" local="130304596847319466" remote="130304596840000000" Dst="0" />
-<file name="consultas_list.php" server="//servidor/clinic/" local="130505386346294254" remote="130505386340000000" Dst="0" />
-<file name="consultas_pac_list_cons.php" server="//servidor/clinic/" local="130489212231499761" remote="130489212230000000" Dst="0" />
-<file name="index.php" server="//servidor/clinic/" local="130442827929011963" remote="130442827920000000" Dst="0" />
-<file name="setTabJS.php" server="//servidor/clinic/" local="130484106428121851" remote="130484106420000000" Dst="0" />
-<file name="_fra_con_dat.php" server="//servidor/clinic/" local="130500069158900342" remote="130500069150000000" Dst="0" />
-<file name="form.php" server="//192.168.0.2/clinic/" local="130760002598502664" remote="130760002590000000" Dst="0" />
-<file name="actionsJS.php" server="//192.168.0.2/clinic/" local="130493016080000000" remote="130493016080000000" Dst="0" />
-<file name="reserva_form.php" server="//192.168.0.2/clinic/" local="130464642810000000" remote="130464642810000000" Dst="0" />
-<file name="reserva_lista.php" server="//192.168.0.2/clinic/" local="130464631350000000" remote="130464631350000000" Dst="0" />
-<file name="_libs.php" server="//192.168.0.2/clinic/" local="130063956190000000" remote="130063956190000000" Dst="0" />
-<file name="_fra_con_detpac.php" server="C:/AppServ/www/CLINIC_FREIMO/" local="130883229738419593" remote="130883229730000000" Dst="0" />
+<file name="actions.php" server="//Server01/duosoft_netlike/v2/" local="131751043821953952" remote="131751043820000000" Dst="0" />
+<file name="actionsJS.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="action_res.php" server="//Server01/duosoft_netlike/v2/" local="131751043821844236" remote="131751043820000000" Dst="0" />
+<file name="consultas_act_save.php" server="//Server01/duosoft_netlike/v2/" local="131751043823103566" remote="131751043820000000" Dst="0" />
+<file name="consultas_detail_all.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="consultas_gest.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="consultas_list.php" server="//Server01/duosoft_netlike/v2/" local="131751046390801384" remote="131751046390000000" Dst="0" />
+<file name="consultas_pac_list_cons.php" server="//Server01/duosoft_netlike/v2/" local="131751043823362880" remote="131751043820000000" Dst="0" />
+<file name="consulta_ant.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="consulta_det.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="form.php" server="//Server01/duosoft_netlike/v2/" local="131751043823562347" remote="131751043820000000" Dst="0" />
+<file name="ginecologia_det.php" server="//Server01/duosoft_netlike/v2/" local="131751043823682015" remote="131751043820000000" Dst="0" />
+<file name="historia_det.php" server="//Server01/duosoft_netlike/v2/" local="131751043823801722" remote="131751043820000000" Dst="0" />
+<file name="index.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="reserva_form.php" server="//Server01/duosoft_netlike/v2/" local="131751046390891478" remote="131751046390000000" Dst="0" />
+<file name="reserva_lista.php" server="//Server01/duosoft_netlike/v2/" local="131751046390970932" remote="131751046390000000" Dst="0" />
+<file name="setTabJS.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="_fra_con_dat.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="_fra_con_detpac.php" server="//Server01/duosoft_netlike/v2/" local="131751061114717025" remote="131751061110000000" Dst="0" />
+<file name="_fra_histCons.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="_libs.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
 </dwsync>

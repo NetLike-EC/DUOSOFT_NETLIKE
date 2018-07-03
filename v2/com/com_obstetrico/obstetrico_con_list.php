@@ -1,6 +1,6 @@
 <?php
 //DET OBSTETRICA
-$qryo=sprintf('SELECT * FROM db_obstetrico WHERE pac_cod=%s ORDER BY obs_id DESC',
+$qryo=sprintf('SELECT * FROM db_obstetrico WHERE cli_id=%s ORDER BY obs_id DESC',
 SSQL($idp,'int'));
 $RSo=mysql_query($qryo);
 $row_RSo=mysql_fetch_assoc($RSo);

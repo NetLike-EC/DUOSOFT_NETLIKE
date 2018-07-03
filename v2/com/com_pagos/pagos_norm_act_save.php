@@ -3,9 +3,9 @@ $valor=$_GET['valor'];
 $idp=$_GET['idp'];
 $id_emp=$_SESSION['MM_UserID'];
 
-$SQL_bus_pen="SELECT tbl_cta_por_cobrar.num_cta, tbl_cta_por_cobrar.cta_detalle, tbl_cta_por_cobrar.con_num, tbl_cta_por_cobrar.pac_cod,
+$SQL_bus_pen="SELECT tbl_cta_por_cobrar.num_cta, tbl_cta_por_cobrar.cta_detalle, tbl_cta_por_cobrar.con_num, tbl_cta_por_cobrar.cli_id,
 (tbl_cta_por_cobrar.cta_valor-tbl_cta_por_cobrar.cta_abono) AS Saldo FROM tbl_cta_por_cobrar
-WHERE tbl_cta_por_cobrar.cta_abono<tbl_cta_por_cobrar.cta_valor AND tbl_cta_por_cobrar.pac_cod=".$idp." 
+WHERE tbl_cta_por_cobrar.cta_abono<tbl_cta_por_cobrar.cta_valor AND tbl_cta_por_cobrar.cli_id=".$idp." 
 ORDER BY tbl_cta_por_cobrar.num_cta ASC";
 $RES_bus_pen = mysql_query($SQL_bus_pen);
 
@@ -40,7 +40,7 @@ while($row1 = mysql_fetch_array($RES_bus_pen))
 $fec_system=date("Y-m-d H:i:s");
 
 	@mysql_query("INSERT INTO tbl_pagopac_cab(
-	pag_fech,pag_val,emp_cod,pac_cod,pag_tip)
+	pag_fech,pag_val,emp_cod,cli_id,pag_tip)
 	VALUES ('$fec_system', '$valor', '$id_emp', '$idp', '1')")or($LOG=mysql_error());
 	$id_pago_cab=@mysql_insert_id();
 		
@@ -52,7 +52,7 @@ $fec_system=date("Y-m-d H:i:s");
 		$upd_cta_det=$array_det_pag[$cont_update][2];
 		$upd_pagado_cta=$array_det_pag[$cont_update][3];
 		
-		if(@mysql_query("INSERT INTO tbl_pagopac_det (pag_num, con_num, pac_cod, num_cta, abono, detalle)
+		if(@mysql_query("INSERT INTO tbl_pagopac_det (pag_num, con_num, cli_id, num_cta, abono, detalle)
 		VALUES('$id_pago_cab', '$upd_con_num', '$idp', '$upd_num_cta', '$upd_pagado_cta', '$upd_cta_det')"))
 		{
 			$id_pagdet=@mysql_insert_id();

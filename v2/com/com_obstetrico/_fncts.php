@@ -21,7 +21,7 @@ $urlreturn=$_SESSION['urlp'];
 //FUNCIONES PARA OBSTETRICIA
 if ((isset($_POST['form'])) && ($_POST['form'] == 'obsdet')){
 	if($action=='INS'){	
-	$qryINS=sprintf('INSERT INTO db_obstetrico (pac_cod, obs_fec, obs_fec_um, obs_fecf)
+	$qryINS=sprintf('INSERT INTO db_obstetrico (cli_id, obs_fec, obs_fec_um, obs_fecf)
 	VALUES (%s,%s,%s,%s)',
 	SSQL($idp, "int"),
 	SSQL($_POST['obs_fec'], "date"),

@@ -21,7 +21,7 @@ if(($_POST['form'])&&($_POST['form']=='hispac')){
 	$sao2=$_POST['hsao2'];
 	
 	$insertSQL = sprintf("INSERT INTO `db_signos`
-	(`pac_cod`,`fecha`,`peso`,`paS`,`paD`,`talla`,`temp`,`fc`,`fr`,`SaO2`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+	(`cli_id`,`fecha`,`peso`,`paS`,`paD`,`talla`,`temp`,`fc`,`fr`,`SaO2`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
 		SSQL($id, "int"),
 		SSQL($fecha, "date"),
 		SSQL($peso, "double"),
@@ -38,7 +38,7 @@ if(($_POST['form'])&&($_POST['form']=='hispac')){
 
 $id=vParam('id', $_GET['id'], $_POST['id']);
 $detpac=dPac($id);
-$qry='SELECT * FROM db_signos WHERE pac_cod='.$id.' ORDER BY id DESC';
+$qry='SELECT * FROM db_signos WHERE cli_id='.$id.' ORDER BY id DESC';
 $RSh=mysql_query($qry);
 $row_RSh=mysql_fetch_assoc($RSh);
 $tr_RSh=mysql_num_rows($RSh);
@@ -47,7 +47,7 @@ include(RAIZf.'head.php');
 <body class="cero">
 <div class="container">
 	<div class="page-header">
-    <h2><?php echo $detpac['pac_nom'].' '.$detpac['pac_ape'] ?> <small>Registro Signos Vitales</small></h2>
+    <h2><?php echo $detpac['cli_nom'].' '.$detpac['cli_ape'] ?> <small>Registro Signos Vitales</small></h2>
     </div>
     <div class="row">
     <div class="col-md-4">

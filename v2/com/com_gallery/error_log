@@ -1,0 +1,10 @@
+[17-Feb-2013 23:40:41] PHP Fatal error:  Call to undefined function  fnc_gallery() in /home/susan/public_html/admin/componentes/com_gallery/gall_form.php on line 10
+[18-Feb-2013 00:21:02] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/susan/public_html/admin/componentes/com_gallery/_fncts.php:21) in /home/susan/public_html/admin/componentes/com_gallery/_fncts.php on line 43
+[18-Feb-2013 13:30:30] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/susan/public_html/admin/componentes/com_gallery/_fncts.php:16) in /home/susan/public_html/admin/componentes/com_gallery/_fncts.php on line 69
+[27-Apr-2015 19:38:49 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_gallery/_fncts.php:90) in /home/alemerco/public_html/admin/componentes/com_gallery/_fncts.php on line 91
+[27-Apr-2015 19:39:02 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_gallery/_fncts.php:90) in /home/alemerco/public_html/admin/componentes/com_gallery/_fncts.php on line 91
+[24-Nov-2016 00:42:32 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/alemerco/public_html/admin/componentes/com_gallery/index.php on line 77
+[24-Nov-2016 02:22:55 America/Chicago] PHP Parse error:  syntax error, unexpected '.=' (T_CONCAT_EQUAL) in /home/alemerco/public_html/admin/componentes/com_gallery/_fncts.php on line 61
+[24-Nov-2016 02:39:55 America/Chicago] PHP Fatal error:  Call to undefined function GetSQLValueString() in /home/alemerco/public_html/admin/componentes/com_gallery/gall_form.php on line 105
+[14-Sep-2017 19:22:22 America/Guayaquil] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/merco/public_html/admin/system/inc/fnc_sys.php on line 12
+[05-Feb-2018 17:17:27 America/Guayaquil] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/merco/public_html/admin/system/inc/fnc_sys.php on line 146

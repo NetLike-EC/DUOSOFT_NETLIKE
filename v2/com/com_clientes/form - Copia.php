@@ -3,11 +3,11 @@ fnc_accesslev("1,2,3");
 $_SESSION['MODSEL']="PAC";
 $rowMod=fnc_datamod($_SESSION['MODSEL']);
 $id=vParam('id', $_GET['id'], $_POST['id'], FALSE);
-$detPac=dPac($id);
+$detPac=dataPac($id);
 if ($detPac){
-	$detPac_id=$detPac['pac_cod'];
+	$detPac_id=$detPac['cli_id'];
 	$action="UPD";
-	$detPacSig=detRow('db_signos','pac_cod',$id);
+	$detPacSig=detRow('db_signos','cli_id',$id);
 	$IMC=$detPacSig['imc'];
 	$IMC=calcIMC($IMC,$detPacSig['peso'],$detPacSig['talla']);
 	$dirimg=fncImgExist("images/db/pac/",lastImgPac($id));
@@ -21,7 +21,7 @@ if ($detPac){
 include(RAIZf.'head.php');
 ?>
 <body>
-<?php include(RAIZm.'mod_menu/menuMain.php'); ?>
+<?php include(RAIZm.'mod_navbar/mod.php'); ?>
 <form enctype="multipart/form-data" method="post" action="_fncts.php" name="form_grabar" id="form_grabar" role="form">
 <div class="container-fluid">
 <fieldset>
@@ -39,17 +39,17 @@ include(RAIZf.'head.php');
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#"><?php echo $rowMod['mod_nom'] ?> 
-      <span class="label label-primary"><?php echo $detPac['pac_cod']; ?></span></a>
+      <span class="label label-primary"><?php echo $detPac['cli_id']; ?></span></a>
     </div>
 	<div class="collapse navbar-collapse" id="navbar-collapse-2">
 	<ul class="nav navbar-nav">
 		
-		<li class="active"><a href="#"><?php echo $detPac['pac_nom'].' '.$detPac['pac_ape']; ?></a></li>
+		<li class="active"><a href="#"><?php echo $detPac['cli_nom'].' '.$detPac['cli_ape']; ?></a></li>
 	</ul>
 	<div class="navbar-right btn-group navbar-btn">
 		<?php echo $btnaction ?>
 		<?php if($id){ ?>
-        <a href="<?php echo $RAIZc ?>com_consultas/form.php?idp=<?php echo $id ?>" class="btn btn-info"><i class="fa fa-eye"></i> VER CONSULTA</a>
+        <a href="<?php echo $RAIZc ?>com_consultas/form.php?id_pac=<?php echo $id ?>" class="btn btn-info"><i class="fa fa-eye"></i> VER CONSULTA</a>
         <?php } ?>
         <a href="<?php echo $_SESSION['urlc'] ?>" class="btn btn-default"><i class="glyphicon glyphicon-plus-sign"></i> NUEVO</a>
 		<a href="index.php" class="btn btn-default"><col-md- class="glyphicon glyphicon-remove"></col-md-> CERRAR</a></li>
@@ -61,8 +61,8 @@ include(RAIZf.'head.php');
 	<div class="col-md-5">
 		<fieldset class="well well-sm">
 		<div class="row">
-			<div class="col-md-6"><input name="pac_nom" type="text" required class="form-control input-lg" id="pac_nom" value="<?php echo $detPac['pac_nom']?>" placeholder="Nombres Completos"></div>
-			<div class="col-md-6"><input name="pac_ape" type="text" required class="form-control input-lg" id="pac_ape" value="<?php echo $detPac['pac_ape']?>" placeholder="Apellidos Completos"></div>
+			<div class="col-md-6"><input name="cli_nom" type="text" required class="form-control input-lg" id="cli_nom" value="<?php echo $detPac['cli_nom']?>" placeholder="Nombres Completos"></div>
+			<div class="col-md-6"><input name="cli_ape" type="text" required class="form-control input-lg" id="cli_ape" value="<?php echo $detPac['cli_ape']?>" placeholder="Apellidos Completos"></div>
 		</div>
 		</fieldset>
 		<div class="well well-sm">
@@ -70,7 +70,7 @@ include(RAIZf.'head.php');
 			<div class="col-md-3 text-center">
 			<?php if ($action=="UPD") { ?>
 			<a href="<?php echo $dirimg ?>" class="fancybox"><img class="img-thumbnail img-responsive" src="<?php echo $dirimg ?>"></a><br>
-			<a href="pacientes_loadimage.php?idpac=<?php echo $detPac['pac_cod']; ?>" class="btn btn-default btn-xs btn-block fancybox fancybox.iframe fancyreload"><i class="fa fa-camera fa-lg"></i> Cargar</a>
+			<a href="pacientes_loadimage.php?idpac=<?php echo $detPac['cli_id']; ?>" class="btn btn-default btn-xs btn-block fancybox fancybox.iframe fancyreload"><i class="fa fa-camera fa-lg"></i> Cargar</a>
 			<?php }else{ ?>
             <a class="btn btn-default disabled"><i class="fa fa-picture-o fa-3x"></i><br>
 Foto</a>
@@ -80,12 +80,12 @@ Foto</a>
 			<fieldset class="form-horizontal" role="form">
 				<div class="form-group">
 				<label for="inputEmail3" class="col-sm-3 col-md-3 control-label">Identificacion</label>
-				<div class="col-sm-9"><input name="pac_ced" type="text" class="form-control" id="pac_ced" value="<?php echo $detPac['pac_ced']?>" placeholder="Cedula / RUC / Pasaporte"></div>
+				<div class="col-sm-9"><input name="cli_doc" type="text" class="form-control" id="cli_doc" value="<?php echo $detPac['cli_doc']?>" placeholder="Cedula / RUC / Pasaporte"></div>
 				</div>
 				<div class="form-group">
 				<label for="inputPassword3" class="col-sm-3 col-md-3 control-label">Nacimiento</label>
-				<div class="col-sm-6"><input name="pac_fec" id="pac_fec" value="<?php echo $detPac['pac_fec']; ?>" type="date" class="form-control" placeholder="Fecha"/></div>
-				<div class="col-sm-3"><span class="label label-primary"><?php echo edad($detPac['pac_fec']); ?> Años</span></div>
+				<div class="col-sm-6"><input name="cli_fec" id="cli_fec" value="<?php echo $detPac['cli_fec']; ?>" type="date" class="form-control" placeholder="Fecha"/></div>
+				<div class="col-sm-3"><span class="label label-primary"><?php echo edad($detPac['cli_fec']); ?> Años</span></div>
 				</div>
 			</fieldset>
 			</div>
@@ -141,7 +141,7 @@ Foto</a>
 	<div class="col-md-3">
 	<fieldset class="form-horizontal well well-sm">
 		<div class="form-group"><label class="col-md-3 control-label">Procedencia</label>
-			<div class="col-md-9"><input name="pac_lugp" type="text" value="<?php echo $detPac['pac_lugp']; ?>" class="form-control" placeholder="Lugar de Procedencia"/></div>
+			<div class="col-md-9"><input name="cli_lugp" type="text" value="<?php echo $detPac['cli_lugp']; ?>" class="form-control" placeholder="Lugar de Procedencia"/></div>
 		</div>
 		<div class="form-group"><label class="col-md-3 control-label">Residencia</label>
 			<div class="col-md-9"><input name="pac_lugr" type="text" value="<?php echo $detPac['pac_lugr']; ?>" class="form-control" placeholder="Lugar de Residencia"/></div>
@@ -178,12 +178,12 @@ Foto</a>
 	<div class="col-md-4">
 	<fieldset class="form-horizontal well well-sm">
 	<div class="form-group"><label class="col-md-4 control-label">Nombre Cónyuge</label>
-		<div class="col-md-8"><input name="pac_nompar" type="text" value="<?php echo $detPac['pac_nompar']; ?>" class="form-control"/></div>
+		<div class="col-md-8"><input name="cli_nompar" type="text" value="<?php echo $detPac['cli_nompar']; ?>" class="form-control"/></div>
 	</div>
 	<div class="form-group">
-		<label for="pac_fecpar" class="col-md-4 control-label">Nacimiento</label>
-		<div class="col-md-5"><input name="pac_fecpar" id="pac_fecpar" value="<?php echo $detPac['pac_fecpar']; ?>" type="date" class="form-control" placeholder="Fecha"/></div>
-		<div class="col-sm-3"><span class="label label-primary"><?php echo edad($detPac['pac_fecpar']); ?> Años</span></div>
+		<label for="cli_fecpar" class="col-md-4 control-label">Nacimiento</label>
+		<div class="col-md-5"><input name="cli_fecpar" id="cli_fecpar" value="<?php echo $detPac['cli_fecpar']; ?>" type="date" class="form-control" placeholder="Fecha"/></div>
+		<div class="col-sm-3"><span class="label label-primary"><?php echo edad($detPac['cli_fecpar']); ?> Años</span></div>
 	</div>
     <div class="form-group">
 		<label class="col-md-4 control-label" for="pac_tipsan">Tipo Sangre</label>

@@ -13,12 +13,12 @@ if(!$detRep){
 	$action='UPD';
 	$btnAcc='<button type="submit" class="btn btn-success"><i class="fa fa-refresh"></i> ACTUALIZAR</button>';
 	$idr=$detRep['id'];
-	$idp=$detRep['pac_cod'];
+	$idp=$detRep['cli_id'];
 	$idc=$detRep['con_num'];
 	$detRep_hall=$detRep['eco_hall'];
 }
-$detPac=detRow('db_clientes','pac_cod',$idp);
-$detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
+$detPac=detRow('db_clientes','cli_id',$idp);
+$detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
 $detCon=detRow('db_consultas','con_num',$idc);
 include(RAIZf.'head.php');
 ?>
@@ -46,7 +46,7 @@ include(RAIZf.'head.php');
     </div>
 	<div class="collapse navbar-collapse" id="navbar-collapse-2">
     <ul class="nav navbar-nav">
-		<li class="active"><a><?php echo $detPac_nom ?></a></li>
+		<li class="active"><a><?php echo $detcli_nom ?></a></li>
         <li><a>Consulta <span class="label label-info"><?php echo $idc ?></span></a></li>
         <li><a><?php echo $detRep['fechar'] ?></a></li>
 	</ul>

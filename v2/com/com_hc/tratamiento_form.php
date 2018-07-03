@@ -35,9 +35,9 @@ if($detTrat){
 	$detDiag_nom=$detDiag['nombre'];
 }
 $detCon=detRow('db_consultas','con_num',$idc);
-$idp=$detCon['pac_cod'];
-$detPac=detRow('db_clientes','pac_cod',$idp);//dataPac($idp);
-$detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
+$idp=$detCon['cli_id'];
+$detPac=detRow('db_clientes','cli_id',$idp);//dataPac($idp);
+$detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
 include(RAIZf.'head.php'); ?>
 <body class="cero">
 <?php sLOG('g'); ?>
@@ -62,7 +62,7 @@ include(RAIZf.'head.php'); ?>
     </div>
 	<div class="collapse navbar-collapse" id="navbar-collapse-2">
 	<ul class="nav navbar-nav">
-		<li class="active"><a><?php echo $detPac_nom ?></a></li>
+		<li class="active"><a><?php echo $detcli_nom ?></a></li>
         <li><a>Consulta <span class="label label-default"><?php echo $idc ?></span></a></li>
         <li><a><?php echo $detTrat['fecha'] ?></a></li>
 	</ul>

@@ -19,7 +19,7 @@ $urlreturn=$_SESSION['urlp'];
 //FUNCIONES PARA TRATAMIENTOS
 if ((isset($_POST['form'])) && ($_POST['form'] == 'tratdet')){
 	if($action=='INS'){	
-	$qryinst=sprintf('INSERT INTO db_tratamientos (con_num, pac_cod, fecha, fechap, diagnostico, obs)
+	$qryinst=sprintf('INSERT INTO db_tratamientos (con_num, cli_id, fecha, fechap, diagnostico, obs)
 	VALUES (%s,%s,%s,%s,%s,%s)',
 	GetSQLValueString($_POST['idc'], "int"),
 	GetSQLValueString($_POST['idp'], "int"),
@@ -78,7 +78,7 @@ if ((isset($_POST['form'])) && ($_POST['form'] == 'tratdet')){
 //FUNCIONES PARA OBSTETRICIA
 if ((isset($_POST['form'])) && ($_POST['form'] == 'obsdet')){
 	if($action=='INS'){	
-	$qryINS=sprintf('INSERT INTO db_obstetrico (pac_cod, obs_fec, obs_fec_um, obs_fecf)
+	$qryINS=sprintf('INSERT INTO db_obstetrico (cli_id, obs_fec, obs_fec_um, obs_fecf)
 	VALUES (%s,%s,%s,%s)',
 	GetSQLValueString($idp, "int"),
 	GetSQLValueString($_POST['obs_fec'], "date"),
@@ -153,7 +153,7 @@ if ((isset($_POST['form'])) && ($_POST['form'] == 'fexamen')){
 	
 	
 	if($action=='INS'){	
-	$qryinst=sprintf('INSERT INTO db_examenes (pac_cod,con_num,fecha,fechae,typ_cod,descripcion,resultado)
+	$qryinst=sprintf('INSERT INTO db_examenes (cli_id,con_num,fecha,fechae,typ_cod,descripcion,resultado)
 	VALUES (%s,%s,%s,%s,%s,%s,%s)',
 	GetSQLValueString($_POST['idp'], "int"),
 	GetSQLValueString($_POST['idc'], "int"),

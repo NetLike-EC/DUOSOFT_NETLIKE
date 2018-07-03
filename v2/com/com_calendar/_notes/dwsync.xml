@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="actions.php" server="//servidor/clinic/" local="130496322620903262" remote="130496322620000000" Dst="0" />
-<file name="actionsJS.php" server="//servidor/clinic/" local="130495790484263161" remote="130495790480000000" Dst="0" />
-<file name="form.php" server="//servidor/clinic/" local="130496569760000000" remote="130496569760000000" Dst="0" />
-<file name="index.php" server="//servidor/clinic/" local="130495852844886706" remote="130495852840000000" Dst="0" />
-<file name="jsonEvents.php" server="//servidor/clinic/" local="130496344096169941" remote="130496344090000000" Dst="0" />
-<file name="reserva_form.php" server="//servidor/clinic/" local="130499054291702013" remote="130499054290000000" Dst="0" />
-<file name="reserva_lista.php" server="//servidor/clinic/" local="130496287369038108" remote="130496287360000000" Dst="0" />
+<file name="actions.php" server="//Server01/duosoft_netlike/v2/" local="131751043806961381" remote="131751043800000000" Dst="0" />
+<file name="actionsJS.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="form.php" server="//Server01/duosoft_netlike/v2/" local="131751046382975621" remote="131751046380000000" Dst="0" />
+<file name="index.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="jsonEvents.php" server="//Server01/duosoft_netlike/v2/" local="131751046383185177" remote="131751046380000000" Dst="0" />
+<file name="reserva_form.php" server="//Server01/duosoft_netlike/v2/" local="131751046383424332" remote="131751046380000000" Dst="0" />
+<file name="reserva_lista.php" server="//Server01/duosoft_netlike/v2/" local="131751046383683639" remote="131751046380000000" Dst="0" />
 </dwsync>

@@ -5,7 +5,7 @@ $idp=vParam('idp',$_GET['idp'],$_POST['idp']);
 $idc=vParam('idc',$_GET['idc'],$_POST['idc']);
 $idd=vParam('idd',$_GET['idd'],$_POST['idd']);
 $detdoc=fnc_datadoc($idd);
-if($idd) {$idp=$detdoc['pac_cod']; $idc=$detdoc['con_num'];}
+if($idd) {$idp=$detdoc['cli_id']; $idc=$detdoc['con_num'];}
 $urlreturn=$_SESSION['urlp'];
 
 mysql_query("SET AUTOCOMMIT=0;"); //Desabilita el autocommit
@@ -15,7 +15,7 @@ mysql_query("BEGIN;"); //Inicia la transaccion
 
 if ((isset($_POST['form'])) && ($_POST['form'] == 'fdocs')){
 	if($action=='INS'){	
-	$qryinsd=sprintf('INSERT INTO db_documentos (pac_cod,con_num,nombre,contenido,fecha)
+	$qryinsd=sprintf('INSERT INTO db_documentos (cli_id,con_num,nombre,contenido,fecha)
 	VALUES (%s,%s,%s,%s,%s)',
 	SSQL($_POST['idp'], "int"),
 	SSQL($_POST['idc'], "int"),

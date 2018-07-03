@@ -1,6 +1,7 @@
 <?php
 # PHPlot Example: Bar chart, 3 data sets, shaded
-require_once '../../init.php';
+require_once ('../../init.php');
+require_once (RAIZs.'inc/phplot/phplot.php');
 
 $data=$dataG;
 /*$data = array(
@@ -8,14 +9,14 @@ $data=$dataG;
   array('?', 10), array('Medico',  3), array('Referido',  7),
 );*/
 
-$plot = new PHPlot(700, 500);
+$plot = new PHPlot(1000, 500);
 $plot->SetImageBorderType('plain');
-$plot->SetTitle('Origen de pacientes  ('.$dFI.' al '.$dFF.')');
+$plot->SetTitle('Provenance of Clients ('.$dFI.' al '.$dFF.')');
 $plot->SetPlotType('bars');
 $plot->SetDataType('text-data');
 $plot->SetDataValues($data);
-$plot->SetYTitle('Cantidad de Pacientes');
-$plot->SetXTitle('Origen');
+$plot->SetYTitle('Quantity');
+$plot->SetXTitle('Refered by');
 # Main plot title:
 
 
@@ -48,6 +49,6 @@ $plot->SetPrecisionY(0);
 $plot->SetFileFormat('jpg');
 $plot->SetIsInline(TRUE);
 $graph_SetOutputFile=$GraphGen_name;
-$plot->SetOutputFile($graph_SetOutputFile);
+$plot->SetOutputFile(RAIZc.'com_reportes/res/'.$graph_SetOutputFile);
 $plot->DrawGraph();
 ?>

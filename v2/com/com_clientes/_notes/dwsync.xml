@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="pacientes_detail.php" server="C:/AppServ/www/CLINIC_ORDONEZ/" local="130301719625448390" remote="130301719620000000" Dst="0" />
-<file name="form.php" server="//servidor/clinic/" local="130659008426702172" remote="130659008420000000" Dst="0" />
-<file name="_fncts.php" server="//servidor/clinic/" local="130659029438711905" remote="130659029430000000" Dst="0" />
-<file name="pacientes_detail.php" server="//servidor/clinic/" local="130496327005914788" remote="130496327000000000" Dst="0" />
-<file name="fnc_searchCli.php" server="//servidor/clinic/" local="130299585180000000" remote="130299585180000000" Dst="0" />
-<file name="index.php" server="//servidor/clinic/" local="130442828774894355" remote="130442828770000000" Dst="0" />
-<file name="json.php" server="//servidor/clinic/" local="130490449457014163" remote="130490449450000000" Dst="0" />
-<file name="pacientes_detail_all.php" server="//servidor/clinic/" local="130420918710847365" remote="130420918710000000" Dst="0" />
-<file name="pacientes_find.php" server="//servidor/clinic/" local="130421219558328849" remote="130421219550000000" Dst="0" />
-<file name="pacientes_hystorydeleteimg.php" server="//servidor/clinic/" local="130053504550960543" remote="130053504550000000" Dst="0" />
-<file name="pacientes_loadimage.php" server="//servidor/clinic/" local="130304596854654364" remote="130304596850000000" Dst="0" />
-<file name="search_cli.php" server="//servidor/clinic/" local="130440841286205028" remote="130440841280000000" Dst="0" />
-<file name="form - Copia.php" server="//servidor/clinic/" local="130500704608381353" remote="130500704600000000" Dst="0" />
-<file name="form_datos.php" server="//servidor/clinic/" local="130658991478505265" remote="130658991470000000" Dst="0" />
-<file name="js.js" server="//servidor/clinic/" local="130500732583633829" remote="130500732580000000" Dst="0" />
-<file name="pacientes_hystorydeleteimg.php" server="//192.168.0.2/clinic/" local="130053504550000000" remote="130053504550000000" Dst="0" />
-<file name="pacientes_loadimage.php" server="//192.168.0.2/clinic/" local="130304596850000000" remote="130304596850000000" Dst="0" />
-<file name="form.php" server="C:/AppServ/www/DUOSOFT_NETLIKE/" local="131428002995528410" remote="131428002990000000" Dst="0" />
-<file name="_fncts.php" server="C:/AppServ/www/DUOSOFT_NETLIKE/" local="131428003031982402" remote="131428003030000000" Dst="0" />
+<file name="index.php" server="//Server01/duosoft_netlike/v2/" local="131750424045919257" remote="131750424040000000" Dst="0" />
+<file name="list.php" server="//Server01/duosoft_netlike/v2/" local="131751047225898962" remote="131751047220000000" Dst="0" />
+<file name="fnc_searchCli.php" server="//Server01/duosoft_netlike/v2/" local="130299585180000000" remote="130299585180000000" Dst="0" />
+<file name="form - Copia.php" server="//Server01/duosoft_netlike/v2/" local="131751061111602154" remote="131751061110000000" Dst="0" />
+<file name="_fncts.php" server="//Server01/duosoft_netlike/v2/" local="131751061111168076" remote="131751061110000000" Dst="0" />
+<file name="form.php" server="//Server01/duosoft_netlike/v2/" local="131750431992397331" remote="131750431990000000" Dst="0" />
+<file name="js.js" server="//Server01/duosoft_netlike/v2/" local="131408974810000000" remote="131408974810000000" Dst="0" />
+<file name="_form.php" server="//Server01/duosoft_netlike/v2/" local="131751047225500041" remote="131751047220000000" Dst="0" />
+<file name="form_datos.php" server="//Server01/duosoft_netlike/v2/" local="131751061112091220" remote="131751061110000000" Dst="0" />
+<file name="fra_pacFind.php" server="//Server01/duosoft_netlike/v2/" local="131410974310000000" remote="131410974310000000" Dst="0" />
+<file name="json.php" server="//Server01/duosoft_netlike/v2/" local="131751046386578610" remote="131751046380000000" Dst="0" />
+<file name="pacientes_detail_all.php" server="//Server01/duosoft_netlike/v2/" local="131751046386628811" remote="131751046380000000" Dst="0" />
+<file name="pacientes_find.php" server="//Server01/duosoft_netlike/v2/" local="130421219550000000" remote="130421219550000000" Dst="0" />
+<file name="search_cli.php" server="//Server01/duosoft_netlike/v2/" local="131751046386728200" remote="131751046380000000" Dst="0" />
+<file name="detail_min.php" server="//Server01/duosoft_netlike/v2/" local="131751047225539926" remote="131751047220000000" Dst="0" />
+<file name="fra_find.php" server="//Server01/duosoft_netlike/v2/" local="131750424398085107" remote="131750424390000000" Dst="0" />
 </dwsync>

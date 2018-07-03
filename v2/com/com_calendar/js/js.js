@@ -1,5 +1,5 @@
 // JavaScript Document
 $(document).ready(function(){
-	$('#pac_cod').chosen();
+	$('#cli_id').chosen();
 	$('#typ_cod').chosen();
 });

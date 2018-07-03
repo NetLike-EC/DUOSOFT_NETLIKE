@@ -32,7 +32,7 @@ $pages = new Paginator;
 <tbody> 
 	<?php do{?>
 	<?php
-	$detPac=detRow('db_clientes','pac_cod',$row_RSd['pac_cod']);
+	$detPac=detRow('db_clientes','cli_id',$row_RSd['cli_id']);
 	$typ_tsan=dTyp($detPac['pac_tipsan']);$typ_tsan=$typ_tsan['typ_val'];
 	$typ_eciv=dTyp($detPac['pac_estciv']);$typ_eciv=$typ_eciv['typ_val'];
 	$typ_sexo=dTyp($detPac['pac_sexo']);$typ_sexo=$typ_sexo['typ_val'];
@@ -43,15 +43,15 @@ $pages = new Paginator;
     <tr>
     	<td><?php echo $row_RSd['id'];?></td>
    		<td><?php echo $row_RSd['fecha']; ?></td>
-		<td><?php echo $row_RSd['pac_cod'];?></td>
-		<td><?php echo strtoupper($detPac['pac_nom'])?></td>
-		<td><?php echo strtoupper($detPac['pac_ape'])?></td>
+		<td><?php echo $row_RSd['cli_id'];?></td>
+		<td><?php echo strtoupper($detPac['cli_nom'])?></td>
+		<td><?php echo strtoupper($detPac['cli_ape'])?></td>
         <td><?php echo $row_RSd['peso']; ?></td>
         <td><?php echo $row_RSd['talla']; ?></td>
         <td><?php echo $IMC['val'].' '.$IMC['inf']; ?></td>
         <td><?php echo $row_RSd['pa']; ?></td>
         <td class="text-center">
-        	<a class="btn btn-info btn-xs" href="form.php?id=<?php echo $row_RSd['pac_cod'];?>">
+        	<a class="btn btn-info btn-xs" href="form.php?id=<?php echo $row_RSd['cli_id'];?>">
         	<i class="fa fa-stethoscope fa-lg"></i> Registrar</a>
 		</td>
     </tr>

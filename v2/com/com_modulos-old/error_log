@@ -1,0 +1,6 @@
+[16-Dec-2013 20:33:06] PHP Fatal error:  Call to undefined function  detmod() in /home/susan/public_html/admin/componentes/com_modulos/form.php on line 7
+[16-Dec-2013 20:35:57] PHP Fatal error:  Call to undefined function  urlr() in /home/susan/public_html/admin/componentes/com_modulos/fncts.php on line 49
+[11-Mar-2015 07:01:07 America/Chicago] PHP Warning:  mysql_pconnect(): Too many connections in /home/alemerco/public_html/admin/Connections/conn.php on line 10
+[11-Mar-2015 07:01:07 America/Chicago] PHP Fatal error:  Too many connections in /home/alemerco/public_html/admin/Connections/conn.php on line 10
+[11-Mar-2015 07:04:26 America/Chicago] PHP Warning:  mysql_pconnect(): Too many connections in /home/alemerco/public_html/admin/Connections/conn.php on line 10
+[11-Mar-2015 07:04:26 America/Chicago] PHP Fatal error:  Too many connections in /home/alemerco/public_html/admin/Connections/conn.php on line 10

@@ -1,13 +1,12 @@
 <?php include('../../init.php');
 vLogin();
-$dM=detRow('db_componentes','mod_ref','INI');
-include(RAIZf."head.php");
-include(RAIZm.'mod_menu/menuMain.php');
-sLOG("g",$_REQUEST['LOG']) ?>
-<div class="container">
-    <?php echo genPageHead($dM['mod_cod'])?>
-    <div class="well well-sm">
-		<?php include('_index.php') ?>
-	</div>
+include(RAIZf.'_head.php');
+include(RAIZm.'mod_menu/menuMain.php') ?>
+<div class="jumbotron">
+  <div class="container">
+	<h1>DUOTICS</h1>
+	<p>Content Manage System.</p>
+	<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  </div>
 </div>
-<?php include(RAIZf."footer.php") ?>
+<?php include(RAIZf.'_foot.php') ?>

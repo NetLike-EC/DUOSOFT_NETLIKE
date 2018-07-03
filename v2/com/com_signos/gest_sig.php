@@ -3,8 +3,8 @@ $id=vParam('id', $_GET['id'], $_POST['id']);
 $ids=vParam('ids', $_GET['ids'], $_POST['ids']);
 $detPac=dPac($id);
 $detSig=detRow('db_signos','id',$ids);
-$detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
-if($detPac['pac_fec']) $detPac_fec=edad($detPac['pac_fec']).'Años';
+$detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
+if($detPac['cli_fec']) $detcli_fec=edad($detPac['cli_fec']).'Años';
 if($detSig){
 	$acc='UPD';
 	$btnAcc='<button type="submit" class="btn btn-success"><i class="fa fa-floppy-o fa-lg"></i> ACTUALIZAR</button>';
@@ -31,14 +31,14 @@ include(RAIZf.'head.php');
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#"><?php echo $detPac_nom ?></a></li>
-        <li><a><?php echo $detPac_fec ?></a></li>
+        <li class="active"><a href="#"><?php echo $detcli_nom ?></a></li>
+        <li><a><?php echo $detcli_fec ?></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 <?php if($detPac){
-$qry='SELECT * FROM db_signos WHERE pac_cod='.$id.' ORDER BY id DESC';
+$qry='SELECT * FROM db_signos WHERE cli_id='.$id.' ORDER BY id DESC';
 $RSh=mysql_query($qry);
 $row_RSh=mysql_fetch_assoc($RSh);
 $tr_RSh=mysql_num_rows($RSh);

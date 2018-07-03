@@ -5,7 +5,7 @@ $ide=vParam('ide',$_GET['ide'],$_POST['ide']);
 $acc=vParam('acc',$_GET['acc'],$_POST['acc']);
 if(($acc)&&($acc=='DEL')){
 	$detExa=detRow('db_examenes','id_exa',$ide);
-	$idp=$detExa['pac_cod'];
+	$idp=$detExa['cli_id'];
 	$qryDEL=SPRINTF('DELETE FROM db_examenes WHERE id_exa=%s',
 	SSQL($ide,'int'));
 	if(@mysql_query($qryDEL)){

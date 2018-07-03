@@ -44,16 +44,16 @@ $pages = new Paginator;
 <tbody> 
 	<?php do{?>
 	<?php
-	$detPac=detRow('db_clientes','pac_cod',$row_RSd['pac_cod']);
+	$detPac=detRow('db_clientes','cli_id',$row_RSd['cli_id']);
 	$typ_typ=dTyp($row_RSd['typ_cod']);
 	$typ_typ=$typ_typ['typ_val'];?>
     <tr>
     	<td><?php echo $row_RSd['id_exa'];?></td>
    		<td><?php echo $row_RSd['fecha']; ?></td>
         <td><?php echo $row_RSd['fechae']; ?></td>
-		<td><?php echo $row_RSd['pac_cod'];?></td>
-		<td><?php echo strtoupper($detPac['pac_nom'])?></td>
-		<td><?php echo strtoupper($detPac['pac_ape'])?></td>
+		<td><?php echo $row_RSd['cli_id'];?></td>
+		<td><?php echo strtoupper($detPac['cli_nom'])?></td>
+		<td><?php echo strtoupper($detPac['cli_ape'])?></td>
         <td><?php echo $typ_typ ?></td>
         <td><?php echo $row_RSd['descripcion']; ?></td>
         <td><div class="readmore"><?php echo $row_RSd['resultado']; ?></div></td>
@@ -61,7 +61,7 @@ $pages = new Paginator;
         	<a class="btn btn-info btn-xs fancyreload fancybox.iframe" href="<?php echo $RAIZc ?>com_hc/examen_form.php?ide=<?php echo $row_RSd['id_exa'];?>">
         	<i class="fa fa-heart fa-lg"></i> Editar</a>
             
-            <a class="btn btn-default btn-xs" href="gest.php?id=<?php echo $row_RSd['pac_cod'];?>">
+            <a class="btn btn-default btn-xs" href="gest.php?id=<?php echo $row_RSd['cli_id'];?>">
         	<i class="fa fa-history"></i> Historial</a>
 		</td>
     </tr>

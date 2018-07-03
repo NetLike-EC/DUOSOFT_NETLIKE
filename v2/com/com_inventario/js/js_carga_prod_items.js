@@ -4,11 +4,11 @@ var web="producto_detail.php";
 $(document).ready(function() {
 	var loading = $("#loading");
 	//var cont_cli = $("#cont_cli");
-	var btn_cons_cli = $(".btn_cons_cli");
+	var btn_cons = $("#btn_cons");
 	var id_find_cli = $(".id_find_cli");
 
 	//Manage click events
-	btn_cons_cli.click(function(){
+	btn_cons.click(function(){
 		//show the loading bar
 		showLoading();
 		//load selected section
@@ -19,10 +19,10 @@ $(document).ready(function() {
 				cont_cli.slideDown();*/
 				
 				Shadowbox.open({
-        		content:    'items_prod_form.php?id_sel='+id_cli+'&action_form=Modificar',
+        		content:    'invItemForm.php?id_sel='+id_cli+'&action=UPDATE',
         		player:     "iframe",
         		title:      "<strong>DETALLE PRODUCTO</strong>",
-				width:		600,
+				width:		900,
 				options:	{relOnClose:true}
     			});
 				

@@ -1,4 +1,3 @@
-<?php /*
 <script type='text/javascript' src='<?php echo $RAIZ ?>js/js_carga_pac.js'></script>
 <script type="text/javascript">
 $().ready(function() {

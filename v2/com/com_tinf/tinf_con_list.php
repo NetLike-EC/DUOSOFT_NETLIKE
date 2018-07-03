@@ -1,5 +1,5 @@
 <?php 
-$qry=sprintf('SELECT * FROM db_tratamiento_infertilidad WHERE con_num=%s OR pac_cod=%s ORDER BY id_ti DESC',
+$qry=sprintf('SELECT * FROM db_tratamiento_infertilidad WHERE con_num=%s OR cli_id=%s ORDER BY id_ti DESC',
 SSQL($idc,'int'),
 SSQL($idp,'int'));
 $RSti=mysql_query($qry);

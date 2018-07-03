@@ -58,7 +58,7 @@ if ((isset($_POST['form'])) && ($_POST['form'] == 'fcirugia')){
 	}
 	//END IMAGE UPLOAD
 	if($acc==md5('INS')){	
-		$qryinst=sprintf('INSERT INTO db_cirugias (pac_cod,con_num,fecha,diagnostico,cirugiar,fechar,protocolo,evolucion)
+		$qryinst=sprintf('INSERT INTO db_cirugias (cli_id,con_num,fecha,diagnostico,cirugiar,fechar,protocolo,evolucion)
 		VALUES (%s,%s,%s,%s,%s,%s,%s,%s)',
 		SSQL($_POST['idp'], "int"),
 		SSQL($_POST['idc'], "int"),

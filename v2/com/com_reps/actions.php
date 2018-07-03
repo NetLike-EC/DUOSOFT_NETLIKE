@@ -44,7 +44,7 @@ if(($_FILES['userfile']['name'])){
 }else{
 
 //BEG INS MANUAL
-$qryIns=sprintf('INSERT INTO db_rep_obs (con_num, pac_cod, fechar, fechae, fum, est) 
+$qryIns=sprintf('INSERT INTO db_rep_obs (con_num, cli_id, fechar, fechae, fum, est) 
 VALUES (%s,%s,%s,%s,%s,%s)',
 SSQL($idc,'int'),
 SSQL($idp,'int'),
@@ -213,7 +213,7 @@ if(($_FILES['userfile']['name'])){
 	}
 }else{//INSERTA REPORTE ECOGRAFICO MANUAL
 	//INSERTA REPORTE
-	$qryInsRep=sprintf('INSERT INTO db_rep_eco (con_num, pac_cod, fechar, fechae, tipo, 
+	$qryInsRep=sprintf('INSERT INTO db_rep_eco (con_num, cli_id, fechar, fechae, tipo, 
 	rec_utero, rec_ovder, obs_ovder, rec_ovizq, obs_ovizq, 
 	eco_hall, eco_ohall, eco_diag, est) 
 	VALUES (%s,%s,%s,%s,

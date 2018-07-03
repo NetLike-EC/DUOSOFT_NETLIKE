@@ -1,0 +1,60 @@
+@font-face { font-family: "OpenSans"; src: url("../fonts/OpenSans-Regular.ttf") }
+@font-face { font-family: "OpenSansBold"; src: url("../fonts/OpenSans-Bold.ttf") }
+body{font-family:"OpenSans" !important; }
+body{padding-top:45px; /*background:url(../images/struct/bg_w.jpg) repeat;*/}
+.bodyLogin{}
+.bodyLogin-01{ background:url(../img/struct/bg-001.jpg) top center repeat}
+.bodyLogin-02{ background:url(../img/struct/bg-002.jpg) top center repeat}
+.bodyLogin-03{ background:url(../img/struct/bg-003.jpg) top center repeat}
+.bodyLogin-04{ background:url(../img/struct/bg-004.jpg) top center repeat}
+.cero{padding:0px; margin:0px}
+.mcero{margin:0px}
+.pcero{padding:0px;}
+#contPrintID{background:#FFF;}
+#loading { text-align: center; visibility: hidden;}
+#box_cont { display: none; overflow-y:scroll; height:auto; max-height:365px;
+position: absolute; z-index:100; width:91%; background:#FFF; border:1px solid #999;
+box-shadow: 0px 0px 20px #666;}
+#box_cont_btn{}
+
+.miniDetPac{}
+.miniDetPac table{margin-bottom:0px;}
+.miniDetPac label{ font-size:12px !important;}
+.miniDetPac .badge, .miniDetPac .label{ font-size:13px !important;}
+
+.form-min{}
+.form-min .form-group{ margin-bottom:0px;}
+
+.fileUpload {position: relative; overflow: hidden;}
+.fileUpload input.upload {position: absolute;top: 0;right: 0;margin: 0;padding: 0; cursor: pointer;opacity: 0;filter: alpha(opacity=0); }
+
+.page-header { margin: 21px 0 21px; }
+
+.well-white{background:#FFF;}
+
+.label-women { background-color: #FF6699; }
+/*cALENDAR*/
+.bgcal{background:#999}
+#loading { display: none; position: absolute; top: 10px; right: 10px;}
+#num_sesion {
+font-size: 150%;
+color: #f00;
+font-weight:bold;
+}
+
+/*OTHER STYLES*/
+.imgPacCons{
+transition: all 0.3s ease; webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease; -o-transition: all 0.3s ease;
+-moz-transform: scale(1); -o-transform: scale(1); -ms-transform: scale(1); transform: scale(1);
+position:relative;
+left:0px;
+top:0px;
+}
+.imgPacCons:hover{
+transition: all 0.5s ease;webkit-transition: all 0.5s ease;-moz-transition: all 0.5s ease;-o-transition: all 0.5s ease;
+-moz-transform: scale(1.6); -o-transform: scale(1.6); -ms-transform: scale(1.6); transform: scale(1.6);
+position:relative;
+left:30px;
+top:15px;
+z-index:99;
+}

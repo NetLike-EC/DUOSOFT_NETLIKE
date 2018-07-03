@@ -1,0 +1,15 @@
+/* CSS Document */
+body { padding-top: 45px;}
+.cero{margin:0px; padding:0px;}
+.cero-m{ padding-top :20px;}
+.img-mini{max-width:50px; max-height:25px;}
+.img-small{max-width:100px; max-height:50px;}
+.img-medium{max-width:200px; max-height:150px;}
+.img-xs{max-width:50px; max-height:25px;}
+.img-sm{max-width:100px; max-height:50px;}
+.img-md{max-width:200px; max-height:150px;}
+.page-header{margin-top:15px;}
+.labTitSecc{font-size:15px;}
+.img-form{max-height:80px; max-width:160px;margin:0px;}
+#loading { display: none; position: absolute; top: 10px; right: 10px; }
+.btn~.dropdown-toggle { padding-left: 10px !important; padding-right: 10px !important;}

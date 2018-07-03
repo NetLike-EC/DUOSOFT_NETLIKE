@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="AUTHORS" server="//servidor/clinic/" local="129420050680000000" remote="129420050680000000" Dst="0" />
-<file name="BUGS" server="//servidor/clinic/" local="129420050680000000" remote="129420050680000000" Dst="0" />
-<file name="langcover.txt" server="//servidor/clinic/" local="129420050680000000" remote="129420050680000000" Dst="0" />
-<file name="LICENSE" server="//servidor/clinic/" local="129420050680000000" remote="129420050680000000" Dst="0" />
-<file name="NEWS" server="//servidor/clinic/" local="129420050680000000" remote="129420050680000000" Dst="0" />
-<file name="README" server="//servidor/clinic/" local="129420050680000000" remote="129420050680000000" Dst="0" />
-<file name="status.txt" server="//servidor/clinic/" local="129420050680000000" remote="129420050680000000" Dst="0" />
-<file name="unicover.txt" server="//servidor/clinic/" local="129420050680000000" remote="129420050680000000" Dst="0" />
+<file name="AUTHORS" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686647657689" remote="131632131000000000" Dst="0" />
+<file name="BUGS" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686643381971" remote="131632131000000000" Dst="0" />
+<file name="LICENSE" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686639029527" remote="131632131000000000" Dst="0" />
+<file name="langcover.txt" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686623084513" remote="131632131000000000" Dst="0" />
+<file name="README" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686627394749" remote="131632131000000000" Dst="0" />
+<file name="NEWS" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686634875934" remote="131632131000000000" Dst="0" />
+<file name="unicover.txt" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686617700257" remote="131632131000000000" Dst="0" />
+<file name="status.txt" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686659081671" remote="131632131600000000" Dst="0" />
+<file name="BUGS" server="ftp.ecuahomes.net//public_html/admin/" local="131631686643381971" remote="131670823800000000" Dst="0" />
+<file name="AUTHORS" server="ftp.ecuahomes.net//public_html/admin/" local="131631686647657689" remote="131670823800000000" Dst="0" />
+<file name="LICENSE" server="ftp.ecuahomes.net//public_html/admin/" local="131631686639029527" remote="131670823800000000" Dst="0" />
+<file name="langcover.txt" server="ftp.ecuahomes.net//public_html/admin/" local="131631686623084513" remote="131670823800000000" Dst="0" />
+<file name="NEWS" server="ftp.ecuahomes.net//public_html/admin/" local="131631686634875934" remote="131670823800000000" Dst="0" />
+<file name="README" server="ftp.ecuahomes.net//public_html/admin/" local="131631686627394749" remote="131670823800000000" Dst="0" />
+<file name="unicover.txt" server="ftp.ecuahomes.net//public_html/admin/" local="131631686617700257" remote="131670823800000000" Dst="0" />
+<file name="status.txt" server="ftp.ecuahomes.net//public_html/admin/" local="131631686659081671" remote="131670823800000000" Dst="0" />
+<file name="AUTHORS" server="//Server01/duosoft_netlike/v2/" local="131631686647657689" remote="131631686640000000" Dst="0" />
+<file name="BUGS" server="//Server01/duosoft_netlike/v2/" local="131631686643381971" remote="131631686640000000" Dst="0" />
+<file name="langcover.txt" server="//Server01/duosoft_netlike/v2/" local="131631686623084513" remote="131631686620000000" Dst="0" />
+<file name="LICENSE" server="//Server01/duosoft_netlike/v2/" local="131631686639029527" remote="131631686630000000" Dst="0" />
+<file name="NEWS" server="//Server01/duosoft_netlike/v2/" local="131631686634875934" remote="131631686630000000" Dst="0" />
+<file name="README" server="//Server01/duosoft_netlike/v2/" local="131631686627394749" remote="131631686620000000" Dst="0" />
+<file name="status.txt" server="//Server01/duosoft_netlike/v2/" local="131631686659081671" remote="131631686650000000" Dst="0" />
+<file name="unicover.txt" server="//Server01/duosoft_netlike/v2/" local="131631686617700257" remote="131631686610000000" Dst="0" />
 </dwsync>

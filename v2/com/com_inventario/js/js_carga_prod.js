@@ -15,7 +15,7 @@ $(document).ready(function() {
         		content:    'producto_detail.php?prod_sel_find='+id_cli,
         		player:     "iframe",
         		title:      "<strong>DETALLE PRODUCTO</strong>",
-				width:		500,
+				width:		900,
 				options:	{relOnClose:true}
     			});
 				

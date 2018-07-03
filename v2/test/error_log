@@ -1,0 +1,9 @@
+[05-Jul-2017 12:56:24 America/Chicago] PHP Warning:  mysql_connect(): Access denied for user 'username'@'localhost' (using password: YES) in /home/merco/public_html/admin/test/genCSV.php on line 13
+[05-Jul-2017 12:56:24 America/Chicago] PHP Warning:  mysql_select_db(): Access denied for user 'merco'@'localhost' (using password: NO) in /home/merco/public_html/admin/test/genCSV.php on line 14
+[05-Jul-2017 12:56:24 America/Chicago] PHP Warning:  mysql_select_db(): A link to the server could not be established in /home/merco/public_html/admin/test/genCSV.php on line 14
+[05-Jul-2017 12:56:24 America/Chicago] PHP Warning:  mysql_query(): Access denied for user 'merco'@'localhost' (using password: NO) in /home/merco/public_html/admin/test/genCSV.php on line 15
+[05-Jul-2017 12:56:24 America/Chicago] PHP Warning:  mysql_query(): A link to the server could not be established in /home/merco/public_html/admin/test/genCSV.php on line 15
+[05-Jul-2017 12:56:24 America/Chicago] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, boolean given in /home/merco/public_html/admin/test/genCSV.php on line 18
+[05-Jul-2017 12:57:03 America/Guayaquil] PHP Warning:  mysql_connect(): Access denied for user 'username'@'localhost' (using password: YES) in /home/merco/public_html/admin/test/genCSV.php on line 13
+[05-Jul-2017 12:57:58 America/Guayaquil] PHP Warning:  mysql_connect(): Access denied for user 'username'@'localhost' (using password: YES) in /home/merco/public_html/admin/test/genCSV.php on line 13
+[05-Jul-2017 13:02:14 America/Guayaquil] PHP Warning:  mysql_fetch_assoc() expects parameter 1 to be resource, array given in /home/merco/public_html/admin/test/genCSV.php on line 23

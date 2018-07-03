@@ -2,9 +2,9 @@
 
 <?php
 /*function disable_reserv($con_fin,$pac_fin){
-if(@mysql_result(@mysql_query("SELECT * FROM db_consultas_reserva WHERE con_num='$con_fin' AND pac_cod='$pac_fin'"),'cons_res_num'))
+if(@mysql_result(@mysql_query("SELECT * FROM db_consultas_reserva WHERE con_num='$con_fin' AND cli_id='$pac_fin'"),'cons_res_num'))
 {
-	if(@mysql_query("DELETE FROM db_consultas_reserva WHERE con_num='$con_fin' AND pac_cod='$pac_fin'")or($res_fun=mysql_error()))
+	if(@mysql_query("DELETE FROM db_consultas_reserva WHERE con_num='$con_fin' AND cli_id='$pac_fin'")or($res_fun=mysql_error()))
 		$res_fun.="Eliminada Reserva";
 	else
 		$res_fun.="Falla Eliminación Reserva";
@@ -23,9 +23,9 @@ $sel_tip_pag=$_POST['list_tip_pag'];
 
 if ($_POST['btn_action']=="GRABAR")
 {
-	@mysql_query("INSERT INTO db_consultas (con_num, pac_cod, con_fec, con_diagp, con_stat, con_val, tip_pag) VALUES ('$con_num','$idp', '$date_con','$txt_con_diag','1','$txt_con_val','$sel_tip_pag')")or($LOG=mysql_error());
+	@mysql_query("INSERT INTO db_consultas (con_num, cli_id, con_fec, con_diagp, con_stat, con_val, tip_pag) VALUES ('$con_num','$idp', '$date_con','$txt_con_diag','1','$txt_con_val','$sel_tip_pag')")or($LOG=mysql_error());
 	$LOG.= "Consulta Grabada [OK]<br />";
-	if(@mysql_query("INSERT INTO tbl_cta_por_cobrar (con_num, pac_cod, cta_fecha, cta_detalle, cta_valor, cta_abono, cta_cantidad) VALUES ('$con_num','$idp', '$date_con', 'Consulta $con_num', '$txt_con_val', '0', '1')")or($LOG.=mysql_error()))
+	if(@mysql_query("INSERT INTO tbl_cta_por_cobrar (con_num, cli_id, cta_fecha, cta_detalle, cta_valor, cta_abono, cta_cantidad) VALUES ('$con_num','$idp', '$date_con', 'Consulta $con_num', '$txt_con_val', '0', '1')")or($LOG.=mysql_error()))
 		$LOG.= "Cuenta x Cobrar - Generada [OK]<br />";
 	else
 		$LOG.= "ERROR - Cuenta x Cobrar no Grabada";
@@ -42,9 +42,9 @@ if ($_POST['btn_action']=="GRABAR")
 if ($_POST['btn_action']=="ACTUALIZAR")
 {
 	if($_POST['cons_stat']==0)
-		$SQL_upd="UPDATE db_consultas SET con_diagp='$txt_con_diag', con_stat='1', con_fec='$date_con', tip_pag='$sel_tip_pag' WHERE con_num='$con_num' AND pac_cod='$idp'";
+		$SQL_upd="UPDATE db_consultas SET con_diagp='$txt_con_diag', con_stat='1', con_fec='$date_con', tip_pag='$sel_tip_pag' WHERE con_num='$con_num' AND cli_id='$idp'";
 	else
-		$SQL_upd="UPDATE db_consultas SET con_diagp='$txt_con_diag', con_stat='1' WHERE con_num='$con_num' AND pac_cod='$idp'";
+		$SQL_upd="UPDATE db_consultas SET con_diagp='$txt_con_diag', con_stat='1' WHERE con_num='$con_num' AND cli_id='$idp'";
 		
 	if(@mysql_query($SQL_upd)or($LOG=mysql_error()))
 	{

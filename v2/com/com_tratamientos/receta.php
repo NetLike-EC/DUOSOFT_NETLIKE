@@ -1,7 +1,7 @@
 <?php include_once('../../init.php');
 $dettrat=detRow('db_tratamientos','tid',$idt);//fnc_datatrat($idt);
 $detCon=detRow('db_consultas','con_num',$dettrat['con_num']);//fnc_datatrat($idt);
-$detpac=detRow('db_clientes','pac_cod',$detCon['pac_cod']);//dPac($dettrat['pac_cod']);
+$detpac=detRow('db_clientes','cli_id',$detCon['cli_id']);//dPac($dettrat['cli_id']);
 $dettrat_fecha=date_ame2euro($dettrat['fecha']);
 ?>
 <div style="background:#FFF; padding:34px 0px 0px 72px; border:0px none #FFF; width:400px">
@@ -15,7 +15,7 @@ Cuenca, <?php echo $dettrat_fecha?>
             <td>Receta N°. <strong><?php echo $idt ?></strong></td>
             <td>Consulta. <strong><?php echo $dettrat['con_num'] ?></strong></td>
         </tr>
-        <tr><td colspan="2">Paciente. <strong><?php echo $detpac['pac_nom'].' '.$detpac['pac_ape'] ?></strong></td></tr>
+        <tr><td colspan="2">Paciente. <strong><?php echo $detpac['cli_nom'].' '.$detpac['cli_ape'] ?></strong></td></tr>
         <tr>
             <td>Diagnostico</td>
             <td><strong><?php echo $dettrat['diagnostico'] ?></strong></td>
@@ -72,7 +72,7 @@ Cuenca, <?php echo $dettrat_fecha?>
     	<tbody>
         <tr>
         <td style="width:220px;">Cuenca, <?php echo $dettrat_fecha?></td>
-        <td>Paciente </td><td><strong><?php echo $detpac['pac_nom'].' '.$detpac['pac_ape'] ?></strong></td></tr>
+        <td>Paciente </td><td><strong><?php echo $detpac['cli_nom'].' '.$detpac['cli_ape'] ?></strong></td></tr>
         </tbody>
     </table>
     </div>

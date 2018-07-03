@@ -1,4 +1,4 @@
-<?php $qryHC=sprintf('SELECT * FROM db_paciente_hc WHERE pac_cod=%s',
+<?php $qryHC=sprintf('SELECT * FROM db_paciente_hc WHERE cli_id=%s',
 GetSQLValueString($id_pac,'int'));
 $RShc=mysql_query($qryHC);
 $row_RShc=mysql_fetch_assoc($RShc);

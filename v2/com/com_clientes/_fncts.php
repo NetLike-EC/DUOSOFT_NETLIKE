@@ -1,135 +1,102 @@
 <?php include('../../init.php');
-$urlr=vParam('urlr', $_GET['urlr'], $_POST['urlr']);
-$urlr=urlReturn($urlr,'index.php');
-$action=vParam('action', $_GET['action'], $_POST['action']);
+$dM=vLogin('PACIENTE');
+$goTo=vParam('url', $_GET['url'], $_POST['url']);
+$acc=vParam('acc', $_GET['acc'], $_POST['acc']);
 $id=vParam('id', $_GET['id'], $_POST['id']);
 $vP=FALSE;
+//$vD=TRUE;
+$data=$_POST;
 mysql_query("SET AUTOCOMMIT=0;"); //Desabilita el autocommit
 mysql_query("BEGIN;"); //Inicia la transaccion
-
-if ((isset($_POST['mod'])) && ($_POST['mod'] ==md5(fCLI))){
-	if ((isset($action)) && ($action == md5(INSc))){
-		$idAud=AUD(NULL,'Creación Paciente');
-		$qryins=sprintf('INSERT INTO db_clientes (pac_ced, pac_fec, pac_nom, pac_ape, pac_lugp, pac_lugr, pac_dir, pac_sect, pac_tel1 , pac_tel2, pac_email, pac_tipsan, pac_estciv, pac_hijos, pac_sexo, pac_ins, pac_pro, pac_emp, pac_ocu, pac_nompar, pac_telpar, pac_ocupar, pac_fecpar, pac_tipsanpar, publi, pac_obs, pac_tipst, isnew, pac_fecr, id_aud) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',
-		SSQL($_POST['pac_ced'], "text"),
-		SSQL($_POST['pac_fec'], "date"),
-		SSQL($_POST['pac_nom'], "text"),
-		SSQL($_POST['pac_ape'], "text"),
-		SSQL($_POST['pac_lugp'], "text"),
-		SSQL($_POST['pac_lugr'], "text"),
-		SSQL($_POST['pac_dir'], "text"),
-		SSQL($_POST['pac_sect'], "int"),
-		SSQL($_POST['pac_tel1'], "text"),
-		SSQL($_POST['pac_tel2'], "text"),
-		SSQL($_POST['pac_email'], "text"),
-		SSQL($_POST['pac_tipsan'], "int"),
-		SSQL($_POST['pac_estciv'], "int"),
-		SSQL($_POST['pac_hijos'], "int"),
-		SSQL($_POST['pac_sexo'], "int"),
-		SSQL($_POST['pac_ins'], "int"),
-		SSQL($_POST['pac_pro'], "text"),
-		SSQL($_POST['pac_emp'], "text"),
-		SSQL($_POST['pac_ocu'], "text"),
-		SSQL($_POST['pac_nompar'], "text"),
-		SSQL($_POST['pac_telpar'], "text"),
-		SSQL($_POST['pac_ocupar'], "text"),
-		SSQL($_POST['pac_fecpar'], "date"),
-		SSQL($_POST['pac_tipsanpar'], "int"),
-		SSQL($_POST['publi'], "text"),
-		SSQL($_POST['pac_obs'], "text"),
-		SSQL($_POST['pac_tipst'], "int"),
-		SSQL($_POST['isNew'], "int"),
-		SSQL($sdate, "date"),
-		SSQL($idAud,"int"));
-		if(@mysql_query($qryins)){ $id = @mysql_insert_id();
+if ((isset($data['mod'])) && ($data['mod'] == $dM['mod_ref'])){
+	$LOGd.='<small>mod</small>';
+	if ((isset($acc)) && ($acc == md5("INSp"))){
+		$LOGd.='<small>acc. INS</small>';
+		$qry=sprintf('INSERT INTO db_pacientes (cli_doc, cli_fec, pac_reg, cli_nom, cli_ape, cli_lugp, pac_lugr, pac_dir, pac_sect, pac_tel1 , pac_tel2, pac_email, pac_tipsan, pac_estciv, pac_hijos, pac_sexo, pac_raza, pac_ins, pac_pro, pac_emp, pac_ocu, cli_nompar, pac_telpar, pac_ocupar, cli_fecpar, pac_tipsanpar, publi, pac_obs, pac_tipst) 
+		VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',
+		SSQL($data['cli_doc'], "text"),
+		SSQL($data['cli_fec'], "date"), SSQL($sdate, "date"),
+		SSQL(strtoupper($data['cli_nom']), "text"), SSQL(strtoupper($data['cli_ape']), "text"),
+		SSQL($data['cli_lugp'], "text"), SSQL($data['pac_lugr'], "text"),
+		SSQL($data['pac_dir'], "text"), SSQL($data['pac_sect'], "int"),
+		SSQL($data['pac_tel1'], "text"), SSQL($data['pac_tel2'], "text"), 
+		SSQL($data['pac_email'], "text"),
+		SSQL($data['pac_tipsan'], "int"), SSQL($data['pac_estciv'], "int"), SSQL($data['pac_hijos'], "int"), 
+		SSQL($data['pac_sexo'], "int"), SSQL($data['pac_raza'], "int"),
+		SSQL($data['pac_ins'], "int"), SSQL($data['pac_pro'], "text"), 
+		SSQL($data['pac_emp'], "text"), SSQL($data['pac_ocu'], "text"),
+		SSQL($data['cli_nompar'], "text"), SSQL($data['pac_telpar'], "text"), SSQL($data['pac_ocupar'], "text"), SSQL($data['cli_fecpar'], "date"), SSQL($data['pac_tipsanpar'], "int"),
+		SSQL($data['publi'], "text"), SSQL($data['pac_obs'], "text"), SSQL($data['pac_tipst'], "int"));
+		//$LOGd.='<small>'.$qry.'</small>';
+		if(@mysql_query($qry)){ $id = @mysql_insert_id();
 			$LOG.='<p>Paciente Creado</p>';
 			// Registro Historia Clinic
-			$qryInsHc=sprintf('INSERT INTO db_clientes_hc (pac_cod) VALUES (%s)',
+			$qryHc=sprintf('INSERT INTO db_paciente_hc (cli_id) VALUES (%s)',
 			SSQL($id, "int"));
-			if(@mysql_query($qryInsHc)){ $id_hc = @mysql_insert_id();
+			if(@mysql_query($qryHc)){ $id_hc = @mysql_insert_id();
 				$LOG.='<p>Historial Clinica Generada</p>';
 				//Registro Obstetrico
-				$qryInsGin=sprintf('INSERT INTO db_ginecologia (pac_cod) VALUES (%s)',
+				$qryGin=sprintf('INSERT INTO db_pacientes_gin (cli_id) VALUES (%s)',
 				SSQL($id, "int"));
-				if(@mysql_query($qryInsGin)){ $id_gin = @mysql_insert_id();
+				if(@mysql_query($qryGin)){
+					$vP=TRUE;
+					$id_gin = @mysql_insert_id();
 					$LOG.='<p>Registro Ginecologico Creado</p>';
-				}else{
-					$LOG.='<p>Error al Insertar</p>';
-					$LOG.=mysql_error();
-				}
-			}else{ 
-				$LOG.='<p>Error al Insertar</p>';
-				$LOG.=mysql_error();
-			}
-		}else{
-			$LOG.='<p>Error al Insertar</p>';
-			$LOG.=mysql_error();
-		}
-		$urlr.= '?id='.$id;
+				}else $LOG.='<p>Error al Insertar</p>'.mysql_error();
+			}else $LOG.='<p>Error al Insertar</p>'.mysql_error();
+		}else $LOG.='<p>Error al Insertar</p>'.mysql_error();
+		$goTo.= '?id='.$id;
 	}
-	if ((isset($action)) && ($action == md5(UPDc))){
-		$detPac=detRow('db_clientes','pac_cod',$id);
-		$idAud=AUD($detPac['id_aud'],'Actualización Paciente');
-		
-		$qryupd=sprintf('UPDATE db_clientes SET pac_ced=%s, pac_fec=%s, pac_nom=%s, pac_ape=%s, pac_lugp=%s, pac_lugr=%s, pac_dir=%s, pac_sect=%s, pac_tel1=%s, pac_tel2=%s, pac_email=%s, pac_tipsan=%s, pac_estciv=%s, pac_hijos=%s, pac_sexo=%s, pac_ins=%s, pac_pro=%s, pac_emp=%s, pac_ocu=%s, pac_nompar=%s, pac_telpar=%s, pac_ocupar=%s, pac_fecpar=%s, pac_tipsanpar=%s, publi=%s, pac_obs=%s, pac_tipst=%s, isnew=%s, id_aud=%s 
-		WHERE pac_cod=%s',
-		SSQL($_POST['pac_ced'], "text"),
-		SSQL($_POST['pac_fec'], "date"),
-		SSQL($_POST['pac_nom'], "text"),
-		SSQL($_POST['pac_ape'], "text"),
-		SSQL($_POST['pac_lugp'], "text"),
-		SSQL($_POST['pac_lugr'], "text"),
-		SSQL($_POST['pac_dir'], "text"),
-		SSQL($_POST['pac_sect'], "text"),
-		SSQL($_POST['pac_tel1'], "text"),
-		SSQL($_POST['pac_tel2'], "text"),
-		SSQL($_POST['pac_email'], "text"),
-		SSQL($_POST['pac_tipsan'], "int"),
-		SSQL($_POST['pac_estciv'], "int"),
-		SSQL($_POST['pac_hijos'], "int"),
-		SSQL($_POST['pac_sexo'], "int"),
-		SSQL($_POST['pac_ins'], "int"),
-		SSQL($_POST['pac_pro'], "text"),
-		SSQL($_POST['pac_emp'], "text"),
-		SSQL($_POST['pac_ocu'], "text"),
-		SSQL($_POST['pac_nompar'], "text"),
-		SSQL($_POST['pac_telpar'], "text"),
-		SSQL($_POST['pac_ocupar'], "text"),
-		SSQL($_POST['pac_fecpar'], "date"),
-		SSQL($_POST['pac_tipsanpar'], "int"),
-		SSQL($_POST['publi'], "text"),
-		SSQL($_POST['pac_obs'], "text"),
-		SSQL($_POST['pac_tipst'], "int"),
-		SSQL($_POST['isNew'], "int"),
-		SSQL($idAud,"int"),
+	if ((isset($acc)) && ($acc == md5("UPDp"))){
+		$LOGd.='<small>acc. UPD</small>';
+		$qry=sprintf('UPDATE db_pacientes SET cli_doc=%s, cli_fec=%s, cli_nom=%s, cli_ape=%s, cli_lugp=%s, pac_lugr=%s, pac_dir=%s, pac_sect=%s, pac_tel1=%s, pac_tel2=%s, pac_email=%s, pac_tipsan=%s, pac_estciv=%s, pac_hijos=%s, pac_sexo=%s, pac_raza=%s, pac_ins=%s, pac_pro=%s, pac_emp=%s, pac_ocu=%s, cli_nompar=%s, pac_telpar=%s, pac_ocupar=%s, cli_fecpar=%s, pac_tipsanpar=%s, publi=%s, pac_obs=%s, pac_tipst=%s 
+		WHERE cli_id=%s',
+		SSQL($data['cli_doc'], "text"),
+		SSQL($data['cli_fec'], "date"),
+		SSQL(strtoupper($data['cli_nom']), "text"), SSQL(strtoupper($data['cli_ape']), "text"),
+		SSQL($data['cli_lugp'], "text"), SSQL($data['pac_lugr'], "text"),
+		SSQL($data['pac_dir'], "text"),
+		SSQL($data['pac_sect'], "text"),
+		SSQL($data['pac_tel1'], "text"), SSQL($data['pac_tel2'], "text"),
+		SSQL($data['pac_email'], "text"),
+		SSQL($data['pac_tipsan'], "int"),
+		SSQL($data['pac_estciv'], "int"), SSQL($data['pac_hijos'], "int"),
+		SSQL($data['pac_sexo'], "int"), SSQL($data['pac_raza'], "int"),
+		SSQL($data['pac_ins'], "int"),
+		SSQL($data['pac_pro'], "text"),
+		SSQL($data['pac_emp'], "text"),
+		SSQL($data['pac_ocu'], "text"),
+		SSQL($data['cli_nompar'], "text"), SSQL($data['pac_telpar'], "text"), SSQL($data['pac_ocupar'], "text"),
+		SSQL($data['cli_fecpar'], "date"), SSQL($data['pac_tipsanpar'], "int"),
+		SSQL($data['publi'], "text"), SSQL($data['pac_obs'], "text"), SSQL($data['pac_tipst'], "int"),
 		SSQL($id, "int"));
-		if (@mysql_query($qryupd)) $LOG.='<h4>Actualizado Correctamente </h4>'.$_POST['pac_nom'].' '.$_POST['pac_ape'];
-		else{
-			$LOG.='<h4>Error al Actualizar Paciente</h4>';
-			$LOG.=mysql_error();
-		}
-		$urlr.='?id='.$id;
+		$LOGd.='<small>'.$qry.'</small>';
+		if (@mysql_query($qry)){
+			$vP=TRUE;
+			$LOG.='<p>Actualizado Correctamente </p>'.$data['cli_nom'].' '.$data['cli_ape'];
+		}else $LOG.='<p>Error al Actualizar Paciente</p>'.mysql_error();
+		$goTo.='?id='.$id;
 	}
 }
-
-if(($vP==TRUE)&&(!mysql_error())){
-	$_SESSION['sBr']=$_POST['pac_nom'].' '.$_POST['pac_ape'];
+$LOG.=mysql_error();
+if($vD==TRUE) $LOG.=$LOGd;
+if((!mysql_error())&&($vP==TRUE)){
+	$_SESSION['sBr']=$data['cli_nom'].' '.$data['cli_ape'];
 	mysql_query("COMMIT;");
 	$LOGt.='Operación Exitosa';
 	$LOGc='alert-success';
-	$LOGi=$RAIZa.$_SESSION['conf']['i']['ok'];
+	$LOGi=$RAIZii.'Ok-48.png';
 }else{
 	mysql_query("ROLLBACK;");
 	$LOGt.='Solicitud no Procesada';
 	$LOG.=mysql_error();
 	$LOGc='alert-danger';
-	$LOGi=$RAIZa.$_SESSION['conf']['i']['fail'];
+	$LOGi=$RAIZii.'Cancel-48.png';
 }
 mysql_query("SET AUTOCOMMIT=1;"); //Habilita el autocommit
-$LOG.=mysql_error();
 $_SESSION['LOG']['t']=$LOGt;
 $_SESSION['LOG']['m']=$LOG;
 $_SESSION['LOG']['c']=$LOGc;
 $_SESSION['LOG']['i']=$LOGi;
-header(sprintf("Location: %s", $urlr));
+header(sprintf("Location: %s", $goTo));
 ?>

@@ -1,0 +1,4 @@
+[02-Sep-2017 08:43:22 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_8fb858fef5b8bf80486186f799494afe, O_RDWR) failed: Permission denied (13) in /home/merco/public_html/admin/init.php on line 1
+[02-Sep-2017 08:43:22 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/merco/public_html/admin/init.php:1) in /home/merco/public_html/admin/init.php on line 1
+[02-Sep-2017 08:43:23 America/Guayaquil] PHP Warning:  Unknown: open(/tmp/sess_8fb858fef5b8bf80486186f799494afe, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[02-Sep-2017 08:43:23 America/Guayaquil] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0

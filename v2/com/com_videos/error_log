@@ -1,0 +1,21 @@
+[12-Mar-2013 16:11:26] PHP Warning:  Invalid argument supplied for foreach() in /home/susan/public_html/admin/componentes/com_videos/index.php on line 69
+[12-Mar-2013 16:11:26] PHP Warning:  Invalid argument supplied for foreach() in /home/susan/public_html/admin/componentes/com_videos/index.php on line 69
+[12-Mar-2013 16:11:26] PHP Warning:  Invalid argument supplied for foreach() in /home/susan/public_html/admin/componentes/com_videos/index.php on line 69
+[12-Mar-2013 16:11:26] PHP Warning:  Invalid argument supplied for foreach() in /home/susan/public_html/admin/componentes/com_videos/index.php on line 69
+[12-Mar-2013 16:11:26] PHP Warning:  Invalid argument supplied for foreach() in /home/susan/public_html/admin/componentes/com_videos/index.php on line 69
+[12-Mar-2013 16:36:03] PHP Fatal error:  Call to undefined function  fnc_vid() in /home/susan/public_html/admin/componentes/com_videos/videoplay.php on line 5
+[08-Aug-2013 12:58:30] PHP Warning:  mysql_free_result(): 11 is not a valid MySQL result resource in /home/susan/public_html/admin/componentes/com_videos/video_form.php on line 97
+[08-Aug-2013 13:00:56] PHP Warning:  mysql_free_result(): 11 is not a valid MySQL result resource in /home/susan/public_html/admin/componentes/com_videos/video_form.php on line 97
+[08-Aug-2013 13:02:01] PHP Warning:  mysql_free_result(): 11 is not a valid MySQL result resource in /home/susan/public_html/admin/componentes/com_videos/video_form.php on line 97
+[08-Aug-2013 13:02:41] PHP Warning:  mysql_free_result(): 11 is not a valid MySQL result resource in /home/susan/public_html/admin/componentes/com_videos/video_form.php on line 97
+[08-Aug-2013 13:03:19] PHP Warning:  mysql_free_result(): 11 is not a valid MySQL result resource in /home/susan/public_html/admin/componentes/com_videos/video_form.php on line 97
+[08-Aug-2013 13:05:23] PHP Warning:  mysql_free_result(): 11 is not a valid MySQL result resource in /home/susan/public_html/admin/componentes/com_videos/video_form.php on line 97
+[08-Aug-2013 13:06:58] PHP Warning:  mysql_free_result(): 11 is not a valid MySQL result resource in /home/susan/public_html/admin/componentes/com_videos/video_form.php on line 94
+[04-Jan-2017 07:56:32 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php:15) in /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php on line 60
+[04-Jan-2017 07:57:08 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php:16) in /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php on line 61
+[04-Jan-2017 07:57:59 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php:16) in /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php on line 61
+[04-Jan-2017 07:58:39 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php:16) in /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php on line 61
+[04-Jan-2017 07:58:52 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php:16) in /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php on line 61
+[04-Jan-2017 08:03:14 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php:28) in /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php on line 59
+[04-Jan-2017 08:56:09 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php:56) in /home/alemerco/public_html/admin/componentes/com_videos/_fncts.php on line 57
+[04-Jan-2017 17:20:50 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/alemerco/public_html/admin/componentes/com_videos/index.php on line 62

@@ -110,7 +110,7 @@ $row_pac = dPac($_GET['idp']);
 </tr>
 <tr>
 	<td>Paciente:</td>
-    <td><?php echo $row_pac["pac_nom"]." ".$row_pac["pac_ape"];?></td>
+    <td><?php echo $row_pac["cli_nom"]." ".$row_pac["cli_ape"];?></td>
 </tr>
 <tr>
 	<td>Consulta Numero:</td>

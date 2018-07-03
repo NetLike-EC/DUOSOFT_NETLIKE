@@ -17,7 +17,7 @@ include(RAIZf.'head.php');
            	<p><?php echo date("Y-m-d ");?></p></td>	     
        		<td><label>PACIENTE:</label>
            	<p><?php $res=dPac($_SESSION['idp']); 
-			echo $res['pac_nom']." ".$res['pac_ape']; ?></p></td>           
+			echo $res['cli_nom']." ".$res['cli_ape']; ?></p></td>           
        		<td><label>EMPLEADO:</label>
 	   		<p><?php //$res=dataEmp($_SESSION['MM_Username']); 			echo $res['emp_nom']." ".$res['emp_ape']; ?></p></td>              
 		</tr>

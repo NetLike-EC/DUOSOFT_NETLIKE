@@ -1,7 +1,7 @@
 <?php 
 $id=vParam('id', $_GET['id'], $_POST['id']);
 $detPac=dPac($id);
-$detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
+$detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
 ?>
 
 <nav class="navbar navbar-default" role="navigation">
@@ -20,8 +20,8 @@ $detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#"><?php echo $detPac_nom ?></a></li>
-        <li><a><?php echo $detPac_fec ?></a></li>
+        <li class="active"><a href="#"><?php echo $detcli_nom ?></a></li>
+        <li><a><?php echo $detcli_fec ?></a></li>
       </ul>
       <div class="navbar-right btn-group navbar-btn">
       <a href="<?php echo $RAIZc ?>com_reps/eco_form.php?idp=<?php echo $id ?>" class="btn btn-info fancybox.iframe fancyreload"><col-md- class="glyphicon glyphicon-plus-sign"></col-md-> NUEVO</a>
@@ -37,7 +37,7 @@ $detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
 
 <?php if($detPac){ ?>
 <?php 
-$qry=sprintf('SELECT * FROM  db_rep_eco WHERE pac_cod=%s ORDER BY id DESC',
+$qry=sprintf('SELECT * FROM  db_rep_eco WHERE cli_id=%s ORDER BY id DESC',
 SSQL($id,'int'));
 $RSr=mysql_query($qry);
 $row_RSr=mysql_fetch_assoc($RSr);
@@ -67,10 +67,10 @@ $classtr;
 	</thead>
     <tbody>
 	<?php do{ ?>
-	<?php $detP=detRow('db_clientes','pac_cod',$row_RSr['pac_cod']); ?>
+	<?php $detP=detRow('db_clientes','cli_id',$row_RSr['cli_id']); ?>
 	<tr <?php echo $classtr?>>
         	<td><?php echo $row_RSr['id'] ?></td>
-            <td><?php echo $detP['pac_nom'].' '.$detP['pac_ape'] ?></td>
+            <td><?php echo $detP['cli_nom'].' '.$detP['cli_ape'] ?></td>
 			<td><?php echo $row_RSr['fechar'] ?></td>
             <td><?php echo $row_RSr['fechae'] ?></td>
 			<td><?php echo totRowsTab('db_rep_obs_detalle','id_rep',$row_RSr['id']) ?></td>

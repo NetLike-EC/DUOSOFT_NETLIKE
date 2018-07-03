@@ -46,7 +46,7 @@ if ((isset($_POST['form'])) && ($_POST['form'] == 'fexamen')){
 	
 	
 	if($action=='INS'){	
-	$qryinst=sprintf('INSERT INTO db_examenes (pac_cod,con_num,fecha,fechae,typ_cod,descripcion,resultado)
+	$qryinst=sprintf('INSERT INTO db_examenes (cli_id,con_num,fecha,fechae,typ_cod,descripcion,resultado)
 	VALUES (%s,%s,%s,%s,%s,%s,%s)',
 	SSQL($_POST['idp'], "int"),
 	SSQL($_POST['idc'], "int"),

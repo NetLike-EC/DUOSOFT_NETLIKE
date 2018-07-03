@@ -12,16 +12,16 @@ $idp_sel_RS_paciente_Sel = "-1";
 if (isset($_GET['idp'])) {
   $idp_sel_RS_paciente_Sel = $_GET['idp'];
 }
-$query_RS_paciente_Sel = sprintf("SELECT * FROM db_clientes WHERE db_clientes.pac_cod=%s", SSQL($idp_sel_RS_paciente_Sel, "int"));
+$query_RS_paciente_Sel = sprintf("SELECT * FROM db_clientes WHERE db_clientes.cli_id=%s", SSQL($idp_sel_RS_paciente_Sel, "int"));
 $RS_paciente_Sel = mysql_query($query_RS_paciente_Sel) or die(mysql_error());
 $row_RS_paciente_Sel = mysql_fetch_assoc($RS_paciente_Sel);
 $totalRows_RS_paciente_Sel = mysql_num_rows($RS_paciente_Sel);
 
 $colname_rs_cons_cli = "-1";
-if (isset($_GET['pac_cod'])) {
-  $colname_rs_cons_cli = $_GET['pac_cod'];
+if (isset($_GET['cli_id'])) {
+  $colname_rs_cons_cli = $_GET['cli_id'];
 }
-$query_rs_cons_cli = sprintf("SELECT * FROM tbl_cta_por_cobrar WHERE pac_cod = %s and cta_est='P' order by con_num", SSQL($idp_sel_RS_paciente_Sel, "int"));
+$query_rs_cons_cli = sprintf("SELECT * FROM tbl_cta_por_cobrar WHERE cli_id = %s and cta_est='P' order by con_num", SSQL($idp_sel_RS_paciente_Sel, "int"));
 $rs_cons_cli = mysql_query($query_rs_cons_cli) or die(mysql_error());
 $row_rs_cons_cli = mysql_fetch_assoc($rs_cons_cli);
 $totalRows_rs_cons_cli = mysql_num_rows($rs_cons_cli);

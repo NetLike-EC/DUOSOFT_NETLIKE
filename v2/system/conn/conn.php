@@ -1,12 +1,17 @@
 <?php
-# Type="MYSQL"
-# HTTP="true"
-$hostname_conn = "localhost";
+defined('_JEXEC') or die('Restricted access');//comprueba si la constante esta definida
+$hostname_conn = "p:localhost";
 $database_conn = "duosoft_netlike";
 $username_conn = "root";
-$password_conn = "rootroot";
-//$password_conn = "root";
-$conn_freimo = mysql_pconnect($hostname_conn, $username_conn, $password_conn) or trigger_error(mysql_error(),E_USER_ERROR);
-mysql_select_db($database_conn);
-mysql_query("SET NAMES 'utf8'");
+$password_conn = "root2018NL";
+//var_dump($conn);
+//echo '<hr>';
+if(!$conn){
+	$conn = mysqli_connect($hostname_conn, $username_conn, $password_conn) or trigger_error(mysql_error(),E_USER_ERROR); 
+	mysqli_select_db($conn,$database_conn);
+	mysqli_query($conn,"SET NAMES 'utf8'");
+	//cLOG('Successfully connection');
+}//else cLOG('Existent Connection');
+//var_dump($conn);
+//echo '<hr>';
 ?>

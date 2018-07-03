@@ -12,12 +12,12 @@ $dCon=detRow('db_consultas','con_num',$idc);
 
 if($dRes) $acc='NEW';
 
-if($dCon) $idp=$dCon['pac_cod'];
-$dPac=detRow('db_clientes','pac_cod',$idp);
+if($dCon) $idp=$dCon['cli_id'];
+$dPac=detRow('db_clientes','cli_id',$idp);
 
 if($dPac){
 	if($acc!='NEW'){
-		if(!$dCon) $dCon=detRow('db_consultas','pac_cod',$idp,'con_num','DESC');
+		if(!$dCon) $dCon=detRow('db_consultas','cli_id',$idp,'con_num','DESC');
 		$idc=$dCon['con_num'];
 	}
 }
@@ -36,7 +36,7 @@ if($dCon){
 }
 $dirimg=fncImgExist("data/db/pac/",lastImgPac($idp));
 $stat=estCon($estCon);//Devuelve el estado de la Consulta en HTML
-//$_SESSION['idp']=$dPac['pac_cod'];//Guarda al paciente en una session para mantenerlo durante la navegacion
+//$_SESSION['idp']=$dPac['cli_id'];//Guarda al paciente en una session para mantenerlo durante la navegacion
 
 include(RAIZf.'head.php');
 include(RAIZm.'mod_menu/menuMain.php');
@@ -77,7 +77,7 @@ include(RAIZm.'mod_menu/menuMain.php');
     <ul class="nav navbar-nav pull-right">
 		<li><div class="btn-group">
 			<?php echo $btn_action_form ?>
-			<a href="<?php echo $urlcurrent ?>?idp=<?php echo $dPac['pac_cod']; ?>&acc=NEW" class="btn btn-default navbar-btn">
+			<a href="<?php echo $urlcurrent ?>?idp=<?php echo $dPac['cli_id']; ?>&acc=NEW" class="btn btn-default navbar-btn">
             <i class="fa fa-file-o"></i> NUEVA</a>
 		</div></li>
         </ul>

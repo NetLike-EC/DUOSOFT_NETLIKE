@@ -2,9 +2,9 @@
 $id=$_GET['id'];
 $detRep=detRow('db_rep_obs','id',$id);
 $detCon=detRow('db_consultas','con_num',$detRep['con_num']);
-$detPac=detRow('db_clientes','pac_cod',$detCon['pac_cod']);
-$detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
-$detPac_edad=edad($detPac['pac_fec']);
+$detPac=detRow('db_clientes','cli_id',$detCon['cli_id']);
+$detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
+$detPac_edad=edad($detPac['cli_fec']);
 $dettrat_fecha=date_ame2euro($dettrat['fecha']);
 
 $qryRepDets=sprintf('SELECT * FROM db_rep_obs_detalle WHERE id_rep=%s',
@@ -40,7 +40,7 @@ $TR_RSm=mysql_num_rows($RSm);
 </table>
 <div style="border:1px solid #CCC; margin:5px 0; padding:2px;">
 	<span style="padding:5px; background:#CCC ">Fecha: </span> <span><?php echo $detRep['fechar'] ?></span> 
-    <span style="padding:5px; background:#CCC; margin-left:10px;">Paciente: </span> <span><?php echo $detPac_nom ?></span> 
+    <span style="padding:5px; background:#CCC; margin-left:10px;">Paciente: </span> <span><?php echo $detcli_nom ?></span> 
     <span style="padding:5px; background:#CCC; margin-left:10px;">Edad: </span> <span><?php echo $detPac_edad ?> años</span>
 </div>
 <div style="margin-top:10px;">

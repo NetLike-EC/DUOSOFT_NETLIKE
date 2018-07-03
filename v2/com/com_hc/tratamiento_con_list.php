@@ -1,5 +1,5 @@
 <?php 
-$qryConLst=sprintf('SELECT * FROM db_tratamientos WHERE con_num=%s OR pac_cod=%s ORDER BY tid DESC',
+$qryConLst=sprintf('SELECT * FROM db_tratamientos WHERE con_num=%s OR cli_id=%s ORDER BY tid DESC',
 GetSQLValueString($id_cons,'int'),
 GetSQLValueString($id_pac,'int'));
 $RSt=mysql_query($qryConLst);

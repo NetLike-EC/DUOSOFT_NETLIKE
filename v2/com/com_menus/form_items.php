@@ -1,29 +1,31 @@
 <?php include('../../init.php');
 $dM=vLogin('MENU ITEMS');
-$id=vParam('id', $_GET['id'], $_POST['id']);
-$acc=vParam('action', $_GET['action'], $_POST['action']);
-$det=detRow('tbl_menus_items','men_id',$id);
-if ($det){ 
-	$acc="UPD";
-	$btnAction='<button type="submit" class="btn btn-success" id="vAcc"><span class="fa fa-floppy-o fa-lg"></span> ACTUALIZAR</button>';
+
+$ids=vParam('ids', $_GET['ids'], $_POST['ids']);
+$acc=vParam('acc', $_GET['acc'], $_POST['acc']);
+$det=detRow('tbl_menus_items','md5(men_id)',$ids);
+if ($det){
+	$id=$det['men_id'];
+	$acc=md5(UPDmi);
+	$btnAction='<button type="button" class="btn btn-success" id="vAcc"><i class="fa fa-floppy-o fa-lg"></i> ACTUALIZAR</button>';
 }else {
-	$acc="INS";
-	$btnAction='<button type="submit" class="btn btn-primary" id="vAcc"><span class="fa fa-floppy-o fa-lg"></span> GUARDAR</button>';
+	$acc=md5(INSmi);
+	$btnAction='<button type="button" class="btn btn-primary" id="vAcc"><i class="fa fa-floppy-o fa-lg"></i> GUARDAR</button>';
 }
-include(RAIZf.'head.php'); ?>
+$css['body']='cero';
+include(RAIZf.'_head.php'); ?>
 <div class="container">
 <form enctype="multipart/form-data" method="post" action="fncts.php" class="form-horizontal">
 <fieldset>
 <input name="acc" type="hidden" value="<?php echo $acc ?>">
-<input name="form" type="hidden" value="form_meni">
-<input name="id" type="hidden" value="<?php echo $id ?>" />
+<input name="form" type="hidden" value="<?php echo md5(formMI) ?>">
+<input name="ids" type="hidden" value="<?php echo $ids ?>" />
 <input name="url" type="hidden" value="<?php echo $urlc ?>" />
 </fieldset>
-
 <?php echo genPageNavbar($dM['mod_cod']) ?>
 <div class="btn-group pull-right">
       <?php echo $btnAction ?>
-      <a href="<?php echo $_SESSION['urlc'] ?>" class="btn btn-default"><span class="fa fa-plus"></span> NUEVO</a>
+      <a href="<?php echo $_SESSION['urlc'] ?>" class="btn btn-default"><i class="fa fa-plus"></i> NUEVO</a>
     </div>
 <?php echo genPageHead(NULL,$det['men_nombre'],'h2', $det['men_id']) ?>
 <?php sLog('g'); ?>
@@ -41,7 +43,7 @@ include(RAIZf.'head.php'); ?>
         <div class="form-group">
 			<label class="control-label col-sm-4" for="menu_id">MENU CONTENEDOR</label>
 			<div class="col-sm-8">
-				<?php genSelect('dIDC',detRowGSel('tbl_menus','id','nom','stat','1'),$det['men_idc'],'form-control','required onChange="loadMI(this.value,0)"'); ?>
+				<?php genSelect('dIDC',detRowGSel('tbl_menus','id','CONCAT(sec," | ",nom)','stat','1'),$det['men_idc'],'form-control','required onChange="loadMI(this.value,0)"'); ?>
             </div>
 		</div>
         <div class="form-group">
@@ -60,7 +62,7 @@ include(RAIZf.'head.php'); ?>
         <div class="form-group">
 			<label class="control-label col-sm-4" for="menu_id">COMPONENTE</label>
 			<div class="col-sm-8">
-				<?php genSelect('dMod',detRowGSel('db_componentes','mod_cod','mod_nom','mod_stat','1'),$det['mod_cod'],'form-control'); ?>
+				<?php genSelect('dMod',detRowGSel('db_componentes','mod_cod','mod_ref','mod_stat','1'),$det['mod_cod'],'form-control'); ?>
             </div>
 		</div>
         
@@ -94,11 +96,20 @@ include(RAIZf.'head.php'); ?>
 			<div class="col-sm-8">
 		  <input name="dLnk" type="text" id="men_link" placeholder="Enlace al Archivo" value="<?php echo $det['men_link']; ?>" class="form-control"></div>
 		</div>
-        <div class="form-group">
+		<div class="well">
+		<?php $contMenTit=genFormControlLang('col-sm-8','text','men_tit',NULL,'form-control','Visible text in front-end','Visible title','col-sm-4','tbl_menus_items','men_tit',$id);
+		echo $contMenTit[log];
+		echo $contMenTit[val];
+		?>
+		</div>
+		<!--
+		<div class="form-group">
 			<label class="control-label col-sm-4" for="men_tit">Titulo Visible</label>
 			<div class="col-sm-8">
 		  <input name="dTit" type="text" id="men_tit" placeholder="Titulo" value="<?php echo $det['men_tit']; ?>" class="form-control"></div>
 		</div>
+		-->
+		
         <div class="form-group">
 			<label class="control-label col-sm-4" for="txtIcon">Icono</label>
 			<div class="col-sm-8">
@@ -163,4 +174,4 @@ function loadMI(id,sel){
 	}, "json");
 }
 </script>
-<?php include(RAIZf.'footer.php'); ?>
+<?php include(RAIZf.'_foot.php'); ?>

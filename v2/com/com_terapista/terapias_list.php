@@ -2,7 +2,7 @@
 $qryConLst=sprintf('SELECT * FROM db_terapias
 inner join tbl_usuario on db_terapias.id_usu = tbl_usuario.usr_id
 inner join db_empleados on tbl_usuario.emp_cod=db_empleados.emp_cod
-inner join db_clientes on db_clientes.pac_cod=db_terapias.id_pac WHERE est=%s',
+inner join db_clientes on db_clientes.cli_id=db_terapias.id_pac WHERE est=%s',
 SSQL('1','int'));
 $RSt=mysql_query($qryConLst) or die (mysql_error());
 $row_RSt=mysql_fetch_assoc($RSt);
@@ -44,7 +44,7 @@ $tr_RSt=mysql_num_rows($RSt);
             <td><?php echo $detSes['horai'] ?></td>
             <td><?php echo $detSes['horaf'] ?></td>			
             <td><?php echo $row_RSt['emp_nom'].' '.$row_RSt['emp_ape'] ?></td>
-            <td><?php echo $row_RSt['pac_nom'].' '.$row_RSt['pac_ape'] ?></td>
+            <td><?php echo $row_RSt['cli_nom'].' '.$row_RSt['cli_ape'] ?></td>
             <td><?php echo $estado ?></td>
             <td><?php echo $row_RSt['num_ses'] ?></td>			                     
             <td><div class="btn-group">

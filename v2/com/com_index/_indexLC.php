@@ -39,8 +39,8 @@ $TR_RSCa=mysql_num_rows($RSCa);
             <?php if($TR_RSCr>0){ ?>
             <ul class="list-group">
                     <?php do{ ?>
-                    <?php $detPac=detRow('db_clientes','pac_cod',$row_RSCr['pac_cod']);
-                    $detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
+                    <?php $detPac=detRow('db_clientes','cli_id',$row_RSCr['cli_id']);
+                    $detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
                     $detRes_fec=$row_RSCr['fechai'];
                     if($row_RSCr['horai']){
                         $detRes_hor=strtotime($row_RSCr['horai']); 
@@ -52,8 +52,8 @@ $TR_RSCa=mysql_num_rows($RSCa);
                     $detTyp=detRow('db_types','typ_cod',$row_RSCr['typ_cod']);
                     if($detTyp) $detTyp_nom=' / '.$detTyp['typ_val'];
                     if($detPac){
-                        $det_tit='<a href="'.$RAIZc.'com_consultas/form.php?idp='.$row_RSCr['pac_cod'].'&idr='.$row_RSCr['id'].'">';
-                        $det_tit.=$detPac['pac_nom'].' '.$detPac['pac_ape'].$detTyp_nom;
+                        $det_tit='<a href="'.$RAIZc.'com_consultas/form.php?idp='.$row_RSCr['cli_id'].'&idr='.$row_RSCr['id'].'">';
+                        $det_tit.=$detPac['cli_nom'].' '.$detPac['cli_ape'].$detTyp_nom;
                         $det_tit.='</a>';
                     }else{
                         $det_tit=$row_RSCr['obs'].$detTyp_nom;
@@ -74,8 +74,8 @@ $TR_RSCa=mysql_num_rows($RSCa);
             <?php if($TR_RSCh>0){ ?>
             <ul class="list-group">
                     <?php do{ ?>
-                    <?php $detPac=detRow('db_clientes','pac_cod',$row_RSCh['pac_cod']);
-                    $detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
+                    <?php $detPac=detRow('db_clientes','cli_id',$row_RSCh['cli_id']);
+                    $detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
                     $detAud=detRow('db_auditoria','id_aud',$row_RSCh['id_aud']);
                     $detAud_fec=$detAud['aud_datet'];
                     $detAud_fec=strtotime($detAud_fec); 
@@ -84,8 +84,8 @@ $TR_RSCa=mysql_num_rows($RSCa);
                     <li class="list-group-item">
                     <span class="label label-default"><?php echo $detAud_hor ?></span> 
                     <span class="label label-info"><?php echo $row_RSCh['con_num'] ?></span>
-                    <a href="<?php echo $RAIZc ?>com_consultas/form.php?idc=<?php echo $row_RSCh['con_num'] ?>&idp=<?php echo $row_RSCh['pac_cod'] ?>">
-                        <?php echo $detPac_nom ?>
+                    <a href="<?php echo $RAIZc ?>com_consultas/form.php?idc=<?php echo $row_RSCh['con_num'] ?>&idp=<?php echo $row_RSCh['cli_id'] ?>">
+                        <?php echo $detcli_nom ?>
                     </a>
                     </li>
                     <?php }while($row_RSCh=mysql_fetch_assoc($RSCh)); ?>
@@ -102,8 +102,8 @@ $TR_RSCa=mysql_num_rows($RSCa);
             <?php if($TR_RSCa>0){ ?>
             <ul class="list-group">
                     <?php do{ ?>
-                    <?php $detPac=detRow('db_clientes','pac_cod',$row_RSCa['pac_cod']);
-                    $detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
+                    <?php $detPac=detRow('db_clientes','cli_id',$row_RSCa['cli_id']);
+                    $detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
                     $detAud=detRow('db_auditoria','id_aud',$row_RSCa['id_aud']);
                     $detAud_fec=$detAud['aud_datet'];
                     $detAud_fec=strtotime($detAud_fec); 
@@ -113,7 +113,7 @@ $TR_RSCa=mysql_num_rows($RSCa);
                     <span class="label label-default"><?php echo $detAud_hor ?></span> 
                     <span class="label label-info"><?php echo $row_RSCa['con_num'] ?></span>
                     <a href="<?php echo $RAIZc ?>com_consultas/form.php?idc=<?php echo $row_RSCa['con_num'] ?>">
-                        <?php echo $detPac_nom ?>
+                        <?php echo $detcli_nom ?>
                     </a>
                     </li>
                     <?php }while($row_RSCa=mysql_fetch_assoc($RSCa)); ?>

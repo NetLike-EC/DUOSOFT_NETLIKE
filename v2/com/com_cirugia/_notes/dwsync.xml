@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="actions.php" server="//servidor/clinic/" local="130493001953939399" remote="130493001950000000" Dst="0" />
-<file name="cirugias_con_list.php" server="//servidor/clinic/" local="130517488920342099" remote="130517488920000000" Dst="0" />
-<file name="cirugia_form.php" server="//servidor/clinic/" local="130492999571306052" remote="130492999570000000" Dst="0" />
+<file name="actions.php" server="//Server01/duosoft_netlike/v2/" local="131751043811564872" remote="131751043810000000" Dst="0" />
+<file name="cirugias_con_list.php" server="//Server01/duosoft_netlike/v2/" local="131751043811824171" remote="131751043810000000" Dst="0" />
+<file name="cirugia_form.php" server="//Server01/duosoft_netlike/v2/" local="131751046386000453" remote="131751046380000000" Dst="0" />
+<file name="gest.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="index.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="_gest.php" server="//Server01/duosoft_netlike/v2/" local="131751047224841829" remote="131751047220000000" Dst="0" />
+<file name="_index.php" server="//Server01/duosoft_netlike/v2/" local="131751046386000453" remote="131751046380000000" Dst="0" />
 </dwsync>

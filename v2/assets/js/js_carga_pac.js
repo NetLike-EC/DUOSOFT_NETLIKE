@@ -1,11 +1,12 @@
 // JavaScript Document
 $(function() {
 var loading=$('#loading');
-var web=RAIZc+"com_pacientes/pacientes_detail.php";
+var web=RAIZc+"com_clientes/detail_min.php";
 var SelUrl=$("#locUrl").val();
+	//alert(SelUrl);
 switch (SelUrl){
-case "PAC":
-	webForm=RAIZc+"com_pacientes/form.php?id=";
+case "CLI":
+	webForm=RAIZc+"com_clientes/form.php?ids=";
 	break;
 case "CON":
 	webForm=RAIZc+"com_consultas/form.php?idp=";
@@ -25,29 +26,34 @@ case "ECOO":
 case "ECOG":
 	webForm=RAIZc+"com_reps/gin_list_gest.php?id=";
 	break;
+	default:
+		webForm=null;
+	break;
 }
+	//alert(webForm);
+	//console.log(webForm);
 
     $( "#tags" ).autocomplete({
-		source: RAIZc+'com_pacientes/json.php',//availableTags,
+		source: RAIZc+'com_clientes/json.php',//availableTags,
 		select: function( event, ui ) { 
-			//alert(ui.item.code);
-			openDetCli(ui.item.code);
+			//alert(ui.item.ids);
+			openDetCli(ui.item.ids);
 		},
 		focus: function( event, ui ) {
-			//alert("focus");
-			showDetCli(ui.item.code);
+			//alert(ui.item.ids);
+			showDetCli(ui.item.ids);
 		}
     });	
-			
 	function showDetCli(codCli){
+		//alert('yes');
 	showLoading();
-		if (codCli>0){
-		$( "#cont_cli" ).load( web, { cli_sel_find: codCli, acc:'2' },hideLoading);
+		if (codCli){
+		$( "#cont_cli" ).load( web, { ids: codCli, acc:'2' },hideLoading);
 		}else{ alert("Seleccione Un Cliente"); }
 	}
 	function openDetCli(codCli){
 		showLoading();
-		if (codCli>0){
+		if (codCli){
 			webForm=webForm+codCli;
 		$(location).attr('href',webForm);
 		}else{ alert("Seleccione Un Cliente"); }

@@ -21,7 +21,7 @@ if($dTrat){
 	$btnAcc='<button class="btn btn-success navbar-btn">CREAR TERAPIA</button>';
 }
 
-$detP=detRow('db_clientes','pac_cod',$idp);
+$detP=detRow('db_clientes','cli_id',$idp);
 $qryLTT=sprintf('SELECT * FROM db_terapias_vs_tratamientos WHERE id_ter=%s',
 SSQL($id,'int'));
 $RSltt=mysql_query($qryLTT);
@@ -54,7 +54,7 @@ include(RAIZf.'head.php');
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Paciente</a></li>
-        <li><a href="#"><?php echo $detP['pac_nom'].' '.$detP['pac_ape'] ?></a></li>        
+        <li><a href="#"><?php echo $detP['cli_nom'].' '.$detP['cli_ape'] ?></a></li>        
       </ul>
 
       <div class="navbar-right">

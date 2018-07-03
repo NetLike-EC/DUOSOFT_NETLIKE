@@ -1,15 +1,15 @@
 <table style="width:100%" cellpadding="0" cellspacing="0">
 	<tr>
-    	<td style="width:20%">
+    	<td style="width:20%;text-align:center">
         <?php
-		$logo=RAIZi.'struct/logo.jpg';
+		$logo=$RAIZ0.'assets/img/logo_mercoframesI_100-002.png';
 		?>
-        <img src="<?php echo $logo ?>">
+        <img src="<?php echo $logo ?>" style="height:75px">
         </td>
         <td style="width:80%">
-        <div style="padding:5px; text-align:center; font-size:20px;"><span style="color:#036">CLINICA</span> <span style="color:#F30">BioGEPA</span></div>
-<div style="padding:5px; text-align:center; font-size:20px; color:#036">MEDICINA REPRODUCTIVA Y GINECOLOGICA</div>
-<div style="padding:5px; text-align:center; font-size:16px; color:#036; text-decoration:underline; font-weight:bold">
+        <div style="padding:5px; text-align:center; font-size:26px;"><span style="color:#F30">MERCOFRAMES</span> 
+        <span style="color:#666">Optical Corp</span></div>
+<div style="padding:5px; text-align:center; font-size:18px; color:#333; text-decoration:underline; font-weight:bold">
 <?php echo $setTitle ?>
 </div>
         </td>

@@ -9,7 +9,7 @@ class Paginator{
 	var $high;
 	var $limit;
 	var $return;
-	var $default_ipp = 25;
+	var $default_ipp = 50;
 	var $querystring;
 
 	function Paginator(){
@@ -87,8 +87,7 @@ class Paginator{
 		$items = '';
 		$ipp_array = array(10,25,50,100,'All');
 		foreach($ipp_array as $ipp_opt)	$items .= ($ipp_opt == $this->items_per_page) ? "<option selected value=\"$ipp_opt\">$ipp_opt</option>\n":"<option value=\"$ipp_opt\">$ipp_opt</option>\n";
-		return "<div class='row'><div class='col-md-4 text-right'><span class='label label-default'>Visualizar</span></div>
-		<div class='col-md-8'><select class=\"form-control input-sm\" onchange=\"window.location='$_SERVER[PHP_SELF]?page=1&ipp='+this[this.selectedIndex].value+'$this->querystring';return false\">$items</select></div></div>\n";
+		return "<span>Items </span><select class=\"input-sm\form-control\" onchange=\"window.location='$_SERVER[PHP_SELF]?page=1&ipp='+this[this.selectedIndex].value+'$this->querystring';return false\">$items</select>\n";
 	}
 	function display_jump_menu(){
 		for($i=1;$i<=$this->num_pages;$i++){

@@ -5,12 +5,12 @@ $idc=vParam('idc',$_GET['idc'],$_POST['idc']);
 $ide=vParam('ide',$_GET['ide'],$_POST['ide']);
 $action=vParam('action',$_GET['action'],$_POST['action']);
 $detexam=detRow('db_examenes','id_exa',$ide);//fnc_dataexam($ide);
-if($ide) {$idp=$detexam['pac_cod']; $idc=$detexam['con_num'];}
+if($ide) {$idp=$detexam['cli_id']; $idc=$detexam['con_num'];}
 if($action=='DELEF'){
 	header(sprintf("Location: %s", '_fncts.php?ide='.$ide.'&action=DELEF'));
 }
-$detpac=detRow('db_clientes','pac_cod',$idp);
-$detpac_nom=$detpac['pac_nom'].' '.$detpac['pac_ape'];
+$detpac=detRow('db_clientes','cli_id',$idp);
+$detcli_nom=$detpac['cli_nom'].' '.$detpac['cli_ape'];
 if($detexam){
 	$action='UPD';
 	$dateexam=$detexam['fechae'];
@@ -38,7 +38,7 @@ include(RAIZf.'head.php'); ?>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       	<li><a><span class="label label-info"><?php echo $ide ?></span></a></li>
-        <li><a><?php echo $detpac_nom?></a></li>
+        <li><a><?php echo $detcli_nom?></a></li>
         <li><a>Consulta: <span class="label label-default"><?php echo $idc ?></span></a></li>
         <li><a><?php echo $detexam['fecha'] ?></a></li>
       </ul>

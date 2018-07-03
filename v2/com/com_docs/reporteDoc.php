@@ -1,8 +1,8 @@
 <?php include_once('../../init.php');
 $detDoc=detRow('db_documentos','id_doc',$id);
-$detPac=detRow('db_clientes','pac_cod',$detDoc['pac_cod']);
-$detPac_nom=$detPac['pac_nom'].' '.$detPac['pac_ape'];
-$detPac_edad=edad($detPac['pac_fec']);
+$detPac=detRow('db_clientes','cli_id',$detDoc['cli_id']);
+$detcli_nom=$detPac['cli_nom'].' '.$detPac['cli_ape'];
+$detPac_edad=edad($detPac['cli_fec']);
 $dettrat_fecha=date_ame2euro($detDoc['fecha']);
 ?>
 <?php $setTitle='DOCUMENTO: '.$detDoc['nombre']?>

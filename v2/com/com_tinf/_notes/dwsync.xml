@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="form.php" server="//servidor/clinic/" local="130760003719687887" remote="130760003710000000" Dst="0" />
-<file name="tinf_con_list.php" server="//servidor/clinic/" local="130760868179747025" remote="130760868170000000" Dst="0" />
-<file name="form.php" server="//192.168.0.2/clinic/" local="130766287360000000" remote="130766287360000000" Dst="0" />
-<file name="_fncts.php" server="//192.168.0.2/clinic/" local="130766287040991296" remote="130766287040000000" Dst="0" />
-<file name="tinf_con_list.php" server="//192.168.0.2/clinic/" local="130766275782109709" remote="130766275780000000" Dst="0" />
+<file name="form.php" server="//Server01/duosoft_netlike/v2/" local="131751046401576025" remote="131751046400000000" Dst="0" />
+<file name="gest.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="index.php" server="//Server01/duosoft_netlike/v2/" local="131726743950000000" remote="131726743950000000" Dst="0" />
+<file name="tinf_con_list.php" server="//Server01/duosoft_netlike/v2/" local="131751043852945644" remote="131751043850000000" Dst="0" />
+<file name="_fncts.php" server="//Server01/duosoft_netlike/v2/" local="131751043852334914" remote="131751043850000000" Dst="0" />
+<file name="_gest.php" server="//Server01/duosoft_netlike/v2/" local="131751047235534150" remote="131751047230000000" Dst="0" />
+<file name="_index.php" server="//Server01/duosoft_netlike/v2/" local="131751046401536127" remote="131751046400000000" Dst="0" />
 </dwsync>

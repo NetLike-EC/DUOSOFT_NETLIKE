@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="freetype6.dll" server="//servidor/clinic/" local="129467074220000000" remote="129467074220000000" Dst="0" />
-<file name="makeallttffonts.php" server="//servidor/clinic/" local="129467074220000000" remote="129467074220000000" Dst="0" />
-<file name="makefont.php" server="//servidor/clinic/" local="129467074220000000" remote="129467074220000000" Dst="0" />
-<file name="pfm2afm" server="//servidor/clinic/" local="129467074220000000" remote="129467074220000000" Dst="0" />
-<file name="pfm2afm.exe" server="//servidor/clinic/" local="129467074220000000" remote="129467074220000000" Dst="0" />
-<file name="README.TXT" server="//servidor/clinic/" local="129467074220000000" remote="129467074220000000" Dst="0" />
-<file name="ttf2ufm" server="//servidor/clinic/" local="129467074220000000" remote="129467074220000000" Dst="0" />
-<file name="ttf2ufm.exe" server="//servidor/clinic/" local="129467074220000000" remote="129467074220000000" Dst="0" />
-<file name="zlib1.dll" server="//servidor/clinic/" local="129467074220000000" remote="129467074220000000" Dst="0" />
+<file name="makefont.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686700861686" remote="131632131600000000" Dst="0" />
+<file name="makeallttffonts.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686701495534" remote="131632131600000000" Dst="0" />
+<file name="freetype6.dll" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686714472086" remote="131632131600000000" Dst="0" />
+<file name="pfm2afm" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686697369943" remote="131632131600000000" Dst="0" />
+<file name="pfm2afm.exe" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686694586224" remote="131632131600000000" Dst="0" />
+<file name="README.TXT" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686705681017" remote="131632131600000000" Dst="0" />
+<file name="ttf2ufm" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686692007715" remote="131632131600000000" Dst="0" />
+<file name="ttf2ufm.exe" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686689370702" remote="131632131600000000" Dst="0" />
+<file name="zlib1.dll" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686680786186" remote="131632131600000000" Dst="0" />
+<file name="makeallttffonts.php" server="ftp.ecuahomes.net//public_html/admin/" local="131631686701495534" remote="131670824400000000" Dst="0" />
+<file name="makefont.php" server="ftp.ecuahomes.net//public_html/admin/" local="131631686700861686" remote="131670824400000000" Dst="0" />
+<file name="pfm2afm" server="ftp.ecuahomes.net//public_html/admin/" local="131631686697369943" remote="131670824400000000" Dst="0" />
+<file name="pfm2afm.exe" server="ftp.ecuahomes.net//public_html/admin/" local="131631686694586224" remote="131670824400000000" Dst="0" />
+<file name="freetype6.dll" server="ftp.ecuahomes.net//public_html/admin/" local="131631686714472086" remote="131670824400000000" Dst="0" />
+<file name="README.TXT" server="ftp.ecuahomes.net//public_html/admin/" local="131631686705681017" remote="131670824400000000" Dst="0" />
+<file name="ttf2ufm" server="ftp.ecuahomes.net//public_html/admin/" local="131631686692007715" remote="131670824400000000" Dst="0" />
+<file name="ttf2ufm.exe" server="ftp.ecuahomes.net//public_html/admin/" local="131631686689370702" remote="131670824400000000" Dst="0" />
+<file name="zlib1.dll" server="ftp.ecuahomes.net//public_html/admin/" local="131631686680786186" remote="131670824400000000" Dst="0" />
+<file name="freetype6.dll" server="//Server01/duosoft_netlike/v2/" local="131631686714472086" remote="131631686710000000" Dst="0" />
+<file name="makeallttffonts.php" server="//Server01/duosoft_netlike/v2/" local="131631686701495534" remote="131631686700000000" Dst="0" />
+<file name="makefont.php" server="//Server01/duosoft_netlike/v2/" local="131631686700861686" remote="131631686700000000" Dst="0" />
+<file name="pfm2afm" server="//Server01/duosoft_netlike/v2/" local="131631686697369943" remote="131631686690000000" Dst="0" />
+<file name="pfm2afm.exe" server="//Server01/duosoft_netlike/v2/" local="131631686694586224" remote="131631686690000000" Dst="0" />
+<file name="README.TXT" server="//Server01/duosoft_netlike/v2/" local="131631686705681017" remote="131631686700000000" Dst="0" />
+<file name="ttf2ufm" server="//Server01/duosoft_netlike/v2/" local="131631686692007715" remote="131631686690000000" Dst="0" />
+<file name="ttf2ufm.exe" server="//Server01/duosoft_netlike/v2/" local="131631686689370702" remote="131631686680000000" Dst="0" />
+<file name="zlib1.dll" server="//Server01/duosoft_netlike/v2/" local="131631686680786186" remote="131631686680000000" Dst="0" />
 </dwsync>

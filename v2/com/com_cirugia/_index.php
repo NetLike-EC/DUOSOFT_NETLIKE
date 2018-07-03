@@ -37,7 +37,7 @@ $classtr;
     <tbody>
 	<?php do{ ?>
 	<?php
-    $dPac=detRow('db_clientes','pac_cod',$dRS['pac_cod']);
+    $dPac=detRow('db_clientes','cli_id',$dRS['cli_id']);
 	$detProt=$dRS['protocolo'];
 	$contDetProt=strlen($detProt);
 	if($contDetProt>200){
@@ -48,7 +48,7 @@ $classtr;
 	if($classlast==TRUE){ $classlast=FALSE; $classtr='class="warning"'; }else{$classtr='';}?>
 	<tr <?php echo $classtr?>>
         	<td><?php echo $dRS['id_cir'] ?></td>
-			<td><?php echo $dPac['pac_nom'].' '.$dPac['pac_ape'] ?></td>
+			<td><?php echo $dPac['cli_nom'].' '.$dPac['cli_ape'] ?></td>
             <td><?php echo $dRS['diagnostico'] ?></td>
             <td><?php echo $dRS['fechar'] ?></td>
             <td><?php echo $dRS['cirugiar'] ?></td>
@@ -59,7 +59,7 @@ $classtr;
             <div class="btn-group">
             <a href="<?php echo $RAIZc ?>com_cirugia/cirugia_form.php?idr=<?php echo $dRS['id_cir'] ?>" class="btn btn-primary btn-xs fancybox fancybox.iframe fancyreload">
             <i class="fa fa-pencil-square-o"></i> Editar</a>
-            <a class="btn btn-default btn-xs" href="gest.php?id=<?php echo $dRS['pac_cod'];?>">
+            <a class="btn btn-default btn-xs" href="gest.php?id=<?php echo $dRS['cli_id'];?>">
         	<i class="fa fa-history"></i> Historial</a>
             </div>
             </td>

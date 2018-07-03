@@ -13,7 +13,7 @@ else{
 	echo 'empleado'.$fac_emp = $_POST["fac_emp"];
 	$fac_sal = 0;
 	$fac_total = $_SESSION['total'];
-	$inser_cab = "INSERT INTO tbl_factura(fac_num,fac_fech,pac_cod,emp_cod,tip_pag,total,saldo) VALUES('$fac_num','$fac_fec', '$fac_pac', '$fac_emp', '$fac_tip_pag', '$fac_total', '$fac_sal');";
+	$inser_cab = "INSERT INTO tbl_factura(fac_num,fac_fech,cli_id,emp_cod,tip_pag,total,saldo) VALUES('$fac_num','$fac_fec', '$fac_pac', '$fac_emp', '$fac_tip_pag', '$fac_total', '$fac_sal');";
 	@mysql_query($inser_cab)or($LOG=mysql_error());
 //////////////////////////////////////////////	
 	if ($LOG == '')

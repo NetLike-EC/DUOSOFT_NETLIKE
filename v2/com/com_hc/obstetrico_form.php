@@ -23,7 +23,7 @@ if($detObs){
 		$Sem_Vid='No nacido';
 	}
 	$FUM=$detObs['obs_fec_um'];
-	$idp=$detObs['pac_cod'];
+	$idp=$detObs['cli_id'];
 	$FPP=fnc_obst_fpp($FUM);
 	$SEG=fnc_obst_semges($FUM,$datSeg);
 }else{
@@ -32,7 +32,7 @@ if($detObs){
 	$btntrat='<button type="submit" class="btn btn-large btn-info"><i class="fa fa-floppy-o fa-lg"></i> GUARDAR</button>';
 }
 $detpac=dataPac($idp);
-$detpacNom=$detpac['pac_nom'].' '.$detpac['pac_ape'];
+$detpacNom=$detpac['cli_nom'].' '.$detpac['cli_ape'];
 include(RAIZf.'head.php');
 ?>
 <body class="cero">

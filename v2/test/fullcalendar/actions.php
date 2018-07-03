@@ -8,13 +8,13 @@ mysql_query("BEGIN;");
 
 if(($form)&&($form=='AGE')){
 	if($acc==md5('INS')){
-		$qryIns=sprintf('INSERT INTO db_fullcalendar (fechai,fechaf,horai,horaf,pac_cod,typ_cod,obs)
+		$qryIns=sprintf('INSERT INTO db_fullcalendar (fechai,fechaf,horai,horaf,cli_id,typ_cod,obs)
 		VALUES(%s,%s,%s,%s,%s,%s,%s)',
 		SSQL($fechai,'date'),
 		SSQL($fechaf,'date'),
 		SSQL($horai,'text'),
 		SSQL($horaf,'text'),
-		SSQL($pac_cod,'int'),
+		SSQL($cli_id,'int'),
 		SSQL($typ_cod,'int'),
 		SSQL($obs,'text'));
 		if(mysql_query($qryIns)){
@@ -28,13 +28,13 @@ if(($form)&&($form=='AGE')){
 		$goTo.='?id='.$id;
 	}
 	if($acc==md5('UPD')){
-		$qryUpd=sprintf('UPDATE db_fullcalendar SET fechai=%s, fechaf=%s, horai=%s, horaf=%s, pac_cod=%s, typ_cod=%s, obs=%s 
+		$qryUpd=sprintf('UPDATE db_fullcalendar SET fechai=%s, fechaf=%s, horai=%s, horaf=%s, cli_id=%s, typ_cod=%s, obs=%s 
 		WHERE id=%s',
 		SSQL($fechai,'date'),
 		SSQL($fechaf,'date'),
 		SSQL($horai,'text'),
 		SSQL($horaf,'text'),
-		SSQL($pac_cod,'int'),
+		SSQL($cli_id,'int'),
 		SSQL($typ_cod,'int'),
 		SSQL($obs,'text'),
 		SSQL($id,'int'));

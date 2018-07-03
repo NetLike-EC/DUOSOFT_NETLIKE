@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="fncts.php" server="C:/AppServ/www/CLINIC_BIOGEPA/" local="130464610178139452" remote="130464610170000000" Dst="0" />
-<file name="libs.php" server="//servidor/clinic/" local="130517490991159099" remote="130517490990000000" Dst="0" />
-<file name="styles.php" server="//servidor/clinic/" local="130495794035079424" remote="130495794030000000" Dst="0" />
-<file name="config.php" server="//servidor/clinic/" local="130559786510000000" remote="130559786510000000" Dst="0" />
-<file name="fncts.php" server="//servidor/clinic/" local="130664150160871412" remote="130664150160000000" Dst="0" />
-<file name="config.php" server="//192.168.0.2/clinic/" local="130559786510000000" remote="130559786510000000" Dst="0" />
-<file name="libs.php" server="C:/AppServ/www/CLINIC_FREIMO/" local="130883604106750349" remote="130883604100000000" Dst="0" />
+<file name="config.ini" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631685308462472" remote="131632131000000000" Dst="0" />
+<file name="config.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131638969565255359" remote="131638933200000000" Dst="0" />
+<file name="fncts.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131645261036308864" remote="131645224800000000" Dst="0" />
+<file name="libs.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131645272816960541" remote="131645236800000000" Dst="0" />
+<file name="paths.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131632591322212429" remote="131632555200000000" Dst="0" />
+<file name="styles.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631685298107814" remote="131632133400000000" Dst="0" />
+<file name="config.ini" server="ftp.ecuahomes.net//public_html/admin/" local="131670859200000000" remote="131670859200000000" Dst="0" />
+<file name="config.php" server="ftp.ecuahomes.net//public_html/admin/" local="131708122567191402" remote="131708122200000000" Dst="0" />
+<file name="fncts.php" server="ftp.ecuahomes.net//public_html/admin/" local="131699815570119531" remote="131699815200000000" Dst="0" />
+<file name="paths.php" server="ftp.ecuahomes.net//public_html/admin/" local="131674158000000000" remote="131674158000000000" Dst="0" />
+<file name="libs.php" server="ftp.ecuahomes.net//public_html/admin/" local="131677674141976404" remote="131677638000000000" Dst="0" />
+<file name="styles.php" server="ftp.ecuahomes.net//public_html/admin/" local="131674875482022276" remote="131674839000000000" Dst="0" />
+<file name="config.ini" server="//Server01/duosoft_netlike/v2/" local="131701757865401296" remote="131701757860000000" Dst="0" />
+<file name="config.php" server="//Server01/duosoft_netlike/v2/" local="131728831210000000" remote="131728831210000000" Dst="0" />
+<file name="fncts.php" server="//Server01/duosoft_netlike/v2/" local="131699815570119531" remote="131699815570000000" Dst="0" />
+<file name="libs.php" server="//Server01/duosoft_netlike/v2/" local="131728869440050743" remote="131728869440000000" Dst="0" />
+<file name="paths.php" server="//Server01/duosoft_netlike/v2/" local="131728827524804392" remote="131728827520000000" Dst="0" />
+<file name="styles.php" server="//Server01/duosoft_netlike/v2/" local="131728868283860474" remote="131728868280000000" Dst="0" />
 </dwsync>

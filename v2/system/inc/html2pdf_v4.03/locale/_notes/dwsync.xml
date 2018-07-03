@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="ca.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="cs.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="da.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="de.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="en.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="es.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="fr.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="it.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="nl.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="pt.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
-<file name="tr.csv" server="//servidor/clinic/" local="129466070200000000" remote="129466070200000000" Dst="0" />
+<file name="cs.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686957891340" remote="131632131000000000" Dst="0" />
+<file name="ca.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686958407764" remote="131632131000000000" Dst="0" />
+<file name="de.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686953786252" remote="131632131000000000" Dst="0" />
+<file name="da.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686954189732" remote="131632131000000000" Dst="0" />
+<file name="es.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686949611361" remote="131632131000000000" Dst="0" />
+<file name="en.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686950052329" remote="131632131000000000" Dst="0" />
+<file name="fr.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686945914846" remote="131632131000000000" Dst="0" />
+<file name="nl.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686941417324" remote="131632131000000000" Dst="0" />
+<file name="pt.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686941838404" remote="131632131000000000" Dst="0" />
+<file name="it.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686945523731" remote="131632131000000000" Dst="0" />
+<file name="tr.csv" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631686937163132" remote="131632131000000000" Dst="0" />
+<file name="ca.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686958407764" remote="131670823800000000" Dst="0" />
+<file name="cs.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686957891340" remote="131670823800000000" Dst="0" />
+<file name="da.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686954189732" remote="131670823800000000" Dst="0" />
+<file name="de.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686953786252" remote="131670823800000000" Dst="0" />
+<file name="es.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686949611361" remote="131670823800000000" Dst="0" />
+<file name="en.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686950052329" remote="131670823800000000" Dst="0" />
+<file name="fr.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686945914846" remote="131670823800000000" Dst="0" />
+<file name="it.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686945523731" remote="131670823800000000" Dst="0" />
+<file name="nl.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686941417324" remote="131670823800000000" Dst="0" />
+<file name="pt.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686941838404" remote="131670823800000000" Dst="0" />
+<file name="tr.csv" server="ftp.ecuahomes.net//public_html/admin/" local="131631686937163132" remote="131670823800000000" Dst="0" />
+<file name="ca.csv" server="//Server01/duosoft_netlike/v2/" local="131631686958407764" remote="131631686950000000" Dst="0" />
+<file name="cs.csv" server="//Server01/duosoft_netlike/v2/" local="131631686957891340" remote="131631686950000000" Dst="0" />
+<file name="da.csv" server="//Server01/duosoft_netlike/v2/" local="131631686954189732" remote="131631686950000000" Dst="0" />
+<file name="de.csv" server="//Server01/duosoft_netlike/v2/" local="131631686953786252" remote="131631686950000000" Dst="0" />
+<file name="en.csv" server="//Server01/duosoft_netlike/v2/" local="131631686950052329" remote="131631686950000000" Dst="0" />
+<file name="es.csv" server="//Server01/duosoft_netlike/v2/" local="131631686949611361" remote="131631686940000000" Dst="0" />
+<file name="fr.csv" server="//Server01/duosoft_netlike/v2/" local="131631686945914846" remote="131631686940000000" Dst="0" />
+<file name="it.csv" server="//Server01/duosoft_netlike/v2/" local="131631686945523731" remote="131631686940000000" Dst="0" />
+<file name="nl.csv" server="//Server01/duosoft_netlike/v2/" local="131631686941417324" remote="131631686940000000" Dst="0" />
+<file name="pt.csv" server="//Server01/duosoft_netlike/v2/" local="131631686941838404" remote="131631686940000000" Dst="0" />
+<file name="tr.csv" server="//Server01/duosoft_netlike/v2/" local="131631686937163132" remote="131631686930000000" Dst="0" />
 </dwsync>

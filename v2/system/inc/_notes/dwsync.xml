@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="fnc_data.php" server="C:/AppServ/www/CLINIC_BIOGEPA/" local="130430556380036725" remote="130430556380000000" Dst="0" />
-<file name="fnc_tra.php" server="C:/AppServ/www/CLINIC_BIOGEPA/" local="130460048044340577" remote="130460048040000000" Dst="0" />
-<file name="fnc_tra.php" server="//servidor/clinic/" local="130565624743838029" remote="130565624740000000" Dst="0" />
-<file name="class.image-resize.php" server="//servidor/clinic/" local="130483471811380513" remote="130483471810000000" Dst="0" />
-<file name="enLetras.class.php" server="//servidor/clinic/" local="130081791341160193" remote="130081791340000000" Dst="0" />
-<file name="fnc_data.php" server="//servidor/clinic/" local="130529196433041813" remote="130529196430000000" Dst="0" />
-<file name="fnc_gen.php" server="//servidor/clinic/" local="130500039012337923" remote="130500039010000000" Dst="0" />
-<file name="fnc_sys.php" server="//servidor/clinic/" local="130505446210000000" remote="130505446210000000" Dst="0" />
-<file name="html2pdf.class.php" server="//servidor/clinic/" local="129509941860000000" remote="129509941860000000" Dst="0" />
-<file name="paginator.class.php" server="//servidor/clinic/" local="130301741913019766" remote="130301741910000000" Dst="0" />
-<file name="fnc_data.php" server="//192.168.0.2/clinic/" local="130529196430000000" remote="130529196430000000" Dst="0" />
+<file name="class.pop3.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631685337725616" remote="131632131000000000" Dst="0" />
+<file name="class.phpmailer.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631685345545515" remote="131632131000000000" Dst="0" />
+<file name="class.image-resize.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631685341825098" remote="131632131000000000" Dst="0" />
+<file name="class.smtp.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631685336294543" remote="131632131000000000" Dst="0" />
+<file name="fnc_gen.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631685330093869" remote="131632131000000000" Dst="0" />
+<file name="fnc_data.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131644175236326186" remote="131644138800000000" Dst="0" />
+<file name="fnc_sys.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131648488283421716" remote="131648452200000000" Dst="0" />
+<file name="paginator.class.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631685325974923" remote="131632131600000000" Dst="0" />
+<file name="upload.class.php" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631685324254289" remote="131632132800000000" Dst="0" />
+<file name="class.image-resize.php" server="ftp.ecuahomes.net//public_html/admin/" local="131670859200000000" remote="131670859200000000" Dst="0" />
+<file name="class.pop3.php" server="ftp.ecuahomes.net//public_html/admin/" local="131631685337725616" remote="131670823200000000" Dst="0" />
+<file name="class.smtp.php" server="ftp.ecuahomes.net//public_html/admin/" local="131670859200000000" remote="131670859200000000" Dst="0" />
+<file name="class.phpmailer.php" server="ftp.ecuahomes.net//public_html/admin/" local="131670859200000000" remote="131670859200000000" Dst="0" />
+<file name="fnc_data.php" server="ftp.ecuahomes.net//public_html/admin/" local="131702604740957643" remote="131702604600000000" Dst="0" />
+<file name="fnc_sys.php" server="ftp.ecuahomes.net//public_html/admin/" local="131707994298179886" remote="131707993800000000" Dst="0" />
+<file name="fnc_gen.php" server="ftp.ecuahomes.net//public_html/admin/" local="131693174565984548" remote="131693175600000000" Dst="0" />
+<file name="paginator.class.php" server="ftp.ecuahomes.net//public_html/admin/" local="131674933200000000" remote="131674933200000000" Dst="0" />
+<file name="upload.class.php" server="ftp.ecuahomes.net//public_html/admin/" local="131670861600000000" remote="131670861600000000" Dst="0" />
+<file name="fnc_lang.php" server="ftp.ecuahomes.net//public_html/admin/" local="131705358829891368" remote="131705358600000000" Dst="0" />
+<file name="class.image-resize.php" server="//Server01/duosoft_netlike/v2/" local="131670859200000000" remote="131670859200000000" Dst="0" />
+<file name="class.phpmailer.php" server="//Server01/duosoft_netlike/v2/" local="131670859200000000" remote="131670859200000000" Dst="0" />
+<file name="class.pop3.php" server="//Server01/duosoft_netlike/v2/" local="131631685337725616" remote="131631685330000000" Dst="0" />
+<file name="class.smtp.php" server="//Server01/duosoft_netlike/v2/" local="131670859200000000" remote="131670859200000000" Dst="0" />
+<file name="fnc_data.php" server="//Server01/duosoft_netlike/v2/" local="131751046405157621" remote="131751046400000000" Dst="0" />
+<file name="fnc_gen.php" server="//Server01/duosoft_netlike/v2/" local="131693174565984548" remote="131693174560000000" Dst="0" />
+<file name="fnc_lang.php" server="//Server01/duosoft_netlike/v2/" local="131705358829891368" remote="131705358820000000" Dst="0" />
+<file name="fnc_sys.php" server="//Server01/duosoft_netlike/v2/" local="131750431591869722" remote="131750431590000000" Dst="0" />
+<file name="paginator.class.php" server="//Server01/duosoft_netlike/v2/" local="131674933200000000" remote="131674933200000000" Dst="0" />
+<file name="upload.class.php" server="//Server01/duosoft_netlike/v2/" local="131670861600000000" remote="131670861600000000" Dst="0" />
+<file name="enLetras.class.php" server="//Server01/duosoft_netlike/v2/" local="131726743960000000" remote="131726743960000000" Dst="0" />
+<file name="fnc_tra.php" server="//Server01/duosoft_netlike/v2/" local="131751043867450487" remote="131751043860000000" Dst="0" />
+<file name="html2pdf.class.php" server="//Server01/duosoft_netlike/v2/" local="131726743960000000" remote="131726743960000000" Dst="0" />
 </dwsync>

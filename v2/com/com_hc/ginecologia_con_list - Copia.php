@@ -1,5 +1,5 @@
 <?php //DET GINECOLOGIA
-$qryG=sprintf('SELECT * FROM db_ginecologia WHERE pac_cod=%s',
+$qryG=sprintf('SELECT * FROM db_ginecologia WHERE cli_id=%s',
 GetSQLValueString($id_pac,'int'));
 $RSg=mysql_query($qryG);
 $row_RSg=mysql_fetch_assoc($RSg);

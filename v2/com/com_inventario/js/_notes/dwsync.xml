@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="js_carga_prod.js" server="//servidor/clinic/" local="129666274073996611" remote="129666274070000000" Dst="0" />
-<file name="js_carga_prod_items.js" server="//servidor/clinic/" local="129099767200000000" remote="129099767200000000" Dst="0" />
-<file name="js_events.js" server="//servidor/clinic/" local="130059924240075396" remote="130059924240000000" Dst="0" />
+<file name="js_carga_prod.js" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683934878415" remote="131632129200000000" Dst="0" />
+<file name="js_carga_prod_items.js" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683933516714" remote="131632129200000000" Dst="0" />
+<file name="js_events.js" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683930796470" remote="131632129200000000" Dst="0" />
+<file name="js_carga_prod.js" server="ftp.ecuahomes.net//public_html/admin/" local="131631683934878415" remote="131670822000000000" Dst="0" />
+<file name="js_carga_prod_items.js" server="ftp.ecuahomes.net//public_html/admin/" local="131631683933516714" remote="131670822000000000" Dst="0" />
+<file name="js_events.js" server="ftp.ecuahomes.net//public_html/admin/" local="131631683930796470" remote="131670822000000000" Dst="0" />
+<file name="js_carga_prod.js" server="//Server01/duosoft_netlike/v2/" local="131631683934878415" remote="131631683930000000" Dst="0" />
+<file name="js_carga_prod_items.js" server="//Server01/duosoft_netlike/v2/" local="131631683933516714" remote="131631683930000000" Dst="0" />
+<file name="js_events.js" server="//Server01/duosoft_netlike/v2/" local="131631683930796470" remote="131631683930000000" Dst="0" />
 </dwsync>

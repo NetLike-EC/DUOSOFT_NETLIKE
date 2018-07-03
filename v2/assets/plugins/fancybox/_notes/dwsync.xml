@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="blank.gif" server="//servidor/clinic/" local="130413097078150372" remote="130413097070000000" Dst="0" />
-<file name="fancybox_loading.gif" server="//servidor/clinic/" local="130413097074047669" remote="130413097070000000" Dst="0" />
-<file name="fancybox_loading@2x.gif" server="//servidor/clinic/" local="130413097070075033" remote="130413097070000000" Dst="0" />
-<file name="fancybox_overlay.png" server="//servidor/clinic/" local="130413097066502648" remote="130413097060000000" Dst="0" />
-<file name="fancybox_sprite.png" server="//servidor/clinic/" local="130413097061899614" remote="130413097060000000" Dst="0" />
-<file name="fancybox_sprite@2x.png" server="//servidor/clinic/" local="130413097055895611" remote="130413097050000000" Dst="0" />
-<file name="jquery.fancybox.css" server="//servidor/clinic/" local="130413097045738900" remote="130413097040000000" Dst="0" />
-<file name="jquery.fancybox.js" server="//servidor/clinic/" local="130413097057016376" remote="130413097050000000" Dst="0" />
-<file name="jquery.fancybox.pack.js" server="//servidor/clinic/" local="130413097031859672" remote="130413097030000000" Dst="0" />
-<file name="jquery.mousewheel-3.0.6.pack.js" server="//servidor/clinic/" local="130413097031999765" remote="130413097030000000" Dst="0" />
+<file name="blank.gif" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683233289728" remote="131632127400000000" Dst="0" />
+<file name="fancybox_loading.gif" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683231428378" remote="131632127400000000" Dst="0" />
+<file name="fancybox_loading@2x.gif" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683229196950" remote="131632127400000000" Dst="0" />
+<file name="fancybox_sprite.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683224004907" remote="131632127400000000" Dst="0" />
+<file name="fancybox_sprite@2x.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683223059660" remote="131632127400000000" Dst="0" />
+<file name="fancybox_overlay.png" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683227287489" remote="131632127400000000" Dst="0" />
+<file name="jquery.fancybox.js" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683218877697" remote="131632127400000000" Dst="0" />
+<file name="jquery.fancybox.css" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683217927899" remote="131632127400000000" Dst="0" />
+<file name="jquery.fancybox.pack.js" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683213769905" remote="131632127400000000" Dst="0" />
+<file name="jquery.mousewheel-3.0.6.pack.js" server="ftp.duotics.com//public_html/demo/ecuahomes/admin/" local="131631683211718538" remote="131632127400000000" Dst="0" />
+<file name="blank.gif" server="ftp.ecuahomes.net//public_html/admin/" local="131631683233289728" remote="131670820200000000" Dst="0" />
+<file name="fancybox_loading.gif" server="ftp.ecuahomes.net//public_html/admin/" local="131631683231428378" remote="131670820200000000" Dst="0" />
+<file name="fancybox_loading@2x.gif" server="ftp.ecuahomes.net//public_html/admin/" local="131631683229196950" remote="131670820200000000" Dst="0" />
+<file name="fancybox_overlay.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683227287489" remote="131670820200000000" Dst="0" />
+<file name="fancybox_sprite.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683224004907" remote="131670820200000000" Dst="0" />
+<file name="fancybox_sprite@2x.png" server="ftp.ecuahomes.net//public_html/admin/" local="131631683223059660" remote="131670820200000000" Dst="0" />
+<file name="jquery.fancybox.css" server="ftp.ecuahomes.net//public_html/admin/" local="131631683217927899" remote="131670820200000000" Dst="0" />
+<file name="jquery.fancybox.pack.js" server="ftp.ecuahomes.net//public_html/admin/" local="131631683213769905" remote="131670820200000000" Dst="0" />
+<file name="jquery.fancybox.js" server="ftp.ecuahomes.net//public_html/admin/" local="131631683218877697" remote="131670820200000000" Dst="0" />
+<file name="jquery.mousewheel-3.0.6.pack.js" server="ftp.ecuahomes.net//public_html/admin/" local="131631683211718538" remote="131670820200000000" Dst="0" />
+<file name="blank.gif" server="//Server01/duosoft_netlike/v2/" local="131631683233289728" remote="131631683230000000" Dst="0" />
+<file name="fancybox_loading.gif" server="//Server01/duosoft_netlike/v2/" local="131631683231428378" remote="131631683230000000" Dst="0" />
+<file name="fancybox_loading@2x.gif" server="//Server01/duosoft_netlike/v2/" local="131631683229196950" remote="131631683220000000" Dst="0" />
+<file name="fancybox_overlay.png" server="//Server01/duosoft_netlike/v2/" local="131631683227287489" remote="131631683220000000" Dst="0" />
+<file name="fancybox_sprite.png" server="//Server01/duosoft_netlike/v2/" local="131631683224004907" remote="131631683220000000" Dst="0" />
+<file name="fancybox_sprite@2x.png" server="//Server01/duosoft_netlike/v2/" local="131631683223059660" remote="131631683220000000" Dst="0" />
+<file name="jquery.fancybox.css" server="//Server01/duosoft_netlike/v2/" local="131631683217927899" remote="131631683210000000" Dst="0" />
+<file name="jquery.fancybox.js" server="//Server01/duosoft_netlike/v2/" local="131631683218877697" remote="131631683210000000" Dst="0" />
+<file name="jquery.fancybox.pack.js" server="//Server01/duosoft_netlike/v2/" local="131631683213769905" remote="131631683210000000" Dst="0" />
+<file name="jquery.mousewheel-3.0.6.pack.js" server="//Server01/duosoft_netlike/v2/" local="131631683211718538" remote="131631683210000000" Dst="0" />
 </dwsync>

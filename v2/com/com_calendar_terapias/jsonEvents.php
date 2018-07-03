@@ -1,7 +1,7 @@
 <?php include('../../init.php');
-$qryJson=sprintf("SELECT db_fullcalendar_sesiones.id,pac_nom,pac_ape,obs,fechai,horai,fechaf,horaf,db_fullcalendar_sesiones.est,pac_cod FROM db_fullcalendar_sesiones
+$qryJson=sprintf("SELECT db_fullcalendar_sesiones.id,cli_nom,cli_ape,obs,fechai,horai,fechaf,horaf,db_fullcalendar_sesiones.est,cli_id FROM db_fullcalendar_sesiones
 LEFT JOIN db_terapias ON db_fullcalendar_sesiones.id_ter=db_terapias.id 
-LEFT JOIN db_clientes ON db_terapias.idp=db_clientes.pac_cod 
+LEFT JOIN db_clientes ON db_terapias.idp=db_clientes.cli_id 
 WHERE fechai>=%s AND fechaf<=%s AND db_fullcalendar_sesiones.est<>0",
 SSQL($_GET['start'],'date'),
 SSQL($_GET['end'],'date'));
@@ -12,8 +12,8 @@ while($row = mysql_fetch_array($RSjson)){
 	$fend=NULL;
 	$color=NULL;
 
-	if($row['pac_cod']){
-		$det_tit.=$row['pac_nom'].' '.$row['pac_ape'];
+	if($row['cli_id']){
+		$det_tit.=$row['cli_nom'].' '.$row['cli_ape'];
 	}else{
 		$det_tit=$row['obs'];
 	}
@@ -41,7 +41,7 @@ while($row = mysql_fetch_array($RSjson)){
 		if($row['est']==2){//Atendido
 			$color='#009900';
 		}else if($row['est']==1){//Pendiente
-			if($row['pac_cod']){
+			if($row['cli_id']){
 				$color='#084c8d';
 			}else{
 				$color='#5174b3';
@@ -50,7 +50,7 @@ while($row = mysql_fetch_array($RSjson)){
 	}
 
 /*
-	if($row['pac_cod']){
+	if($row['cli_id']){
 		$color='#2e4174';
 	}else{
 		$color='#73b9e6';

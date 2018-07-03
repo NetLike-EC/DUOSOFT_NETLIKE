@@ -5,11 +5,11 @@ $idc=vParam('idc',$_GET['idc'],$_POST['idc']);
 $idr=vParam('idr',$_GET['idr'],$_POST['idr']);
 $action=vParam('action',$_GET['action'],$_POST['action']);
 $detCir=detRow('db_cirugias','id_cir',$idr);
-if($idr) {$idp=$detCir['pac_cod']; $idc=$detCir['con_num'];}
+if($idr) {$idp=$detCir['cli_id']; $idc=$detCir['con_num'];}
 if($action=='DELRF'){
 	header(sprintf("Location: %s", '_fncts.php?idr='.$idr.'&action=DELRF'));
 }
-$detpac=detRow('db_clientes','pac_cod',$idp);//dataPac($idp);
+$detpac=detRow('db_clientes','cli_id',$idp);//dataPac($idp);
 
 if($detCir){
 	$action='UPD';
@@ -51,7 +51,7 @@ include(RAIZf.'head.php');
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       	<li><a><span class="label label-info"><?php echo $idr ?></span></a></li>
-        <li><a><?php echo $detpac['pac_nom'].' '.$detpac['pac_ape'] ?></a></li>
+        <li><a><?php echo $detpac['cli_nom'].' '.$detpac['cli_ape'] ?></a></li>
         <li><a>Consulta: <span class="label label-default"><?php echo $idc ?></span></a></li>
         <li><a><?php echo $detCir['fecha'] ?></a></li>
       </ul>

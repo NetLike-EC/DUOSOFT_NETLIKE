@@ -4,7 +4,7 @@ $RSdf=mysql_query($qrydf);
 $row_RSdf=mysql_fetch_assoc($RSdf);
 $tr_RSdf=mysql_num_rows($RSdf);
 
-$qryd=sprintf('SELECT * FROM db_documentos WHERE pac_cod=%s ORDER BY id_doc DESC',
+$qryd=sprintf('SELECT * FROM db_documentos WHERE cli_id=%s ORDER BY id_doc DESC',
 SSQL($idp,'int'));
 $RSd=mysql_query($qryd);
 $row_RSd=mysql_fetch_assoc($RSd);

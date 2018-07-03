@@ -1,7 +1,7 @@
 <?php require_once('../../init.php');
 $idpac=$_GET['id'];
 $valview=$_GET['val'];
-$query_RS_datos = "SELECT * FROM db_signos WHERE pac_cod = '".$idpac."' ORDER BY id ASC";
+$query_RS_datos = "SELECT * FROM db_signos WHERE cli_id = '".$idpac."' ORDER BY id ASC";
 $RS_datos = mysql_query($query_RS_datos) or die(mysql_error());
 $row_RS_datos = mysql_fetch_assoc($RS_datos);
 $totalRows_RS_datos = mysql_num_rows($RS_datos);

@@ -5,12 +5,17 @@ include_once(RAIZf.'headPrint.php') ?>
     <?php
 $dFI=vParam('FI', $_GET['FI'], $_POST['FI'],FALSE);
 $dFF=vParam('FF', $_GET['FF'], $_POST['FF'],FALSE);
-$qryPR=sprintf('SELECT * FROM db_clientes WHERE pac_fecr>=%s AND pac_fecr<=%s',
-SSQL($dFI,'date'),
-SSQL($dFF,'date'));
+$qryPR=sprintf('SELECT tbl_contact_data.name as NOM, tbl_contact_data.date as FEC, tbl_contact_data.message as MSG, 
+tbl_types.typ_val as TIP, tbl_contact_mail.mail as MAIL
+FROM tbl_contact_data 
+INNER JOIN tbl_contact_mail ON tbl_contact_data.idMail=tbl_contact_mail.idMail 
+INNER JOIN tbl_types ON tbl_contact_data.ContactKnow=tbl_types.typ_cod 
+WHERE date>=%s AND date<=%s ORDER BY tbl_types.typ_val ASC',
+GetSQLValueString($dFI,'date'),
+GetSQLValueString($dFF,'date'));
 
 $RSpr = mysql_query($qryPR) or die(mysql_error());
-$row_RSpr = mysql_fetch_assoc($RSpr);
+$dRSpr = mysql_fetch_assoc($RSpr);
 $tr_RSpr = mysql_num_rows($RSpr);
 
 $banSR=TRUE;
@@ -33,55 +38,52 @@ if(!$dFI||!$dFF){
 
 if($banSR==TRUE){
 	$GraphGen_name='graph-'.date('Ymd-His').'.jpg';
-	$setTitle="REPORTE PROCEDENCIA PACIENTES";
+	$setTitle="REPORT - Source Contacts";
 	include_once(RAIZf.'fra_print_header_gen.php')
 ?>
 
 <div style="margin-top:10px;">
     
     <div class="panel panel-default">
-    	<div class="panel-heading" style="text-align:center">Del <?php echo $dFI.' al '.$dFF ?></div>        
+    	<div class="panel-heading" style="text-align:center">From <strong><?php echo $dFI ?></strong> to <strong><?php echo $dFF ?></strong></div>        
     </div>
     
     <div class="panel panel-info">
-    	<div class="panel-heading">Listado Pacientes</div>
+    	<div class="panel-heading">Data</div>
     </div>
 
-<table style="width:100%;" cellpadding="0" cellspacing="0" border="1" bordercolor="#ddd">
-	<tr>
-		<th>H.C.</th>
-        <th>Fecha Registro</th>
-    	<th>Nombres</th>
-        <th>Apellidos</th>
-		<th>Edad</th>
-        <th>Origen Referido</th>
-	</tr>
-	<?php do{
-	$cod_pac=$row_RSpr['pac_cod'];
-	$detRef=detRow('db_types','typ_cod',$row_RSpr['publi']);
-	?>
+<table style="font-size:10px" cellpadding="0" cellspacing="0" border="1" bordercolor="#ddd">
+	<thead>
     <tr>
-		<td style="width:5%"><?php echo $row_RSpr['pac_cod'] ?></td>
-        <td style="width:15%"><?php echo $row_RSpr['pac_fecr'] ?></td>
-		<td style="width:25%"><?php echo strtoupper($row_RSpr['pac_nom'])?></td>
-		<td style="width:25%"><?php echo strtoupper($row_RSpr['pac_ape'])?></td>
-		<td style="width:10%"><?php echo edad($row_RSpr['pac_fec']); ?></td>
-        <td style="width:20%"><?php echo $detRef['typ_val'] ?></td>
+		<th width="80">Date</th>
+        <th width="210">Name</th>
+    	<th width="260">Email</th>
+        <th width="130">Source</th>
+	</tr>
+    </thead>
+    <tbody>
+	<?php do{ ?>
+    <tr style="font-size:10px">
+        <td width="80"><?php echo $dRSpr['FEC'] ?></td>
+		<td width="210"><?php echo $dRSpr['NOM'] ?></td>
+		<td width="260"><?php echo $dRSpr['MAIL'] ?></td>
+        <td width="130"><?php echo $dRSpr['TIP'] ?></td>
     </tr>
-    <?php } while ($row_RSpr = mysql_fetch_assoc($RSpr)); ?>
+    <?php } while ($dRSpr = mysql_fetch_assoc($RSpr)); ?>
+    </tbody>
 </table>
     
     <div class="panel panel-default" style="margin-top:10px;">
-    	<div class="panel-heading">Comentarios</div>
-        <div class="panel-body" style="padding:15px;">
+    	<div class="panel-heading">Comments</div>
+        <div class="panel-body" style="padding:5px;">
         	<table style="width:100%">
             	<tr>
-                <th style="width:50%">Fecha Generación</th>
+                <th style="width:50%">Generated</th>
                 <td><?php echo $sdatet ?></td>
                 </tr>
                 <tr>
-                <th style="width:50%">Responsable</th>
-                <td><?php echo $detEmp_fullname//DetEMP movido del mod_navbar al INIT ?></td>
+                <th style="width:50%">By</th>
+                <td><?php echo $_SESSION['MM_Username'] ?></td>
                 </tr>
             </table>
         </div>

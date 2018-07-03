@@ -70,7 +70,7 @@ if ((isset($_POST['form'])) && ($_POST['form'] == 'fti')){
 	//END IMAGE UPLOAD
 	
 	if($action=='INS'){	
-	$qryinst=sprintf('INSERT INTO db_tratamiento_infertilidad (pac_cod,con_num,date,datei,datef,donante,des,typ_cod,status)
+	$qryinst=sprintf('INSERT INTO db_tratamiento_infertilidad (cli_id,con_num,date,datei,datef,donante,des,typ_cod,status)
 	VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)',
 	SSQL($_POST['idp'], "int"),
 	SSQL($_POST['idc'], "int"),

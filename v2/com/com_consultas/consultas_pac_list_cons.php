@@ -1,5 +1,5 @@
 <?php include('../../init.php');
-$qry = sprintf("SELECT * FROM db_consultas WHERE pac_cod= %s ORDER BY con_num DESC", 
+$qry = sprintf("SELECT * FROM db_consultas WHERE cli_id= %s ORDER BY con_num DESC", 
 SSQL($_REQUEST['idp'], "int"));
 $RSlcp = mysql_query($qry) or die(mysql_error());
 $dRSlcp = mysql_fetch_assoc($RSlcp);

@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="actions.php" server="C:/AppServ/www/CLINIC_BIOGEPA/" local="130442988195182340" remote="130442988190000000" Dst="0" />
-<file name="changePass.php" server="//servidor/clinic/" local="130484439712003042" remote="130484439710000000" Dst="0" />
-<file name="user_perfil.php" server="//servidor/clinic/" local="130499987136742990" remote="130499987130000000" Dst="0" />
-<file name="actions.php" server="//servidor/clinic/" local="130500002080206335" remote="130500002080000000" Dst="0" />
-<file name="css.css" server="//servidor/clinic/" local="130442863297467240" remote="130442863290000000" Dst="0" />
-<file name="js.js" server="//servidor/clinic/" local="130442863297547298" remote="130442863290000000" Dst="0" />
-<file name="users_form.php" server="//servidor/clinic/" local="130440841679314421" remote="130440841670000000" Dst="0" />
-<file name="users_list.php" server="//servidor/clinic/" local="130440840223396737" remote="130440840220000000" Dst="0" />
-<file name="_fncts.php" server="//servidor/clinic/" local="130440840223216586" remote="130440840220000000" Dst="0" />
+<file name="actions.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701905438963619" remote="131701905000000000" Dst="0" />
+<file name="changePass.php" server="ftp.ecuahomes.net//public_html/admin/" local="131702589452878499" remote="131702589000000000" Dst="0" />
+<file name="css.css" server="ftp.ecuahomes.net//public_html/admin/" local="131701764126690073" remote="131701764000000000" Dst="0" />
+<file name="form.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701810754706642" remote="131701810200000000" Dst="0" />
+<file name="index.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701776532336433" remote="131701776000000000" Dst="0" />
+<file name="js.js" server="ftp.ecuahomes.net//public_html/admin/" local="131701764126799773" remote="131701764000000000" Dst="0" />
+<file name="menus_permiso.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701764126879534" remote="131701764000000000" Dst="0" />
+<file name="menus_permiso_save.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701764126959357" remote="131701764000000000" Dst="0" />
+<file name="users_form.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701764127138801" remote="131701764000000000" Dst="0" />
+<file name="permiso_usuario.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701764127049193" remote="131701764000000000" Dst="0" />
+<file name="users_list.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701781594196137" remote="131701781400000000" Dst="0" />
+<file name="user_form.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701764127358170" remote="131701764000000000" Dst="0" />
+<file name="users_save.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701764127258467" remote="131701764000000000" Dst="0" />
+<file name="user_perfil.php" server="ftp.ecuahomes.net//public_html/admin/" local="131702598119059565" remote="131702598000000000" Dst="0" />
+<file name="_fncts.php" server="ftp.ecuahomes.net//public_html/admin/" local="131701764127477832" remote="131701764000000000" Dst="0" />
+<file name="_form.php" server="ftp.ecuahomes.net//public_html/admin/" local="131703010682437216" remote="131703010200000000" Dst="0" />
+<file name="actions.php" server="//Server01/duosoft_netlike/v2/" local="131701905438963619" remote="131701905430000000" Dst="0" />
+<file name="changePass.php" server="//Server01/duosoft_netlike/v2/" local="131702589452878499" remote="131702589450000000" Dst="0" />
+<file name="css.css" server="//Server01/duosoft_netlike/v2/" local="131701764126690073" remote="131701764120000000" Dst="0" />
+<file name="form.php" server="//Server01/duosoft_netlike/v2/" local="131701810754706642" remote="131701810750000000" Dst="0" />
+<file name="index.php" server="//Server01/duosoft_netlike/v2/" local="131701777077302454" remote="131701777070000000" Dst="0" />
+<file name="js.js" server="//Server01/duosoft_netlike/v2/" local="131701764126799773" remote="131701764120000000" Dst="0" />
+<file name="menus_permiso.php" server="//Server01/duosoft_netlike/v2/" local="131701764126879534" remote="131701764120000000" Dst="0" />
+<file name="menus_permiso_save.php" server="//Server01/duosoft_netlike/v2/" local="131701764126959357" remote="131701764120000000" Dst="0" />
+<file name="permiso_usuario.php" server="//Server01/duosoft_netlike/v2/" local="131701764127049193" remote="131701764120000000" Dst="0" />
+<file name="users_form.php" server="//Server01/duosoft_netlike/v2/" local="131701764127138801" remote="131701764120000000" Dst="0" />
+<file name="users_list.php" server="//Server01/duosoft_netlike/v2/" local="131701781594196137" remote="131701781590000000" Dst="0" />
+<file name="users_save.php" server="//Server01/duosoft_netlike/v2/" local="131701764127258467" remote="131701764120000000" Dst="0" />
+<file name="user_form.php" server="//Server01/duosoft_netlike/v2/" local="131701764127358170" remote="131701764120000000" Dst="0" />
+<file name="user_perfil.php" server="//Server01/duosoft_netlike/v2/" local="131702598119059565" remote="131702598110000000" Dst="0" />
+<file name="_fncts.php" server="//Server01/duosoft_netlike/v2/" local="131701764127477832" remote="131701764120000000" Dst="0" />
+<file name="_form.php" server="//Server01/duosoft_netlike/v2/" local="131703010682437216" remote="131703010680000000" Dst="0" />
 </dwsync>

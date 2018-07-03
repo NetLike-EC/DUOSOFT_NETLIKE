@@ -1,5 +1,5 @@
 <?php 
-$qry=sprintf('SELECT * FROM db_rep_obs WHERE pac_cod=%s ORDER BY id DESC',
+$qry=sprintf('SELECT * FROM db_rep_obs WHERE cli_id=%s ORDER BY id DESC',
 SSQL($idp,'int'));
 $RSr=mysql_query($qry);
 $row_RSr=mysql_fetch_assoc($RSr);

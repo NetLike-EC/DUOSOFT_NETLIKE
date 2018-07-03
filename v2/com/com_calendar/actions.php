@@ -14,13 +14,13 @@ if(($dat['form'])&&($dat['form']=='AGE')){
 	if($acc==md5('INS')){
 		if(!$est) $est=1;
 		$id_aud=AUD(NULL,'Creación Reserva');
-		$qryIns=sprintf('INSERT INTO db_fullcalendar (fechai,fechaf,horai,horaf,pac_cod,typ_cod,obs,est,id_aud)
+		$qryIns=sprintf('INSERT INTO db_fullcalendar (fechai,fechaf,horai,horaf,cli_id,typ_cod,obs,est,id_aud)
 		VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)',
 		SSQL($dat['fechai'],'date'),
 		SSQL($dat['fechaf'],'date'),
 		SSQL($dat['horai'],'text'),
 		SSQL($dat['horaf'],'text'),
-		SSQL($dat['pac_cod'],'int'),
+		SSQL($dat['cli_id'],'int'),
 		SSQL($dat['typ_cod'],'int'),
 		SSQL($dat['obs'],'text'),
 		SSQL($dat['est'],'int'),
@@ -37,13 +37,13 @@ if(($dat['form'])&&($dat['form']=='AGE')){
 	}else if($acc==md5('UPD')){
 		$detRes=detRow('db_fullcalendar','id',$id);
 		$id_aud=AUD($detRes['id_aud'],'Actualización Reserva');
-		$qryUpd=sprintf('UPDATE db_fullcalendar SET fechai=%s, fechaf=%s, horai=%s, horaf=%s, pac_cod=%s, typ_cod=%s, obs=%s, est=%s, id_aud=%s 
+		$qryUpd=sprintf('UPDATE db_fullcalendar SET fechai=%s, fechaf=%s, horai=%s, horaf=%s, cli_id=%s, typ_cod=%s, obs=%s, est=%s, id_aud=%s 
 		WHERE id=%s',
 		SSQL($dat['fechai'],'date'),
 		SSQL($dat['fechaf'],'date'),
 		SSQL($dat['horai'],'text'),
 		SSQL($dat['horaf'],'text'),
-		SSQL($dat['pac_cod'],'int'),
+		SSQL($dat['cli_id'],'int'),
 		SSQL($dat['typ_cod'],'int'),
 		SSQL($dat['obs'],'text'),
 		SSQL($dat['est'],'text'),
@@ -81,7 +81,7 @@ if($acc==md5('DELE')){
 
 if($acc==md5('DELEL')){
 	$detRes=detRow('db_fullcalendar','id',$id);
-	$idp=$detRes['pac_cod'];
+	$idp=$detRes['cli_id'];
 	$qryUpd=sprintf('UPDATE db_fullcalendar SET est=0 WHERE id=%s',
 	SSQL($id,'int'));
 	//$qryDel=sprintf('DELETE FROM db_fullcalendar WHERE id=%s',

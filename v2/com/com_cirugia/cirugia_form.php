@@ -5,8 +5,8 @@ $idp=vParam('idp',$_GET['idp'],$_POST['idp']);
 $idc=vParam('idc',$_GET['idc'],$_POST['idc']);
 $idr=vParam('idr',$_GET['idr'],$_POST['idr']);
 $detCir=detRow('db_cirugias','id_cir',$idr);
-if($idr) {$idp=$detCir['pac_cod']; $idc=$detCir['con_num'];}
-$detpac=detRow('db_clientes','pac_cod',$idp);
+if($idr) {$idp=$detCir['cli_id']; $idc=$detCir['con_num'];}
+$detpac=detRow('db_clientes','cli_id',$idp);
 if($detCir){
 	$acc='UPD';
 	$btnform='<button type="submit" class="btn btn-success"><i class="fa fa-refresh fa-lg"></i> ACTUALIZAR</button>';
@@ -42,7 +42,7 @@ include(RAIZf.'head.php'); ?>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
       	<li><a><span class="label label-info"><?php echo $idr ?></span></a></li>
-        <li><a><?php echo $detpac['pac_nom'].' '.$detpac['pac_ape'] ?></a></li>
+        <li><a><?php echo $detpac['cli_nom'].' '.$detpac['cli_ape'] ?></a></li>
         <li><a>Consulta: <span class="label label-default"><?php echo $idc ?></span></a></li>
         <li><a><?php echo $detCir['fecha'] ?></a></li>
       </ul>

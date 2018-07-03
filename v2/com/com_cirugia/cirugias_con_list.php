@@ -1,5 +1,5 @@
 <?php 
-$qry=sprintf('SELECT * FROM db_cirugias WHERE con_num=%s OR pac_cod=%s ORDER BY id_cir DESC',
+$qry=sprintf('SELECT * FROM db_cirugias WHERE con_num=%s OR cli_id=%s ORDER BY id_cir DESC',
 SSQL($idc,'int'),
 SSQL($idp,'int'));
 $RSe=mysql_query($qry);
